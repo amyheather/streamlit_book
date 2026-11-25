@@ -2,8 +2,14 @@ project:
   type: book
 book:
   title: HSMA - Web Apps with Streamlit
-  author: Sammi Rosser
-  date: 2024/07/31
+  date: today
+  author:
+    - name: Sammi Rosser
+      orcid: /0000-0002-9552-8988
+      website: https://github.com/Bergam0t
+    - name: Amy Heather
+      orcid: 0000-0002-6596-3479
+      website: https://github.com/amyheather
   google-analytics:
     tracking-id: "G-973P3EMW72"
     anonymize-ip: true
@@ -141,3 +147,5 @@ format:
       - assets/fonts/css/lexend.css
     grid:
       sidebar-width: 250px
+language:
+  title-block-published: "Book last updated"
