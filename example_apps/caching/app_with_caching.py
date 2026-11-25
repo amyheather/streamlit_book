@@ -23,7 +23,7 @@ st.write(
 #    it *returns* your dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("athlete_details_eventwise.csv")
+    return pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 # 3. Finally, call this function and save the output to a variable with a name of your choosing
 # You can then use this like a standard dataframe throughout the rest of your script - Streamlit

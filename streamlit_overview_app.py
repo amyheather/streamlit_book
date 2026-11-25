@@ -572,7 +572,7 @@ with tab4:
 
         st.code(
         """
-        penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+        penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
         output = BytesIO()
 
@@ -614,7 +614,7 @@ with tab4:
         if show_code:
             st.code(
             """
-            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
             fig, ax = plt.subplots(figsize=(15,10))
             plt.scatter(x=penguins_df["body_mass_g"], y=penguins_df["bill_length_mm"])
             plt.title("Penguin Body Mass (g) versus Bill Length (mm)")
@@ -663,7 +663,7 @@ with tab4:
         if show_code:
             st.code(
             """
-            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
             fig = px.scatter(penguins_df, x="body_mass_g", y="bill_length_mm")
 
@@ -855,7 +855,7 @@ with tab3:
     with tab11:
         if show_code:
             st.code("""
-            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
             st.table(penguins_df)
             """)
@@ -865,7 +865,7 @@ with tab3:
 
         if show_code:
             st.code("""
-                    penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+                    penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
                     st.dataframe(penguins_df)
                     """)
@@ -877,7 +877,7 @@ with tab3:
 
         if show_code:
             st.code("""
-                    penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+                    penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
                     penguins_df_edited = st.data_editor(penguins_df)
 
@@ -897,7 +897,7 @@ with tab3:
         if show_code:
             st.code(
             """
-            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
             fig, ax = plt.subplots(figsize=(15,10))
             plt.scatter(x=penguins_df["body_mass_g"], y=penguins_df["bill_length_mm"])
@@ -923,7 +923,7 @@ with tab3:
         if show_code:
             st.code(
             """
-            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+            penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
             plotly_fig = px.scatter(penguins_df, x="body_mass_g", y="bill_length_mm")
 

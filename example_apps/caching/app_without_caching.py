@@ -23,7 +23,7 @@ st.write(
 # - The dataset will be loaded in separately for every single user, which can cause you
 #   to start exceeding memory limits on your hosting if you have lots of
 #   simultaneous users
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 
 # The code that follows

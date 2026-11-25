@@ -37,7 +37,7 @@ We can then just use our dataframe like normal - Streamlit will handle the awkwa
 import pandas as pd
 import streamlit as st
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 st.dataframe(athlete_statistics)
 ```
@@ -51,7 +51,7 @@ import streamlit as st
 
 @st.cache_data
 def load_data():
-  return pd.read_csv("athlete_details_eventwise.csv")
+  return pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 athlete_statistics = load_data()
 
@@ -102,7 +102,7 @@ import streamlit as st
 
 @st.cache_data
 def load_data():
-  return pd.read_csv("athlete_details_eventwise.csv")
+  return pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 athlete_statistics = load_data()
 

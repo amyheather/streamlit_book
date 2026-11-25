@@ -35,7 +35,7 @@ import pandas as pd
 from palmerpenguins import load_penguins
 import streamlit as st
 
-penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
+penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
 penguins_df_edited = st.data_editor(penguins_df)
 

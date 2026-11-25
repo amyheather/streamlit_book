@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 chosen_country = "UK"
 # ========================== #
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 # Turn the dataframe into a 'long' format for plotting - don't worry about what that means!
 # What we'll end up with is a dataframe with columns for Year, Country, Medal Type (called 'variable')
@@ -62,7 +62,7 @@ year = 2012
 sport = "Athletics"
 # ========================== #
 
-country_medals_by_event = pd.read_csv("country_medals_by_event.csv")
+country_medals_by_event = pd.read_csv("datasets/country_medals_by_event.csv")
 
 country_medals_by_event_filtered = (
     country_medals_by_event[
@@ -81,7 +81,7 @@ print(country_medals_by_event_filtered[['Event', 'Bronze', 'Silver', 'Gold']])
 year = 2012
 # ========================== #
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 # Filter the dataframe to just the rows for the selected year
 medals_per_country_per_year_filtered = (
@@ -153,7 +153,7 @@ year = 2012
 selected_medal_type="Gold"
 # ========================== #
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 country_outlines = geopandas.read_file("countries_outlines.geojson")
 
@@ -220,7 +220,7 @@ Several dataframes are provided, as well as a geojson file of country outlines f
 ```{python}
 import pandas as pd
 
-athlete_details_eventwise = pd.read_csv("athlete_details_eventwise.csv")
+athlete_details_eventwise = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 athlete_details_eventwise.head(5)
 ```
@@ -230,7 +230,7 @@ athlete_details_eventwise.head(5)
 ```{python}
 import pandas as pd
 
-country_medals_by_event = pd.read_csv("country_medals_by_event.csv")
+country_medals_by_event = pd.read_csv("datasets/country_medals_by_event.csv")
 
 country_medals_by_event.head()
 ```
@@ -240,7 +240,7 @@ country_medals_by_event.head()
 ```{python}
 import pandas as pd
 
-games_cities = pd.read_csv("games_cities.csv")
+games_cities = pd.read_csv("datasets/games_cities.csv")
 
 games_cities.head()
 ```
@@ -250,7 +250,7 @@ games_cities.head()
 ```{python}
 import pandas as pd
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 medals_per_country_per_year.head()
 ```
@@ -281,7 +281,7 @@ So you don't have to spend too much time focussing on data manipulation and visu
 ```{python}
 import pandas as pd
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 medals_per_country_per_year.sort_values("Total", ascending=False).head(15)
 ```
@@ -292,7 +292,7 @@ medals_per_country_per_year.sort_values("Total", ascending=False).head(15)
 ```{python}
 import pandas as pd
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 medals_per_country_per_year.sort_values(["Gold", "Total"], ascending=True).head(15)
 ```
@@ -302,7 +302,7 @@ medals_per_country_per_year.sort_values(["Gold", "Total"], ascending=True).head(
 ```{python}
 import pandas as pd
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 total_medals_all_time = (
     medals_per_country_per_year.drop(columns=["Year", "NOC"])
@@ -319,7 +319,7 @@ total_medals_all_time.head(15)
 ```{python}
 import pandas as pd
 
-medals_by_event = pd.read_csv("country_medals_by_event.csv")
+medals_by_event = pd.read_csv("datasets/country_medals_by_event.csv")
 medals_by_event
 
 ```
@@ -332,7 +332,7 @@ import pandas as pd
 selected_year = 2012
 selected_sport = "Judo"
 
-medals_by_event = pd.read_csv("country_medals_by_event.csv")
+medals_by_event = pd.read_csv("datasets/country_medals_by_event.csv")
 medals_by_event
 
 ```
@@ -342,7 +342,7 @@ medals_by_event
 ```{python}
 import pandas as pd
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 most_events_per_year_by_athlete = athlete_statistics.value_counts(['Name', 'Country', 'Year']).reset_index()
 
@@ -354,7 +354,7 @@ most_events_per_year_by_athlete.head(15)
 ```{python}
 import pandas as pd
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 most_events_per_year_by_athlete = athlete_statistics.value_counts(['Name', 'Country', 'Year']).reset_index()
 
@@ -370,7 +370,7 @@ athlete_statistics[(athlete_statistics["Name"] == athlete_name_most_events) &
 ```{python}
 import pandas as pd
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 athlete_statistics.value_counts(['Name', 'Sex', 'Country']).reset_index()
 ```
@@ -380,7 +380,7 @@ athlete_statistics.value_counts(['Name', 'Sex', 'Country']).reset_index()
 ```{python}
 import pandas as pd
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 chosen_athlete = "Simone Arianne Biles"
 
@@ -392,7 +392,7 @@ athlete_statistics[athlete_statistics["Name"] == chosen_athlete]
 ```{python}
 import pandas as pd
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 search_string = "Ben"
 
@@ -406,7 +406,7 @@ import pandas as pd
 
 selected_year = 2012
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 athlete_statistics[athlete_statistics["Year"] == selected_year][['Sport', 'Event']].drop_duplicates().reset_index(drop=True).head(15)
 ```
@@ -416,7 +416,7 @@ athlete_statistics[athlete_statistics["Year"] == selected_year][['Sport', 'Event
 ```{python}
 import pandas as pd
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 athlete_statistics[athlete_statistics["Year"] == selected_year][['Sport', 'Event']].drop_duplicates().value_counts('Sport').reset_index().head(15)
 ```
@@ -431,7 +431,7 @@ athlete_statistics[athlete_statistics["Year"] == selected_year][['Sport', 'Event
 ```{python}
 import pandas as pd
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 all_sports = athlete_statistics["Sport"].drop_duplicates().tolist()
 
@@ -445,7 +445,7 @@ import pandas as pd
 
 selected_year = 2012
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 athlete_statistics_year = athlete_statistics[athlete_statistics["Year"] == selected_year]
 
@@ -459,7 +459,7 @@ print(all_events)
 ```{python}
 import pandas as pd
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 earliest_year = medals_per_country_per_year["Year"].min()
 
@@ -478,7 +478,7 @@ import pandas as pd
 selected_year = 2012
 selected_sport = "Gymnastics"
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 athlete_statistics_filtered = athlete_statistics[(athlete_statistics["Year"] == selected_year) & (athlete_statistics["Sport"] == selected_sport)]
 
@@ -507,7 +507,7 @@ selected_countries = ["UK", "USA", "Canada", "Australia", "China", "Russia", "Fr
 
 selected_medal_type = "Bronze"
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 px.line(medals_per_country_per_year[medals_per_country_per_year["Country"].isin(selected_countries)],
         x="Year", y=selected_medal_type, color="Country",
@@ -523,7 +523,7 @@ import plotly.express as px
 chosen_country = "UK"
 selected_medal_type = "Bronze"
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 px.line(medals_per_country_per_year[medals_per_country_per_year["Country"] == chosen_country],
         y=selected_medal_type, x="Year",
@@ -538,7 +538,7 @@ import plotly.express as px
 
 chosen_country = "UK"
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 medals_per_country_per_year_long = medals_per_country_per_year.melt(id_vars=["Year", "Country", "NOC"])
 
@@ -556,7 +556,7 @@ import plotly.express as px
 
 rows_to_display = 10
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 total_medals_all_time = (
     medals_per_country_per_year.drop(columns=["Year", "NOC"])
@@ -576,7 +576,7 @@ px.bar(total_medals_all_time.head(rows_to_display), x='Country', y='Total',
 import pandas as pd
 import plotly.express as px
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 total_medals_all_time = (
     medals_per_country_per_year.drop(columns=["Year", "NOC"])
@@ -599,7 +599,7 @@ px.bar(total_medals_all_time_long,
 import pandas as pd
 import plotly.express as px
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 total_medals_all_time = (
     medals_per_country_per_year.drop(columns=["Year", "NOC"])
@@ -627,7 +627,7 @@ px.bar(total_medals_all_time_long[total_medals_all_time_long['Country'].isin(tot
 import pandas as pd
 import plotly.express as px
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 distinct_athletes_per_year = athlete_statistics[['Name', 'Year','Country','Sex', 'Age', 'Height', 'Weight']].drop_duplicates()
 
@@ -649,7 +649,7 @@ px.bar(athlete_counts_by_sex_by_year,
 import pandas as pd
 import plotly.express as px
 
-athlete_statistics = pd.read_csv("athlete_details_eventwise.csv")
+athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 selected_sport = "Gymnastics"
 
@@ -689,7 +689,7 @@ import matplotlib.pyplot as plt
 selected_year = 2012
 selected_medal_type="Bronze"
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 country_outlines = geopandas.read_file("countries_outlines.geojson")
 
@@ -717,7 +717,7 @@ import folium
 selected_year = 2012
 selected_medal_type="Bronze"
 
-medals_per_country_per_year = pd.read_csv("medals_per_country_per_year.csv")
+medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
 country_outlines = geopandas.read_file("countries_outlines.geojson")
 
