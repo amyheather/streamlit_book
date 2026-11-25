@@ -128,7 +128,7 @@ book:
     style: docked
     logo: resources/logos/hsma_logo_transparent_background_large.png
     background: '#111111'
-bibliography: references.bib
+bibliography: assets/references.bib
 format:
   html:
     execute:
