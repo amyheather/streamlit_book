@@ -1,10 +1,12 @@
 ---
-title: "Static Charts"
+title: "Static charts"
 filters:
   - whitphx/stlite
 ---
 
-## Displaying charts made with matplotlib
+<br>
+
+## Displaying charts with `st.pyplot()`
 
 When we want to display static charts, we will often be using the `matplotlib` library.
 
@@ -92,7 +94,9 @@ st.pyplot(fig)
 
 ```
 
-## An alternative way of displaying charts made with matplotlib
+<br>
+
+## Displaying a saved chart with `st.image()`
 
 Instead of using the `st.pyplot()` function, we may find it easier in some cases to save the output figure and serve that to the user using the `st.image()` function instead.
 
@@ -176,7 +180,9 @@ st.image(filename)
 
 ```
 
-## Making use of the available space
+<br>
+
+## Adjusting the chart width
 
 Many streamlit components have a parameter called `use_container_width`.
 

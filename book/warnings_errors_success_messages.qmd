@@ -1,8 +1,10 @@
 ---
-title: "Info, Success, Warning and Error Boxes"
+title: "Info, success, warning and error boxes"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 Streamlit provides several options for displaying text with a background colour to help draw attention to it.
 
@@ -18,10 +20,6 @@ st.error("This is a bad message!")
 
 st.info("This is just something we wanted to notify you about.")
 ```
-
-:::{.callout-note}
-The code won't be displayed when writing your own app - it's just shown here so you can easily see which bits of code creates which output.
-:::
 
 ```{stlite-python}
 import streamlit as st
@@ -65,6 +63,8 @@ if show_code:
 st.info("This is just something we wanted to notify you about.")
 ```
 
+<br>
+
 ## Icons
 
 All of the above can also use optional icons.
@@ -86,6 +86,7 @@ st.error("This is a bad message!", icon="🔥")
 st.info("This is just something we wanted to notify you about.", icon=":material/thumb_up:")
 ```
 
+<br>
 
 ## Using conditional logic with error messages
 

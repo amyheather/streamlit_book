@@ -1,12 +1,14 @@
 ---
-title: "Interactive Charts"
+title: "Interactive charts"
 filters:
   - whitphx/stlite
 ---
 
-## An overview of supported interactive chart types in Streamlit
+<br>
 
-Streamlit provides support for several interactive chart libraries, including
+## Supported interactive chart libraries
+
+Streamlit provides support for several interactive chart libraries, including:
 
 - Plotly
 - Bokeh
@@ -32,7 +34,9 @@ Each of the plot types mentioned above require a different streamlit command to 
 The details and specific arguments that are available for each can be found in the Streamlit documentation [here](https://docs.streamlit.io/develop/api-reference/charts).
 :::
 
-## An example plotly chart in Streamlit
+<br>
+
+## Displaying a Plotly chart
 
 ```{python}
 #| eval: False
@@ -55,12 +59,13 @@ st.plotly_chart(fig) # <9>
 
 1. Here we load in a package that will provide access to a dataset of penguin measurements.
 2. We also need to load in the plotly.express module. The standard alias for this library is `px`.
-3. We use the `load_penguins()` function to pull in the pandas dataframe of penguin measurements, assigning it to the variable `penguin`.
+3. We use the `load_penguins()` function to pull in the pandas dataframe of penguin measurements, assigning it to the variable `penguins`.
 4. Plotly express (px) provides access to a wide range of simple plot types. Here, `px.scatter` sets up the chart as a scatterplot which expects, as a minimum, two columns of numeric values to assign the x and y position of a series of points on an axis. We save the output of this function to a variable, as we'll need to pass that variable to the relevant streamlit function later. A common variable name to use for this is `fig`.
 5. We pass in the dataframe we want to plot as the first argument.
 6. We specify the names of the columns we want to plot the values of on the x (horizontal) and y (vertical) axes. These can be surrounded by single ' or double " quotes. Note that we don't need to respecify the dataframe name here - purely the column name as a string.
-8. Optionally we can pass in a column containing a categorical variable (which can just be a column of strings) to use to colour the points. Here, we have a column called 'sex' which just contains the values 'Male' or 'Female'; passing this in will mean our male penguin points will have one colour, and female another.
-9. Finally, we pass the variable corresponding to our plotly plot object to the `st.plotly_plot()` function.
+7. Optionally we can pass in a column containing a categorical variable (which can just be a column of strings) to use to colour the points. Here, we have a column called 'sex' which just contains the values 'Male' or 'Female'; passing this in will mean our male penguin points will have one colour, and female another.
+8. We pass in a string to use as the title of the graph with the `title` argument.
+9. Finally, we pass the variable corresponding to our plotly plot object to the `st.plotly_chart()` function.
 
 ```{stlite-python}
 import micropip
@@ -79,7 +84,9 @@ title=f"Penguins Dataset - Bill Length (mm) vs Bill Depth (mm), coloured by Sex"
 st.plotly_chart(fig)
 ```
 
-## Making use of the available space
+<br>
+
+## Adjusting the chart width
 
 Many streamlit components have a parameter called `use_container_width`.
 
@@ -150,8 +157,9 @@ st.subheader("use_container_width=True")
 st.plotly_chart(fig, use_container_width = True, key="plot_2")
 ```
 
+<br>
 
-## Sneak Peak: Reacting to user inputs
+## Updating a chart in response to user inputs
 
 While we haven't gone into detail about user inputs yet, here is an example of a plotly chart updating based on the options a user is selecting.
 
@@ -164,7 +172,7 @@ from plotly import express as px
 penguins = load_penguins()
 
 axis_options = [
-       'bill_length_mm', 'bill_depth_mm' 'flipper_length_mm'
+       'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm'
        ] # <1>
 
 col_1 = st.selectbox(
