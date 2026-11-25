@@ -8,7 +8,7 @@ There are a few parts of Streamlit’s theming that we can officially change usi
 
 This file needs to be called config.toml and lives inside a subfolder called .streamlit
 
-![](assets/2024-09-16-22-11-49.png)
+![](assets/images/2024-09-16-22-11-49.png)
 
 The config.toml file contains a variable number of parameters.
 
@@ -16,7 +16,7 @@ It can determine whether the default colourscheme is light or dark, and whether 
 
 You can create a template config.toml from within streamlit, then paste the output into a config.toml file you create yourself.
 
-![](assets/firefox_qB7kSDDCyA.gif)
+![](assets/gif/firefox_qB7kSDDCyA.gif)
 
 Let's look at an example app.
 
@@ -57,4 +57,4 @@ st.text(f"The answer is {output}")
 
 ```
 
-![](assets/2024-09-16-22-22-29.png)
+![](assets/images/2024-09-16-22-22-29.png)

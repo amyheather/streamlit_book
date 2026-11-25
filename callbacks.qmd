@@ -10,7 +10,7 @@ They are often used in conjunction with session state.
 
 For example - we could increment a counter every time the user clicks on a button.
 
-![](assets/callback_gif.gif)
+![](assets/gif/callback_gif.gif)
 
 :::{.callout-tip}
 In standard Streamlit, this would be impossible because it would forget that you clicked the button every time you did so!

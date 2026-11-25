@@ -51,21 +51,21 @@ fiona==1.9.0
 
 You can then run the app as normal from the terminal in VSCode.
 
-![](assets/2024-09-30-16-45-59.png)
+![](assets/images/2024-09-30-16-45-59.png)
 
 At the top right of the app, there will be a 'deploy' button. Click on this.
 
-![](assets/2024-09-30-16-46-47.png)
+![](assets/images/2024-09-30-16-46-47.png)
 
 In the pop-up that appears, click on the 'deploy now' button for the option on the left.
 
-![](assets/2024-09-30-16-47-01.png)
+![](assets/images/2024-09-30-16-47-01.png)
 
 :::{.callout-tip}
 If you have not previously followed this process, you will be asked to authorize Streamlit to link with your Github account.
 :::
 
-![](assets/2024-09-30-16-48-24.png)
+![](assets/images/2024-09-30-16-48-24.png)
 
 You should not need to change the values for 'Repository', 'Branch' or 'Main File Path'.
 
@@ -79,7 +79,7 @@ Next, click on 'Advanced settings'.
 
 The HSMA webdev environment used in module 7 of the course uses Python 3.11, so it's best to select this from the dropdown.
 
-![](assets/2024-09-30-16-50-16.png)
+![](assets/images/2024-09-30-16-50-16.png)
 
 :::{.callout-warning}
 You can't change the Python version for a deployed app at a later stage - you would have to delete the app from your community cloud and start the deployment process again.
@@ -91,12 +91,12 @@ Click 'Save'.
 
 Now you should be back on the original screen, and can click 'Deploy'.
 
-![](assets/2024-09-30-16-48-24.png)
+![](assets/images/2024-09-30-16-48-24.png)
 
 
 :::{.callout-tip}
 #### Animated overview of the process
-![](assets/Code_j6hu00OEKH.gif)
+![](assets/gif/Code_j6hu00OEKH.gif)
 :::
 
 ### Method 2 - From the Streamlit Community Cloud Website
@@ -107,19 +107,19 @@ For subsequent apps, you may find it quicker to navigate to <https://share.strea
 You will first need to log into Streamlit community cloud using your Github account.
 :::
 
-![](assets/2024-09-30-17-04-51.png)
+![](assets/images/2024-09-30-17-04-51.png)
 
 Choose 'Yup, I have an app'.
 
-![](assets/2024-09-30-17-05-18.png)
+![](assets/images/2024-09-30-17-05-18.png)
 
 Fill in the required details.
 
-![](assets/2024-09-30-17-05-36.png)
+![](assets/images/2024-09-30-17-05-36.png)
 
 Clicking on the 'repository' field will give you a scrollable list of all repositories available in your Github.
 
-![](assets/2024-09-30-17-06-32.png)
+![](assets/images/2024-09-30-17-06-32.png)
 
 When you're ready, click deploy.
 
@@ -128,11 +128,11 @@ When you're ready, click deploy.
 
 Navigating to <https://share.streamlit.io/> will give you an overview of the apps you have published to the community cloud.
 
-![](assets/2024-09-30-16-54-17.png)
+![](assets/images/2024-09-30-16-54-17.png)
 
 Clicking on the three dots will allow you to delete or reboot the app, or change various settings relating to app privacy, secrets, and the app URL.
 
-![](assets/2024-09-30-16-59-08.png)
+![](assets/images/2024-09-30-16-59-08.png)
 
 ## Troubleshooting your app
 
@@ -140,15 +140,15 @@ When loading up your app while logged into your Streamlit community cloud accoun
 
 You should see a 'manage app' button at the bottom right of the screen.
 
-![](assets/2024-09-30-17-01-27.png)
+![](assets/images/2024-09-30-17-01-27.png)
 
 Clicking on this brings up a sidebar that allows you to see the behind-the-scenes activity that occurs when the virtual machine running your app is first loaded up, along with any logging or error messages. This can give you an idea of why your app isn't working.
 
-![](assets/2024-09-30-17-01-42.png)
+![](assets/images/2024-09-30-17-01-42.png)
 
 Clicking on the three dots at the bottom gives you access to some useful commands, like rebooting the app.
 
-![](assets/2024-09-30-17-03-27.png)
+![](assets/images/2024-09-30-17-03-27.png)
 
 ## Updating your App
 
@@ -158,6 +158,6 @@ The exception to this may be changes to the list of required packages in `requir
 
 If this is the case, you may need to manually reboot the app from the list in <https://share.streamlit.io/> or from within the 'manage app' menu when viewing your app.
 
-![](assets/2024-09-30-16-59-08.png)
+![](assets/images/2024-09-30-16-59-08.png)
 
-![](assets/2024-09-30-17-03-27.png)
+![](assets/images/2024-09-30-17-03-27.png)

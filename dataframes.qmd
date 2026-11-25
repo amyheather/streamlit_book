@@ -133,7 +133,7 @@ st.dataframe(name_lookup_df)
 
 A simple search functionality is available when hovering over it, as well as the option to make the table take up the full screen.
 
-![](assets/2024-08-19-15-56-02.png)
+![](assets/images/2024-08-19-15-56-02.png)
 
 ### Polishing the display of different data types with the column API
 

@@ -179,41 +179,41 @@ Click [here](https://github.com/Bergam0t/stlite_multipage_example_hsma) to view 
 
 From your github repository, click on 'settings'.
 
-![](assets/2024-09-30-17-29-21.png)
+![](assets/images/2024-09-30-17-29-21.png)
 
 In the sidebar on the left, click on 'pages'.
 
-![](assets/2024-09-30-17-29-45.png)
+![](assets/images/2024-09-30-17-29-45.png)
 
 Choose 'Branch' and 'Main'.
 
-![](assets/2024-09-30-17-30-04.png)
+![](assets/images/2024-09-30-17-30-04.png)
 
 Leave the folder as 'root' and click 'Save'.
 
-![](assets/2024-09-30-17-30-25.png)
+![](assets/images/2024-09-30-17-30-25.png)
 
 After saving, it should look like this:
 
-![](assets/2024-09-30-17-30-46.png)
+![](assets/images/2024-09-30-17-30-46.png)
 
 Next, head back to your repository and click on the cog next to 'about'.
 
-![](assets/2024-09-30-17-31-20.png)
+![](assets/images/2024-09-30-17-31-20.png)
 
 Tick 'use your github pages website'.
 
-![](assets/2024-09-30-17-31-37.png)
+![](assets/images/2024-09-30-17-31-37.png)
 
 This will automatically generate a github pages link.
 
-![](assets/2024-09-30-17-32-04.png)
+![](assets/images/2024-09-30-17-32-04.png)
 
 Click 'Save Changes'
 
 Now click on the URL to view your app.
 
-![](assets/2024-09-30-17-32-58.png)
+![](assets/images/2024-09-30-17-32-58.png)
 
 
 :::{.callout-warning}

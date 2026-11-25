@@ -189,7 +189,7 @@ st.download_button(
 :::{.callout-tip}
 When using plotly, users can hover over the plot and choose 'Download plot as a png'.
 
-![](assets/2024-08-12-19-54-14.png)
+![](assets/images/2024-08-12-19-54-14.png)
 :::
 
 ##### Excel Files

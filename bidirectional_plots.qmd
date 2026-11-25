@@ -60,11 +60,11 @@ st.write(selected_rows)
 :::{.callout-tip}
 Note that selecting a subset of cells like this is not sufficient.
 
-![](assets/2024-08-19-15-10-02.png)
+![](assets/images/2024-08-19-15-10-02.png)
 
 You must select the full rows using the dataset column at the far left, to the left of the index column if displayed.
 
-![](assets/2024-08-19-15-11-10.png)
+![](assets/images/2024-08-19-15-11-10.png)
 :::
 
 We can then use the selected row indices to restrict the rows we use for subsequent calculations.
@@ -157,7 +157,7 @@ In this book we focus on the use of plotly; take a look at the Streamlit documen
 
 When hovering over the plot, users are given options such as 'box select' (to choose a box-shaped subset of points) or lasso select (to select an irregular set of points.)
 
-![](assets/2024-08-19-14-41-40.png)
+![](assets/images/2024-08-19-14-41-40.png)
 
 Let's start by creating a scatterplot of the penguins dataset.
 

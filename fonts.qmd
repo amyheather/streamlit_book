@@ -10,7 +10,7 @@ CSS stands for ‘cascading style sheets’ and is a language used for theming m
 
 We can create our own .css file and force Streamlit to load it in.
 
-![](assets/2024-09-16-22-37-35.png)
+![](assets/images/2024-09-16-22-37-35.png)
 
 To load the file into the app, we need to include the following command:
 
@@ -58,7 +58,7 @@ The streamlit forums and StackOverflow are also good ways to find examples of pe
 
 Here is an example of a Streamlit title with and without the custom theming applied.
 
-![](assets/2024-09-16-22-49-15.png)
+![](assets/images/2024-09-16-22-49-15.png)
 
 :::{.callout-tip}
 Google fonts provide a good option that is easy to load in via the method above.

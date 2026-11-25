@@ -9,7 +9,7 @@ Streamlit has basic support for small logos in your app.
 It will look for a file you specify relative to the currently running streamlit file
 here, for example, it looks for a folder called ‘resources’ and then looks for the ‘hsma_logo.png’ file.
 
-![](assets/2024-09-16-22-24-06.png)
+![](assets/images/2024-09-16-22-24-06.png)
 
 The logo will appear in the top left of your app.
 
@@ -89,7 +89,7 @@ Ideally, your logo should be close to 24 pixels tall by 240 pixels wide.
 
 It is possible to include larger logos through more advanced tricks, but they are fragile and prone to breaking as changes are made to the Streamlit library.
 
-![](assets/2024-09-16-22-27-41.png)
+![](assets/images/2024-09-16-22-27-41.png)
 
 The approach requires using some markdown to inject some custom CSS (see the fonts chapter for more details on CSS).
 

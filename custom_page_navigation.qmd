@@ -30,7 +30,7 @@ Here is an example app.
 
 In this app, we have a folder structure like so:
 
-![](assets/2024-09-30-14-52-45.png)
+![](assets/images/2024-09-30-14-52-45.png)
 
 We then set up each page as follows:
 
