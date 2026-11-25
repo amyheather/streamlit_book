@@ -12,8 +12,7 @@ Book content remains unchanged - but repository has been reorganised.
 ### Added
 
 * Add GitHub action to automate build and deployment to GitHub pages.
-* Add CHANGELOG.
-* Add README.
+* Add `CHANGELOG.md`, `README.md` and `CITATION.cff`.
 
 ### Changed
 
