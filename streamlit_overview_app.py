@@ -1013,9 +1013,9 @@ with tab5:
 
         if show_code:
             st.code("""
-    st.image("resources/cover_image_robot.jpeg")
+    st.image("assets/images/cover_image_robot.jpeg")
                     """)
-        st.image("resources/cover_image_robot.jpeg")
+        st.image("assets/images/cover_image_robot.jpeg")
 
         st.subheader("Web Image")
         if show_code:

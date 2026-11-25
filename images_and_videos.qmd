@@ -12,7 +12,7 @@ You can use
 
 - local images (e.g. an image on your local drive) by passing a filepath that is relative to where your .py file is.
     - note that you will have to make sure that the file is available in the same relative position when you *deploy* your app.
-    - e.g. `st.image("resources/cover_image_robot.jpeg")`
+    - e.g. `st.image("assets/images/cover_image_robot.jpeg")`
 - web-based images via a URL
     - e.g. `st.image("https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg")`
 
@@ -64,7 +64,7 @@ if show_code:
 
     st.code(
         """
-    st.image("cover_image_robot.jpeg")
+    st.image("assets/images/cover_image_robot.jpeg")
 
         """
     )

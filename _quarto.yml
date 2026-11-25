@@ -107,7 +107,7 @@ book:
     chapters:
     - other_examples.qmd
     - cheat_sheet.qmd
-  cover-image: resources/cover_image_robot.jpeg
+  cover-image: assets/images/cover_image_robot.jpeg
   favicon: resources/logos/hsma_logo_transparent_background_large.png
   search: true
   page-navigation: true
