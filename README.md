@@ -1,24 +1,42 @@
-# Streamlit book
+# HSMA - Web Apps with Streamlit
 
-Streamlit book. Developed to accompany HSMA-6. You can view this at:
+This book accompanies the Streamlit sessions in the [Health Service Modelling Associates (HSMA) Programme](https://hsma.co.uk/).
 
-<https://webapps.hsma.co.uk/>
+You can view the book at: **<https://webapps.hsma.co.uk/>**
+
+![](book/assets/images/cover_image_robot.jpeg)
 
 <br>
 
-## Viewing this book locally
+## Contributing and sharing feedback
 
-Set up environment - for example, using mamba:
+Please open an issue if you spot an error, or have suggestions for improvements or additional chapters.
 
-```
+## Viewing the book locally
+
+The book is available [online](https://webapps.hsma.co.uk/). To build it locally, you will need to:
+
+1. Clone this repository.
+2. Ensure you have Quarto installed.
+3. Create the virtual environment - for example, using mamba:
+
+```bash
 mamba create -n "streamlit_book" python=3.14
 mamba activate streamlit_book
 pip install -r requirements.txt
 ```
 
-To build and preview the book:
+4. Use the following commands to build and preview the book:
 
-```
+```bash
 quarto render book
 quarto preview book
 ```
+
+## Citation
+
+Please cite this book as:
+
+> [Sammi Rosser](https://github.com/Bergam0t) [![ORCID ID](book/assets/images/orcid.png)](https://orcid.org/0000-0002-9552-8988). **HSMA - Web Apps with Streamlit**. <https://webapps.hsma.co.uk/>.
+
+A `CITATION.cff` file is also provided.
