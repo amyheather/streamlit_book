@@ -37,6 +37,6 @@ quarto preview book
 
 Please cite this book as:
 
-> [Sammi Rosser](https://github.com/Bergam0t) [![ORCID ID](book/assets/images/orcid.png)](https://orcid.org/0000-0002-9552-8988). **HSMA - Web Apps with Streamlit**. <https://webapps.hsma.co.uk/>.
+> [Sammi Rosser](https://github.com/Bergam0t) [![ORCID ID](book/assets/images/orcid.png)](https://orcid.org/0000-0002-9552-8988) and [Amy Heather](https://github.com/amyheather) [![ORCID ID](book/assets/images/orcid.png)](https://orcid.org/0000-0002-6596-3479). **HSMA - Web Apps with Streamlit**. <https://webapps.hsma.co.uk/>.
 
 A `CITATION.cff` file is also provided.
