@@ -87,8 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-90358eb2e8b61fc133284e1b8bcd1ab4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/stlite/iframeResizer.min.js"></script>
 <script src="site_libs/quarto-contrib/stlite/stlite.js"></script>
 <link href="site_libs/quarto-contrib/stlite/style.css" rel="stylesheet">
@@ -910,7 +910,7 @@ cookieconsent.run({
 <section id="the-imports" class="level3" data-number="48.1.1">
 <h3 data-number="48.1.1" class="anchored" data-anchor-id="the-imports"><span class="header-section-number">48.1.1</span> The imports</h3>
 <p>We add in streamlit as one of our chosen imports.</p>
-<div id="2ecd2442" class="cell" data-execution_count="1">
+<div id="19fcc5e1" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># eval: false</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> simpy</span>
@@ -921,7 +921,7 @@ cookieconsent.run({
 <section id="the-introduction" class="level3" data-number="48.1.2">
 <h3 data-number="48.1.2" class="anchored" data-anchor-id="the-introduction"><span class="header-section-number">48.1.2</span> The introduction</h3>
 <p>Next, we add in some titles and explanatory text so that users will know what the app does.</p>
-<div id="af1e558f" class="cell" data-execution_count="2">
+<div id="054fba5b" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>st.title(<span class="st">"Simple One-Step DES"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>st.write(<span class="st">"In this discrete event simulation, patients arrive and are seen by a nurse in the order of arrival, then leave the system."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -942,7 +942,7 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p>Remember - this is what our g class looked like in the original code.</p>
-<div id="67f647de" class="cell" data-execution_count="3">
+<div id="08d8a77c" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Class to store global parameter values</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> g:</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    patient_inter <span class="op">=</span> <span class="dv">5</span></span>
@@ -953,7 +953,7 @@ Note
 </div>
 </div>
 </div>
-<div id="e4d2a58a" class="cell" data-execution_count="4">
+<div id="0e0c09f0" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>patient_iat_slider <span class="op">=</span> st.slider(<span class="st">"What is the average length of time between patients arriving?"</span>,</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                               min_value<span class="op">=</span><span class="dv">1</span>, max_value<span class="op">=</span><span class="dv">30</span>, value<span class="op">=</span><span class="dv">5</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -985,7 +985,7 @@ Note
 <h3 data-number="48.1.5" class="anchored" data-anchor-id="the-outputs"><span class="header-section-number">48.1.5</span> The outputs</h3>
 <p>Depending on whether our outputs are text, dataframes, or charts, we can display them with the appropriate streamlit command.</p>
 <p>For example, here we just have a Pandas dataframe summarising the results - so we’ll display that using the <code>st.dataframe</code> command.</p>
-<div id="fc37fab2" class="cell" data-execution_count="5">
+<div id="0a4bd1eb" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>st.dataframe(results_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1019,7 +1019,7 @@ Tip
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="bcee76a1" class="cell" data-execution_count="6">
+<div id="64e26a34" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> simpy</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>

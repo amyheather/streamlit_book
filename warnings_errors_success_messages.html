@@ -87,8 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-90358eb2e8b61fc133284e1b8bcd1ab4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/stlite/iframeResizer.min.js"></script>
 <script src="site_libs/quarto-contrib/stlite/stlite.js"></script>
 <link href="site_libs/quarto-contrib/stlite/style.css" rel="stylesheet">
@@ -890,7 +890,7 @@ cookieconsent.run({
 
 
 <p>Streamlit provides several options for displaying text with a background colour to help draw attention to it.</p>
-<div id="c8008f84" class="cell" data-execution_count="1">
+<div id="b3119ac6" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>st.success(<span class="st">"This is a good message!"</span>)</span>
@@ -921,7 +921,7 @@ Note
 <p>All of the above can also use optional icons.</p>
 <p>These icons can either be <a href="https://emojipedia.org/">emojis</a> or icons from <a href="https://fonts.google.com/icons?icon.set=Material+Symbols&amp;icon.style=Rounded">Google’s material-ui library</a>.</p>
 <p>To do this, you can just pass the icon to the icon argument.</p>
-<div id="1c2bcb43" class="cell" data-execution_count="2">
+<div id="2ec1b8db" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>st.success(<span class="st">"This is a good message!"</span>, icon<span class="op">=</span><span class="st">"🚨"</span>)</span>
@@ -937,7 +937,7 @@ Note
 <h2 data-number="5.2" class="anchored" data-anchor-id="using-conditional-logic-with-error-messages"><span class="header-section-number">5.2</span> Using conditional logic with error messages</h2>
 <p>Often you will want to display a different message depending on a user’s input or something similar.</p>
 <p>Here’s an example where the user’s input is checked to see if it can be divided exactly by 5. If it cannot, an error message is displayed. If it can be, a success message is displayed.</p>
-<div id="4785ddb5" class="cell" data-execution_count="3">
+<div id="6dd01636" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>users_number <span class="op">=</span> st.number_input(<span class="st">"Please enter a number that can be divided by 5 without leaving a remainder."</span>)</span>

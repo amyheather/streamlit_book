@@ -87,8 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-90358eb2e8b61fc133284e1b8bcd1ab4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -930,7 +930,7 @@ Tip
 </ul>
 </div>
 </div>
-<div id="53087209" class="cell" data-execution_count="1">
+<div id="08a4b5bb" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'your_number'</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    st.session_state.your_number <span class="op">=</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -939,7 +939,7 @@ Tip
 <h2 data-number="37.2" class="anchored" data-anchor-id="assigning-to-session-state-keys"><span class="header-section-number">37.2</span> Assigning to session state keys</h2>
 <p>Session state can be used to store a range of things.</p>
 <p>It can store the input given in a user input widget:</p>
-<div id="f56e4326" class="cell" data-execution_count="2">
+<div id="1144d999" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>st.session_state.your_number <span class="op">=</span> st.number_input(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Pick a number between 1 and 100"</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    min_value<span class="op">=</span><span class="dv">1</span>, max_value<span class="op">=</span><span class="dv">100</span>, value<span class="op">=</span><span class="va">None</span></span>
@@ -964,11 +964,11 @@ Tip
 </div>
 </div>
 <p>Or the result of a calculation (whether that’s a number, a dataframe, a graph, or something else)</p>
-<div id="a7752cfa" class="cell" data-execution_count="3">
+<div id="90fe6c8e" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>st.session_state.the_final_answer <span class="op">=</span> result <span class="op">*</span> <span class="dv">42</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The thing you’re saving to the state could itself optionally use something stored in the session state!</p>
-<div id="eab9cb1a" class="cell" data-execution_count="4">
+<div id="0c3c74f4" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>st.session_state.the_final_answer <span class="op">=</span> st.session_state.your_number <span class="op">*</span> <span class="dv">42</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -986,7 +986,7 @@ Tip
 <p>Try comparing the behaviour when moving between the different pages of the app.</p>
 <section id="app.py" class="level3" data-number="37.4.1">
 <h3 data-number="37.4.1" class="anchored" data-anchor-id="app.py"><span class="header-section-number">37.4.1</span> app.py</h3>
-<div id="e4ffc019" class="cell" data-execution_count="6">
+<div id="06ee49be" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>pg <span class="op">=</span> st.navigation([</span>
@@ -999,7 +999,7 @@ Tip
 </section>
 <section id="page_1.py" class="level3" data-number="37.4.2">
 <h3 data-number="37.4.2" class="anchored" data-anchor-id="page_1.py"><span class="header-section-number">37.4.2</span> page_1.py</h3>
-<div id="9f4836f5" class="cell" data-execution_count="7">
+<div id="d9c897f8" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'your_number'</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
@@ -1026,7 +1026,7 @@ Tip
 </section>
 <section id="page_2.py" class="level3" data-number="37.4.3">
 <h3 data-number="37.4.3" class="anchored" data-anchor-id="page_2.py"><span class="header-section-number">37.4.3</span> page_2.py</h3>
-<div id="2fb061e5" class="cell" data-execution_count="8">
+<div id="7e000657" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'your_number'</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>

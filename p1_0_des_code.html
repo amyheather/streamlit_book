@@ -87,8 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-90358eb2e8b61fc133284e1b8bcd1ab4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -910,7 +910,7 @@ Tip
 </div>
 <section id="the-starter-des-code" class="level3" data-number="47.0.1">
 <h3 data-number="47.0.1" class="anchored" data-anchor-id="the-starter-des-code"><span class="header-section-number">47.0.1</span> The starter DES code</h3>
-<div id="83cc8bc7" class="cell" data-execution_count="1">
+<div id="24ad554c" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> simpy</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -1095,200 +1095,192 @@ Tip
 <div class="cell-output cell-output-stdout">
 <pre><code>            Mean Q Time Nurse
 Run Number                   
-0                    8.856125
-1                    5.012641
-2                   26.851561
-3                   23.477299
-4                   16.497787</code></pre>
+0                   26.184865
+1                   27.544819
+2                    9.709975
+3                   26.749394
+4                   33.403068</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_4297/1146597976.py:161: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+<pre><code>/tmp/ipykernel_4033/1146597976.py:161: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   self.df_trial_results.set_index("Run Number", inplace=True)
-/tmp/ipykernel_4297/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+/tmp/ipykernel_4033/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   self.results_df.set_index("Patient ID", inplace=True)
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+/tmp/ipykernel_4033/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   self.results_df.set_index("Patient ID", inplace=True)
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+  self.results_df.at[patient.id, "Q Time Nurse"] = (
+/tmp/ipykernel_4033/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   self.results_df.set_index("Patient ID", inplace=True)
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+/tmp/ipykernel_4033/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   self.results_df.set_index("Patient ID", inplace=True)
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+  self.results_df.at[patient.id, "Q Time Nurse"] = (
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+  self.results_df.at[patient.id, "Q Time Nurse"] = (
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+  self.results_df.at[patient.id, "Q Time Nurse"] = (
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+  self.results_df.at[patient.id, "Q Time Nurse"] = (
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+  self.results_df.at[patient.id, "Q Time Nurse"] = (
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+  self.results_df.at[patient.id, "Q Time Nurse"] = (
+/tmp/ipykernel_4033/1146597976.py:47: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   self.results_df.set_index("Patient ID", inplace=True)
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
-  self.results_df.at[patient.id, "Q Time Nurse"] = (
-/tmp/ipykernel_4297/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
+/tmp/ipykernel_4033/1146597976.py:116: Pandas4Warning: Setting a value on a DataFrame via .at with a key that does not exist in the index is deprecated and will raise a KeyError in a future version. Use .loc instead.
   self.results_df.at[patient.id, "Q Time Nurse"] = (</code></pre>
 </div>
 </div>
