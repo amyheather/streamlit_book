@@ -702,14 +702,14 @@ with tab4:
 
         @st.cache_data
         def load_crime_data():
-            return geopandas.read_file("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/crime_dataset.gpkg")
+            return geopandas.read_file("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/crime_dataset.gpkg")
 
         lsoa_2011_crime_figures_df = load_crime_data()
 
         if show_code:
             ("""
 
-            lsoa_2011_crime_figures_df = geopandas.read_file("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/crime_dataset.gpkg")
+            lsoa_2011_crime_figures_df = geopandas.read_file("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/crime_dataset.gpkg")
              fig, ax = plt.subplots()
 
         lsoa_2011_crime_figures_df.plot(
@@ -761,7 +761,7 @@ with tab4:
         @st.cache_data
         def load_gp_data():
             return geopandas.read_file(
-            "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/gps_sw.gpkg"
+            "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/gps_sw.gpkg"
             )
 
         gp_list_gdf_sw = load_gp_data()
@@ -770,7 +770,7 @@ with tab4:
             st.code(
                 """
 gp_list_gdf_sw = geopandas.read_file(
-            "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/gps_sw.gpkg"
+            "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/gps_sw.gpkg"
             )
 
 gp_list_gdf_sw = gp_list_gdf_sw[~gp_list_gdf_sw['geometry'].is_empty]
@@ -942,7 +942,7 @@ with tab3:
         if show_code:
             st.code(
                 """
-            lsoa_2011_crime_figures_df = geopandas.read_file("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/crime_dataset.gpkg")
+            lsoa_2011_crime_figures_df = geopandas.read_file("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/crime_dataset.gpkg")
 
             fig, ax = plt.subplots()
 
@@ -972,7 +972,7 @@ with tab3:
         if show_code:
             st.code("""
         gp_list_gdf_sw = geopandas.read_file(
-            "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/gps_sw.gpkg"
+            "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/gps_sw.gpkg"
             )
         # Filter out instances with no geometry
         gp_list_gdf_sw = gp_list_gdf_sw[~gp_list_gdf_sw['geometry'].is_empty]

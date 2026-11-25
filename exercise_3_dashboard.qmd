@@ -155,7 +155,7 @@ selected_medal_type="Gold"
 
 medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
-country_outlines = geopandas.read_file("countries_outlines.geojson")
+country_outlines = geopandas.read_file("assets/geo/countries_outlines.geojson")
 
 medals_per_country_per_year_gdf = pd.concat([
     pd.merge(country_outlines, medals_per_country_per_year, left_on="id", right_on="NOC", how="inner"),
@@ -260,7 +260,7 @@ medals_per_country_per_year.head()
 ```{python}
 import geopandas
 
-country_outlines = geopandas.read_file("countries_outlines.geojson")
+country_outlines = geopandas.read_file("assets/geo/countries_outlines.geojson")
 
 country_outlines.plot()
 ```
@@ -691,7 +691,7 @@ selected_medal_type="Bronze"
 
 medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
-country_outlines = geopandas.read_file("countries_outlines.geojson")
+country_outlines = geopandas.read_file("assets/geo/countries_outlines.geojson")
 
 medals_per_country_per_year_gdf = pd.concat([
     pd.merge(country_outlines, medals_per_country_per_year, left_on="id", right_on="NOC", how="inner"),
@@ -719,7 +719,7 @@ selected_medal_type="Bronze"
 
 medals_per_country_per_year = pd.read_csv("datasets/medals_per_country_per_year.csv")
 
-country_outlines = geopandas.read_file("countries_outlines.geojson")
+country_outlines = geopandas.read_file("assets/geo/countries_outlines.geojson")
 
 medals_per_country_per_year_gdf = pd.concat([
     pd.merge(country_outlines, medals_per_country_per_year, left_on="id", right_on="NOC", how="inner"),
