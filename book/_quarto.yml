@@ -1,6 +1,5 @@
 project:
   type: book
-  output-dir: docs
 book:
   title: HSMA - Web Apps with Streamlit
   author: Sammi Rosser
@@ -131,8 +130,6 @@ book:
 bibliography: assets/references.bib
 format:
   html:
-    execute:
-      freeze: auto
     theme:
       dark:
       - darkly

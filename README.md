@@ -19,6 +19,6 @@ pip install -r requirements.txt
 To build and preview the book:
 
 ```
-quarto render
-quarto preview
+quarto render book
+quarto preview book
 ```
