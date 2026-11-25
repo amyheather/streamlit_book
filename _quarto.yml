@@ -108,7 +108,7 @@ book:
     - other_examples.qmd
     - cheat_sheet.qmd
   cover-image: assets/images/cover_image_robot.jpeg
-  favicon: resources/logos/hsma_logo_transparent_background_large.png
+  favicon: assets/images/hsma_logo_transparent_background_large.png
   search: true
   page-navigation: true
   back-to-top-navigation: true
@@ -126,7 +126,7 @@ book:
   sidebar:
     search: true
     style: docked
-    logo: resources/logos/hsma_logo_transparent_background_large.png
+    logo: assets/images/hsma_logo_transparent_background_large.png
     background: '#111111'
 bibliography: assets/references.bib
 format:
