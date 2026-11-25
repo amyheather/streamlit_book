@@ -138,11 +138,11 @@ format:
     theme:
       dark:
       - darkly
-      - theme-dark.scss
-      - resources/fonts/css/lexend.css
+      - assets/css/theme-dark.scss
+      - assets/fonts/css/lexend.css
       light:
       - flatly
-      - theme-light.scss
-      - resources/fonts/css/lexend.css
+      - assets/css/theme-light.scss
+      - assets/fonts/css/lexend.css
     grid:
       sidebar-width: 250px
