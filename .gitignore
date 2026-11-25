@@ -12,8 +12,11 @@ test/archive/Datafiniti_Hotel_Reviews.csv
 *.pyc
 test_cache.py
 example_apps/writing_google_sheet/.streamlit/secrets.toml
+plotly_chart.html
+plotly_map_gp.html
 
 **/*.quarto_ipynb
 
 docs/
 _freeze/
+site_libs/
