@@ -4,17 +4,6 @@ filters:
   - whitphx/stlite
 ---
 
-```{r, echo = FALSE, results='asis'}
-#| label: setupwebex
-knitr::opts_chunk$set(echo = FALSE)
-
-# Uncomment to change widget colours:
-# style_widgets(
-#    # incorrect = "goldenrod", correct = "purple", highlight = "firebrick",
-#    feedback="mediumorchid"
-#    )
-```
-
 Streamlit apps are remarkably simple to initialise!
 
 Let's create a web app that just has a heading.
