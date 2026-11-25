@@ -1,34 +1,38 @@
 # Preface {.unnumbered}
 
-Welcome to this book accompanying the Streamlit sessions of module 7 of the HSMA programme.
+Welcome! This book is a feature-by-feature guide to building Python web apps with Streamlit. It accompanies the Streamlit sessions in HSMA-7 (Health Service Modelling Associates Programme 7):
 
-In this module we introduce the Streamlit framework for web app development.
+* [Module 2G: Creating a DES interface with Streamlit — Part 1](https://hsma-programme.github.io/hsma7_2g_streamlit_part1)
+* [Module 2H: Creating a DES interface with Streamlit — Part 2](https://hsma-programme.github.io/hsma7_2h_streamlit_part2)
 
-Streamlit is a popular Python web framework that allows powerful and professional looking data apps to be created in hours instead of weeks.
+## How to use this book
 
-In this book, we will introduce some of the key features of Streamlit and how to start putting them together to make more complex apps.
+In the module sessions, we build an interface for a discrete-event simulation (DES) model, introducing Streamlit features as we need them.
 
+This book takes a different approach. It explores individual Streamlit features through focused explanations and examples, with less emphasis on DES. You can use it to revisit a topic from the sessions, try out a particular feature, or find an example to adapt for your own app.
+
+If you are an HSMA student, we recommend following the module sessions to understand how the features fit together into a DES app, and using this book as a reference when you want to explore them individually.
+
+You do not necessarily need to read the book from beginning to end: dip into the topics that are useful to you.
 
 ## stlite
 
-Many examples throughout this book use the stlite framework and the stlite-quarto extension, which allows running of streamlit apps directly on the browser of the reader rather than hosting each app remotely.
+Many examples in this book use the  [stlite](https://github.com/whitphx/stlite) framework and the [stlite extension for Quarto](https://github.com/whitphx/quarto-stlite), which allows example streamlit apps to run in your browser.
 
 This does mean that the app examples within each page do take a while to load, and you may not want to read this book cover-to-cover if you are on, say, a mobile network - each example will load several megabytes of data to be able to render.
 
+<br>
 
-## Acknowledgements
+::: {.callout-note collapse="true"}
+## Dataset acknowledgements
 
-### Datasets
+### Palmer Penguins
 
-#### Name Popularity
+Several examples use the Palmer Penguins dataset, loaded through the [`palmerpenguins` Python package](https://github.com/mcnakhaee/palmerpenguins).
 
-The name popularity dataset used in several examples was created by
-
-
-#### Palmer Penguins
-
-The palmer penguins dataset is loaded via the `palmerpenguins` library available [here](https://github.com/mcnakhaee/palmerpenguins). Credit goes to [Muhammad Chenariyan Nakhaee](https://github.com/mcnakhaee) for the Python port, and Allison Horst, Alison Hill, and Kristen Gorman for the [original dataset and R package](https://allisonhorst.github.io/palmerpenguins/).
+We thank Muhammad Chenariyan Nakhaee for the Python port, and Allison Horst, Alison Hill and Kristen Gorman for the [original R package](https://allisonhorst.github.io/palmerpenguins/). The data were collected and made available by Dr Kristen Gorman and the Palmer Station Antarctica Long Term Ecological Research (LTER) programme.
 
 ```
 Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. https://allisonhorst.github.io/palmerpenguins/. doi: 10.5281/zenodo.3960218.
 ```
+:::
