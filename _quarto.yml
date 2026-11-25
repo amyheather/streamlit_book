@@ -133,8 +133,6 @@ format:
   html:
     execute:
       freeze: auto
-    css: include/webex.css
-    include-after-body: include/webex.js
     theme:
       dark:
       - darkly
