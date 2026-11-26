@@ -1,8 +1,10 @@
 ---
-title: "Persisting Data Across Pages and Runs with Session State"
+title: "Persisting data across pages and runs with session state"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 One limitation we’ve mentioned of multipage apps is that variables do not persist across the different pages.
 
@@ -11,6 +13,8 @@ Once you switch pages, all of that information is lost!
 However - you can use session state to remember things across multiple pages or multiple runs of the same app.
 
 It doesn’t help with remembering information when leaving or fully reloading the page.
+
+<br>
 
 ## Initialising session state keys
 
@@ -33,6 +37,8 @@ You need to do this on every page of your app where you will do either of the fo
 if 'your_number' not in st.session_state:
     st.session_state.your_number = None
 ```
+
+<br>
 
 ## Assigning to session state keys
 
@@ -73,22 +79,17 @@ The thing you’re saving to the state could itself optionally use something sto
 st.session_state.the_final_answer = st.session_state.your_number * 42
 ```
 
+<br>
 
 ## Using the session state
 
 You can then access the session state key regardless of the page you are using it on!
 
-```{python}
-#| eval: false
-
-
-```
-
-
-
 Just remember - you need to check for whether the key exists in the session state anywhere you are setting or using the key, and set a default value for it if it doesn’t already exist.
 
 When your app is deployed, a user could open the app on a page that means they are trying to view the stored session state key before they’ve had a chance to actually input a value - so think about how you could use conditional logic (if/elif/else) to handle this gracefully.
+
+<br>
 
 ## A more complex multipage example
 
@@ -100,7 +101,7 @@ We'll have a text input for the user's name which doesn't make use of session st
 
 Try comparing the behaviour when moving between the different pages of the app.
 
-### app.py
+### `app.py`
 
 ```{python}
 #| eval: false
@@ -114,7 +115,7 @@ pg = st.navigation([
 pg.run()
 ```
 
-### page_1.py
+### `page_1.py`
 
 ```{python}
 #| eval: false
@@ -145,7 +146,7 @@ name_input = st.text_input("Enter Your Name")
 ```
 
 
-### page_2.py
+### `page_2.py`
 
 ```{python}
 #| eval: false
@@ -175,11 +176,12 @@ except:
 
 ```
 
+### Sample app
 
 :::{.callout-note}
 The sample app linked below also uses a concept known as `callbacks`, which is often used with session state, to make the button increment work. Head to the callbacks chapter to find out more!
 :::
 
 ```{=html}
-<iframe width="780" height="800" src="https://session-state-callbacks-examples-hsma.streamlit.app/" title="Session State example"></iframe>
+<iframe width="100%" height="600" src="https://session-state-callbacks-examples-hsma.streamlit.app/?embed=true" title="Session State example"></iframe>
 ```

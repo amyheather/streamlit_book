@@ -7,6 +7,8 @@ filters:
   - whitphx/stlite
 ---
 
+<br>
+
 We often want to load data files into Streamlit.
 
 There are two main issues we might run into
@@ -28,9 +30,11 @@ To switch from doing a standard data import to using caching, we
 
 We can then just use our dataframe like normal - Streamlit will handle the awkward bits.
 
-## A Caching Code Example
+<br>
 
-### Without Caching
+## A caching code example
+
+### Without caching
 
 ```{python}
 #| eval: false
@@ -42,7 +46,9 @@ athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 st.dataframe(athlete_statistics)
 ```
 
-### Loading in the Same Dataset with Caching
+<br>
+
+### Loading in the same dataset with caching
 
 ```{python}
 #| eval: false
@@ -58,7 +64,9 @@ athlete_statistics = load_data()
 st.dataframe(athlete_statistics)
 ```
 
-## How Does Caching Affect the App?
+<br>
+
+## How does caching affect the app?
 
 When a dataset is cached, this means it will almost be excluded from the top-to-bottom running of the app.
 
@@ -72,24 +80,29 @@ Here is an example of the same app with and without caching so you can compare p
 In this example, the performance improvement is very minor due to the small size of the dataset. With larger datasets with tens of thousands of rows or geodataframes that often contain complex information of 20+ mb, then the performance difference is significantly bigger.
 :::
 
-### Without Caching
+<br>
+
+### Without caching
 
 ```{=html}
-<iframe width="780" height="500" src="https://hsma-app-without-caching.streamlit.app/" title="Quarto Components"></iframe>
+<iframe width="100%" height="500" src="https://hsma-app-without-caching.streamlit.app/" title="Quarto Components"></iframe>
 ```
 
 [Click here to load the app in a new page](https://hsma-app-without-caching.streamlit.app/)
 
-### With Caching
+<br>
+
+### With caching
 
 ```{=html}
-<iframe width="780" height="500" src="https://hsma-app-with-caching.streamlit.app/" title="Quarto Components"></iframe>
+<iframe width="100%" height="500" src="https://hsma-app-with-caching.streamlit.app/" title="Quarto Components"></iframe>
 ```
 
 [Click here to load the app in a new page](https://hsma-app-with-caching.streamlit.app/)
 
+<br>
 
-## Caching Other Steps
+## Caching other steps
 
 If you have certain actions that take a long time, then you may wish to cache those too.
 
@@ -118,15 +131,19 @@ clean_athlete_statistics = clean_data()
 st.dataframe(clean_athlete_statistics)
 ```
 
-## Caching Types: Data vs Resources
+<br>
+
+## Caching types: data vs resource
 
 Caching can also be used for other large files - for example, if you wanted to load in a trained machine learning model that’s the same for all users who will interact with your app.
 
-![](assets/images/2024-09-16-23-10-39.png)
+![](assets/images/2024-09-16-23-10-39.png){.box}
 
 It’s not always obvious which to use, so head to [the Streamlit documentation](https://docs.streamlit.io/develop/concepts/architecture/caching#deciding-which-caching-decorator-to-use) if you’re a bit unsure.
 
-## Caching Functions with Parameters
+<br>
+
+## Caching functions with parameters
 
 While using caching for the initial load of a dataframe, it can also make sense to use it for other long-running functions.
 
@@ -138,6 +155,8 @@ Streamlit will be able to look at the parameters passed in and tell whether it s
 - run the function (because it’s a new set of parameters that it doesn’t already have a saved output for in its cache)
 
 * There are a few complexities around parameters that you may want to look into if using this in your own app: https://docs.streamlit.io/develop/concepts/architecture/caching#excluding-input-parameters
+
+<br>
 
 ## Caching settings
 
@@ -171,6 +190,6 @@ def your_function_here():
 
 This also prevents your cache from becoming very large.
 
-## Further Caching Settings
+### Further caching settings
 
 Additional caching settings can be explored [in the documentation](https://docs.streamlit.io/develop/concepts/architecture/caching).

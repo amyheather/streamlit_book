@@ -2,6 +2,8 @@
 title: Persisting data between sessions
 ---
 
+<br>
+
 :::{.callout-warning}
 This section is a work in progress - it will be enhanced further with detailed instructions at a later date
 :::
@@ -9,6 +11,8 @@ This section is a work in progress - it will be enhanced further with detailed i
 Because of how Streamlit apps run when deployed on something like Streamlit cloud or an alternative platform like Heroku - data you write to something like a csv in a relative folder to your app will not persist indefinitely.
 
 This means that for some apps you may find yourself in the situation of needing a place to read and write from outside of the Streamlit ecosystem.
+
+<br>
 
 ## TiDB cloud
 
@@ -23,11 +27,15 @@ TiDB cloud has been certified to a range of standards including SOC 1 Type 2, SO
 However, you should still consult with all relevant departments in your organisation before using it for any data of a sensitive nature.
 :::
 
+<br>
+
 ## Supabase
 
 Supabase has been confirmed recently as a working option. A code example will follow shortly.
 
-## Google Sheets
+<br>
+
+## Google sheets
 
 ### Reading
 
@@ -38,13 +46,13 @@ Public google sheets can be easily read from using the `st-gsheets-connection` e
 This app shows an example of reading from a google sheet.
 
 ```{=html}
-<iframe width="780" height="500" src="https://hsma-g-sheets-app-read.streamlit.app/" title="Quarto Components"></iframe>
+<iframe width="100%" height="500" src="https://hsma-g-sheets-app-read.streamlit.app/?embed=true" title="Quarto Components"></iframe>
 ```
 In this example app, the URL to the sheet is stored inside a `secrets.toml` file, which is stored in a `.streamlit` folder when running locally and would generally not be committed to github.
 
 When deploying this to the community cloud, you click into 'advanced settings' when deploying your app and paste the contents of the secrets file there.
 
-### App Code
+### App code
 
 ```{python}
 #| eval: false
@@ -86,15 +94,15 @@ st-gsheets-connection
 
 :::
 
-### Writing + Private Sheets
+### Writing and private sheets
 
 To either read from a private sheet, or write to a public or private sheet, you will need to undertake some additional steps using the Google
 
 ```{=html}
-<iframe width="780" height="500" src="https://hsma-g-sheets-app-write.streamlit.app/" title="Quarto Components"></iframe>
+<iframe width="100%" height="500" src="https://hsma-g-sheets-app-write.streamlit.app/?embed=true" title="Quarto Components"></iframe>
 ```
 
-### App Code
+### App code
 
 ```{python}
 #| eval: false
@@ -155,7 +163,7 @@ if st.button("Update worksheet"):
 ```
 
 
-### Example Secrets File
+### Example secrets file
 
 :::{.callout-warning}
 The credentials in this code snippet aren't real - this is just to give you an idea of the file structure.
@@ -191,6 +199,7 @@ st-gsheets-connection
 
 :::
 
+<br>
 
 ## Writing to an internal database
 
