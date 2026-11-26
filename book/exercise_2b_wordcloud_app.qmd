@@ -1,5 +1,7 @@
 # Exercise 2b: Wordcloudy with a chance of meatballs
 
+<br>
+
 A few weeks ago you created some excellent wordclouds.
 
 I imagine all your friends now want to create wordclouds too - but they don’t have any Python knowledge.

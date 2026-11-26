@@ -1,4 +1,6 @@
-# Exercise 2a: Hello Streamlit!
+# Exercise 2a: Hello streamlit!
+
+<br>
 
 Your first task is to just create and run a simple Streamlit app.
 

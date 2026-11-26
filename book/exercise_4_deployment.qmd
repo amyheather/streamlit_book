@@ -1,4 +1,6 @@
-# Exercise 7: Take Me To The Clouds Above
+# Exercise 4: Take me to the clouds above
+
+<br>
 
 The final task of the day is deploying an app.
 

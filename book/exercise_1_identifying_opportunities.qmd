@@ -1,4 +1,6 @@
-# Exercise 1: Into the Future
+# Exercise 1: Into the future
+
+<br>
 
 Spend some time thinking about opportunities for web apps in your organisation.
 
