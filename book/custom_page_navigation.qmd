@@ -1,8 +1,10 @@
 ---
-title: "Custom Page Navigation Buttons"
+title: "Custom page navigation buttons"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 The `st.switch_page()` function allows for additional custom navigation within an app.
 
@@ -18,7 +20,8 @@ if st.button("String denoting what appears on the button"):
   st.switch_page("page_to_switch_to.py")
 ```
 
-### Example App Using st.switch_page
+
+## Example app using `st.switch_page`
 
 Here is an example app.
 
@@ -30,11 +33,13 @@ Here is an example app.
 
 In this app, we have a folder structure like so:
 
-![](assets/images/2024-09-30-14-52-45.png)
+![](assets/images/2024-09-30-14-52-45.png){.box}
 
-We then set up each page as follows:
+We then set up each page as follows...
 
-### app.py
+<br>
+
+### `app.py`
 
 *This is unchanged from our original multipage app*
 
@@ -52,7 +57,9 @@ pg.run()
 
 ```
 
-### home_page.py
+<br>
+
+### `home_page.py`
 
 ```{python}
 #| eval: false
@@ -67,7 +74,9 @@ if st.button("Click here to head to the simulation page"):
 
 ```
 
-### des_page.py
+<br>
+
+### `des_page.py`
 
 ```{python}
 #| eval: false

@@ -1,8 +1,10 @@
 ---
-title: "Partial Reruns (fragments)"
+title: "Partial reruns (fragments)"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 Partial reruns are a faily new feature in Streamlit that allow you to break out of the traditional top-to-bottom rerun pattern of a Streamlit app.
 
@@ -56,7 +58,7 @@ await micropip.install("palmerpenguins")
 await micropip.install("plotly")
 import streamlit as st
 from palmerpenguins import load_penguins
-import plotly.express as px
+from plotly import express as px
 import asyncio
 
 penguins = load_penguins()
@@ -87,11 +89,14 @@ with app_column_2:
     st.plotly_chart(fig)
 ```
 
-## The Partial Rerun Decorator
+<br>
+
+## The partial rerun decorator
 
 Now let's rewrite this using the fragment code.
 
 ```{python}
+#| eval: False
 import streamlit as st
 from palmerpenguins import load_penguins
 import plotly.express as px
@@ -141,16 +146,12 @@ with app_column_2:
 4. Using the `with` notation with the first column we created, we then call our first function.
 5. We then repeat this for the second column and second function.
 
-:::{.callout-note}
-As the fragments feature is so new as of writing this book, it has not yet been integrated into the library we use for displaying the example apps.
-
-Instead, you can view the output of this code in the embedded webpage below.
-:::
+<br>
 
 Notice that now when we change the parameters in the drop-down select boxes, only half of the app fades out - indicating that only half of the app is updating at a time; each half of the page can now act independently of the other.
 
 [Click here to open the example app if it does not load in the box below](https://penguins-partial-rerun-example.streamlit.app?embed=true)
 
 ```{=html}
-<iframe width="900" height="900" src="https://penguins-partial-rerun-example.streamlit.app?embed=true" title="Partial Rerun Example"></iframe>
+<iframe width="100%" height="600" src="https://penguins-partial-rerun-example.streamlit.app?embed=true" title="Partial Rerun Example"></iframe>
 ```
