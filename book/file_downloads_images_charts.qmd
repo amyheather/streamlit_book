@@ -1,14 +1,22 @@
 ---
-title: "Downloading Images and Charts"
+title: "Downloading images and charts"
 filters:
   - whitphx/stlite
 ---
 
-### Matplotlib
+<br>
+
+## Matplotlib
 
 We can provide two possible ways of downloading the output of a matplotlib plot.
 
-The first involves saving the resulting plot to a file, then serving that file to the user. This is a reliable and simple method that is probably the best to use in most situations - it will generally work even when the file is deployed.
+1. Saving the plot to a file, then serving that file to the user.
+2. Saving the plot to temporary memory, then serving that instead.
+
+<br>
+
+### Saving the plot to a file
+This is a reliable and simple method that is probably the best to use in most situations - it will generally work even when the file is deployed.
 
 ```{python}
 #| eval: false
@@ -42,10 +50,11 @@ with open(filename, "rb") as img:
 ```{stlite-python}
 import micropip
 await micropip.install("setuptools")
+await micropip.install("matplotlib")
 await micropip.install("palmerpenguins")
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 from palmerpenguins import load_penguins
 
 penguins = load_penguins()
@@ -70,9 +79,11 @@ with open(filename, "rb") as img:
 
 ```
 
-:::{.callout-note collapse="true"}
-#### Advanced Method
-The second involves saving the image to tempory memory, then serving that instead.
+<br>
+
+### Saving the plot to temporary memory
+
+::: {.callout-note collapse="true" title="Advanced method"}
 
 ```{python}
 #| eval: false
@@ -108,9 +119,10 @@ btn = st.download_button(
 import micropip
 await micropip.install("setuptools")
 await micropip.install("palmerpenguins")
+await micropip.install("matplotlib")
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 from palmerpenguins import load_penguins
 from io import BytesIO
 
@@ -137,7 +149,9 @@ btn = st.download_button(
 ```
 :::
 
-#### Wordcloud Example
+<br>
+
+## Wordcloud
 
 The popular `wordcloud` package is actually using matplotlib for its plotting!
 
@@ -201,12 +215,14 @@ with open("wordcloud.png", "rb") as file:
 ```
 
 ```{stlite-python}
-import streamlit as st
 import micropip
 await micropip.install("wordcloud")
+await micropip.install("matplotlib")
+
+import streamlit as st
 from wordcloud import WordCloud, STOPWORDS
 import string
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 stopwords = set(STOPWORDS)
 
@@ -256,7 +272,9 @@ with open("wordcloud.png", "rb") as file:
 
 ```
 
-### Seaborn
+<br>
+
+## Seaborn
 
 Saving the file and then serving this is a good way to work with seaborn as well.
 
@@ -329,21 +347,25 @@ with open("boxplot_sns_penguins.png", "rb") as file:
     )
 ```
 
+<br>
 
-### Plotly
+## Plotly
 
 Plotly is a bit different because the plots it produces are interactive - but it is possible to save this too.
 
 The resulting file is completely self-contained and can even be used offline. The file could be emailed or placed on a shared site like sharepoint or google drive and would work - though sometimes it requires the user to download the html file to their own machine for it to display correctly rather than just previewing the underlying html data, depending on the platform.
 
+<br>
 
-#### Built-in method for downloading static plots
+### Built-in method for downloading static plots
 
 When using plotly, users can hover over the plot and choose 'Download plot as a png'.
 
-![](assets/images/2024-08-12-19-54-14.png)
+![](assets/images/2024-08-12-19-54-14.png){.box}
 
-#### Downloading the interactive plots
+<br>
+
+### Downloading the interactive plots
 
 ```{python}
 #| eval: False
@@ -360,7 +382,7 @@ col_1 = st.selectbox("Select the column to use for the x axis", axis_options)
 
 axis_options.remove(col_1)
 
-col_2 = st.selectbox("Select the column to use for the x axis", axis_options)
+col_2 = st.selectbox("Select the column to use for the y axis", axis_options)
 
 color_factor = st.selectbox("Select the column to colour the chart by",
 ["species", "sex", "island"])
@@ -388,7 +410,7 @@ await micropip.install("palmerpenguins")
 await micropip.install("plotly")
 import streamlit as st
 from palmerpenguins import load_penguins
-import plotly.express as px
+from plotly import express as px
 
 penguins = load_penguins()
 
@@ -399,7 +421,7 @@ col_1 = st.selectbox("Select the column to use for the x axis", axis_options)
 
 axis_options.remove(col_1)
 
-col_2 = st.selectbox("Select the column to use for the x axis", axis_options)
+col_2 = st.selectbox("Select the column to use for the y axis", axis_options)
 
 color_factor = st.selectbox("Select the column to colour the chart by",
 ["species", "sex", "island"])
@@ -420,8 +442,7 @@ with open("plotly_chart.html", "rb") as file:
     )
 ```
 
-:::{.callout-note collapse="true"}
-##### Advanced Method
+:::{.callout-note collapse="true" title="Advanced method"}
 
 We could once again use `StringIO` to save the chart html temporarily to memory, then write that to a html file when the user clicks on a download button, as opposed to actually saving the file to a html file on our storage wherever our app is running and then serving that file.
 
@@ -431,7 +452,9 @@ That is slightly more complex with Plotly; you could attempt to adapt the code i
 
 :::
 
-#### Static outputs with a download button
+<br>
+
+### Static outputs with a download button
 
 With some additional libraries, it becomes possible to output static images when using plotly, which can give you additional control over things like the filetype and filename.
 
@@ -466,7 +489,7 @@ col_1 = st.selectbox("Select the column to use for the x axis", axis_options)
 
 axis_options.remove(col_1)
 
-col_2 = st.selectbox("Select the column to use for the x axis", axis_options)
+col_2 = st.selectbox("Select the column to use for the y axis", axis_options)
 
 color_factor = st.selectbox("Select the column to colour the chart by",
 ["species", "sex", "island"])
@@ -482,7 +505,7 @@ with open("temp.png", "rb") as img:
         label='Download This Plot as an Static Image File',
         data=fig.to_image(engine='kaleido'),
         file_name=f'{col_1}_vs_{col_2}_by_{color_factor}.png',
-        mime='img/png'
+        mime='image/png'
     )
 
 ```
