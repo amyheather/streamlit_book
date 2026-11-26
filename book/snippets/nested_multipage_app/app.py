@@ -10,8 +10,8 @@ pg = st.navigation(
     {
         "Section 1": [homepage],
         "Section 2": [info_page, trends_page],
-        "Section 3": [explorer_page, theming_page]
+        "Section 3": [explorer_page, theming_page],
     }
-     )
+)
 
 pg.run()

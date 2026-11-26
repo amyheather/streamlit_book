@@ -1,33 +1,33 @@
-import streamlit as st
-import pandas as pd
-from palmerpenguins import load_penguins
-import xlsxwriter
-from io import BytesIO
-import matplotlib.pyplot as plt
-import plotly.express as px
-import geopandas
-import folium
-from streamlit_folium import st_folium
 from datetime import datetime, time
+from io import BytesIO
 
+import folium
+import geopandas
+import matplotlib.pyplot as plt
+import pandas as pd
+import plotly.express as px
+import streamlit as st
+from palmerpenguins import load_penguins
+from streamlit_folium import st_folium
 
 st.set_page_config(layout="wide")
 
 show_code = st.toggle("Click to show or hide the code", value=True)
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(
-    ["Headers, Text, Markdown and Messages",
-    "User Inputs",
-    "Dataframes, Charts, Metrics and Maps",
-    "Upload and Download Buttons",
-    "Other Media"
-    ])
+    [
+        "Headers, Text, Markdown and Messages",
+        "User Inputs",
+        "Dataframes, Charts, Metrics and Maps",
+        "Upload and Download Buttons",
+        "Other Media",
+    ]
+)
 
 with tab1:
-
     if show_code:
         st.code(
-    '''
+            """
     st.header("Titles and text")
 
     st.title("This is a title")
@@ -42,7 +42,7 @@ with tab1:
 
     st.header("Markdown")
 
-    '''
+    """
         )
 
     st.header("Titles and text")
@@ -61,7 +61,7 @@ with tab1:
 
     if show_code:
         st.code(
-    '''
+            '''
     st.markdown("# This is header level 1")
 
     st.markdown("## This is header level 2")
@@ -121,7 +121,9 @@ with tab1:
 
     st.markdown("You can colour text :red[text to be colored]")
 
-    st.markdown("Or colour the background of text :green-background[text to be colored]")
+    st.markdown(
+        "Or colour the background of text :green-background[text to be colored]"
+    )
 
     st.markdown("""
     You can also do multiline text.
@@ -138,7 +140,7 @@ with tab1:
 
     if show_code:
         st.code(
-    '''
+            """
     st.error("This is an error")
 
     st.warning("This is a warning")
@@ -146,7 +148,7 @@ with tab1:
     st.success("This is a good message")
 
     st.info("This is an informational message")
-    '''
+    """
         )
 
     st.error("This is an error")
@@ -158,13 +160,47 @@ with tab1:
     st.info("This is an informational message")
 
 with tab2:
-
-    taba, tabb, tabc, tabd, tabe, tabf, tabg, tabh, tabi, tabj, tabk, tabl, tabm, tabn, tabo, tabp, tabq, tabr = st.tabs([
-        "Numeric Input", "Numeric Slider", "Range Slider", "Time Slider", "Date Slider",
-        "Date Range Slider", "Time Range Slider", "Datetime Slider", "Calendar Picker", "Time Picker",
-        "Long Text Input", "Short Text Input", "Radio Select", "Single Select", "Multiselect",
-        "Select Slider", "Checkbox", "Toggle"
-    ])
+    (
+        taba,
+        tabb,
+        tabc,
+        tabd,
+        tabe,
+        tabf,
+        tabg,
+        tabh,
+        tabi,
+        tabj,
+        tabk,
+        tabl,
+        tabm,
+        tabn,
+        tabo,
+        tabp,
+        tabq,
+        tabr,
+    ) = st.tabs(
+        [
+            "Numeric Input",
+            "Numeric Slider",
+            "Range Slider",
+            "Time Slider",
+            "Date Slider",
+            "Date Range Slider",
+            "Time Range Slider",
+            "Datetime Slider",
+            "Calendar Picker",
+            "Time Picker",
+            "Long Text Input",
+            "Short Text Input",
+            "Radio Select",
+            "Single Select",
+            "Multiselect",
+            "Select Slider",
+            "Checkbox",
+            "Toggle",
+        ]
+    )
 
     with taba:
         st.subheader("Numeric Input")
@@ -201,13 +237,17 @@ with tab2:
                 """
             )
 
-        chosen_number_slider = st.slider("Pick a Number on the slider", min_value=0, max_value=250, value=50)
+        chosen_number_slider = st.slider(
+            "Pick a Number on the slider", min_value=0, max_value=250, value=50
+        )
 
         st.write(f"The number you have chosen is {chosen_number_slider}")
 
         chosen_number_slider_multiplied_by_8 = chosen_number * 8
 
-        st.write(f"Your number multiplied by 8 is {chosen_number_slider_multiplied_by_8}")
+        st.write(
+            f"Your number multiplied by 8 is {chosen_number_slider_multiplied_by_8}"
+        )
 
         st.write(f"Your number plus 3 is {chosen_number_slider + 3}")
 
@@ -219,7 +259,9 @@ with tab2:
             lower_value, upper_value = st.slider("Pick a lower and upper limit",  min_value=0, max_value=100, value=(35, 80))
             """)
 
-        lower_value, upper_value = st.slider("Pick a lower and upper limit",  min_value=0, max_value=100, value=(35, 80))
+        lower_value, upper_value = st.slider(
+            "Pick a lower and upper limit", min_value=0, max_value=100, value=(35, 80)
+        )
 
         st.write(f"Your inputs are {lower_value} and {upper_value}")
         st.write(f"They are of type {type(lower_value)} and {type(upper_value)}")
@@ -234,9 +276,7 @@ with tab2:
             )
             """)
 
-        chosen_time = st.slider(
-            "Select a time:", time(11, 30)
-        )
+        chosen_time = st.slider("Select a time:", time(11, 30))
 
         st.write(f"Your input is {chosen_time}")
         st.write(f"It is of type {type(chosen_time)}")
@@ -277,7 +317,6 @@ with tab2:
         start_date, end_date = st.slider(
             "Select a date?",
             value=(datetime(2022, 1, 1), datetime(2023, 6, 1)),
-
             format="DD/MM/YYYY",
         )
 
@@ -358,7 +397,9 @@ with tab2:
                 )
             """)
 
-        longer_text_input = st.text_area("Use this input to enter a larger piece of text")
+        longer_text_input = st.text_area(
+            "Use this input to enter a larger piece of text"
+        )
 
         st.write(f"Your input is {longer_text_input}")
         st.write(f"It is of type {type(longer_text_input)}")
@@ -372,7 +413,9 @@ with tab2:
                 )
             """)
 
-        shorter_text_input = st.text_input("We saw this before - this is an input for a short bit of text")
+        shorter_text_input = st.text_input(
+            "We saw this before - this is an input for a short bit of text"
+        )
 
         st.write(f"Your input is {shorter_text_input}")
         st.write(f"It is of type {type(shorter_text_input)}")
@@ -397,12 +440,11 @@ with tab2:
 
         radio_colour_select = st.radio(
             "Which of these colours is your favourite?", options=colour_options
-            )
+        )
 
     with tabn:
-
         if show_code:
-                st.code("""
+            st.code("""
                 colour_options = ["Green", "Blue", "Red", "Yellow", "Purple"]
                 """)
 
@@ -419,12 +461,10 @@ with tab2:
             """)
 
         selectbox_colour_select = st.selectbox(
-            "Which of these colours is your favourite?",
-            options=colour_options
-            )
+            "Which of these colours is your favourite?", options=colour_options
+        )
 
     with tabo:
-
         if show_code:
             st.code("""
             colour_options = ["Green", "Blue", "Red", "Yellow", "Purple"]
@@ -447,11 +487,10 @@ with tab2:
 
         multiselect_colour_select = st.multiselect(
             "Which of these colours are your favourite? You can pick more than one!",
-            options=colour_options
-            )
+            options=colour_options,
+        )
 
     with tabp:
-
         if show_code:
             st.code("""
             colour_options = ["Green", "Blue", "Red", "Yellow", "Purple"]
@@ -470,7 +509,7 @@ with tab2:
 
         slider_colour_select = st.select_slider(
             "Which of these colours is your favourite?", options=colour_options
-            )
+        )
 
     with tabq:
         st.subheader("Checkbox")
@@ -480,8 +519,7 @@ with tab2:
             checkbox_value = st.checkbox(
                 "Tick or untick me!"
                 )
-            """
-            )
+            """)
 
         checkbox_value = st.checkbox("Tick or untick me!")
 
@@ -501,18 +539,24 @@ with tab2:
 
 
 with tab4:
-
-    tabaa, tabbb, tabcc, tabdd, tabee, tabff, tabgg = st.tabs([
-        "Uploads", "Download - CSV", "Download - Excel", "Download - Matplotlib", "Download - Plotly",
-        "Download - Static Map", "Download - Interactive Map"
-    ])
+    tabaa, tabbb, tabcc, tabdd, tabee, tabff, tabgg = st.tabs(
+        [
+            "Uploads",
+            "Download - CSV",
+            "Download - Excel",
+            "Download - Matplotlib",
+            "Download - Plotly",
+            "Download - Static Map",
+            "Download - Interactive Map",
+        ]
+    )
 
     with tabaa:
         st.header("File Uploads")
 
         if show_code:
             st.code(
-        """
+                """
         uploaded_file = st.file_uploader(
             "Please upload a csv data file",
             type=['csv'] # <1>
@@ -527,8 +571,8 @@ with tab4:
 
         uploaded_file = st.file_uploader(
             "Please upload a csv data file",
-            type=['csv'] # <1>
-            )
+            type=["csv"],  # <1>
+        )
 
         if uploaded_file is not None:
             uploaded_df = pd.read_csv(uploaded_file)
@@ -544,7 +588,7 @@ with tab4:
 
         if show_code:
             st.code(
-        """
+                """
 
         penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/penguins_df.csv")
 
@@ -557,13 +601,12 @@ with tab4:
         """
             )
 
-
         st.download_button(
-            "Click here to download the dataframe as a csv file", # <1>
-            data=penguins_df.to_csv(index=False).encode('utf-8'), # <2>
+            "Click here to download the dataframe as a csv file",  # <1>
+            data=penguins_df.to_csv(index=False).encode("utf-8"),  # <2>
             file_name="penguins_df.csv",
-            mime="text/csv"
-            )
+            mime="text/csv",
+        )
 
     with tabcc:
         st.header("File Downloads")
@@ -571,7 +614,7 @@ with tab4:
         st.subheader("Excel Files")
 
         st.code(
-        """
+            """
         penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
         output = BytesIO()
@@ -593,17 +636,17 @@ with tab4:
 
         output = BytesIO()
 
-        writer = pd.ExcelWriter(output, engine='xlsxwriter')
+        writer = pd.ExcelWriter(output, engine="xlsxwriter")
 
         penguins_df.to_excel(writer, sheet_name="Penguins Data", index=False)
 
         writer.close()
 
         st.download_button(
-        "Click here to download the dataframe as an Excel file",
-        data = output.getvalue(),
-        file_name=f"penguins.xlsx",
-        mime="application/vnd.ms-excel"
+            "Click here to download the dataframe as an Excel file",
+            data=output.getvalue(),
+            file_name="penguins.xlsx",
+            mime="application/vnd.ms-excel",
         )
 
     with tabdd:
@@ -613,7 +656,7 @@ with tab4:
 
         if show_code:
             st.code(
-            """
+                """
             penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
             fig, ax = plt.subplots(figsize=(15,10))
             plt.scatter(x=penguins_df["body_mass_g"], y=penguins_df["bill_length_mm"])
@@ -637,7 +680,7 @@ with tab4:
             """
             )
 
-        fig, ax = plt.subplots(figsize=(15,10))
+        fig, ax = plt.subplots(figsize=(15, 10))
         plt.scatter(x=penguins_df["body_mass_g"], y=penguins_df["bill_length_mm"])
         plt.title("Penguin Body Mass (g) versus Bill Length (mm)")
         ax.set_xlabel("Body Mass (g)")
@@ -645,14 +688,11 @@ with tab4:
 
         st.pyplot(fig)
 
-        filename = 'penguins_scatter_method_1.png'
+        filename = "penguins_scatter_method_1.png"
         plt.savefig(filename)
         with open(filename, "rb") as img:
             btn = st.download_button(
-                label="Download image",
-                data=img,
-                file_name=filename,
-                mime="image/png"
+                label="Download image", data=img, file_name=filename, mime="image/png"
             )
 
     with tabee:
@@ -662,7 +702,7 @@ with tab4:
 
         if show_code:
             st.code(
-            """
+                """
             penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
             fig = px.scatter(penguins_df, x="body_mass_g", y="bill_length_mm")
@@ -689,10 +729,10 @@ with tab4:
 
         with open("plotly_chart.html", "rb") as file:
             st.download_button(
-                label='Download This Plot as an Interactive HTML file',
+                label="Download This Plot as an Interactive HTML file",
                 data=file,
-                file_name=f'penguins_scatterplot.html',
-                mime='text/html'
+                file_name="penguins_scatterplot.html",
+                mime="text/html",
             )
 
     with tabff:
@@ -702,12 +742,15 @@ with tab4:
 
         @st.cache_data
         def load_crime_data():
-            return geopandas.read_file("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/crime_dataset.gpkg")
+            return geopandas.read_file(
+                "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/crime_dataset.gpkg"
+            )
 
         lsoa_2011_crime_figures_df = load_crime_data()
 
         if show_code:
-            ("""
+            (
+                """
 
             lsoa_2011_crime_figures_df = geopandas.read_file("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/crime_dataset.gpkg")
              fig, ax = plt.subplots()
@@ -732,36 +775,31 @@ with tab4:
                 mime="image/png"
             )
              """
-
             )
 
         fig, ax = plt.subplots()
 
         lsoa_2011_crime_figures_df.plot(
-            column="sw_5forces_street_by_lsoa_Other crime",
-            legend=True,
-            ax=ax
-            )
+            column="sw_5forces_street_by_lsoa_Other crime", legend=True, ax=ax
+        )
 
         st.pyplot(fig)
 
-        filename = 'other_crime_devon.png'
+        filename = "other_crime_devon.png"
 
         plt.savefig(filename)
 
         with open(filename, "rb") as img:
             btn = st.download_button(
-                label="Download Map",
-                data=img,
-                file_name=filename,
-                mime="image/png"
+                label="Download Map", data=img, file_name=filename, mime="image/png"
             )
 
     with tabgg:
+
         @st.cache_data
         def load_gp_data():
             return geopandas.read_file(
-            "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/gps_sw.gpkg"
+                "https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/assets/geo/gps_sw.gpkg"
             )
 
         gp_list_gdf_sw = load_gp_data()
@@ -809,47 +847,55 @@ gp_list_gdf_sw = gp_list_gdf_sw[~gp_list_gdf_sw['geometry'].is_empty]
             )
 
         # Filter out instances with no geometry
-        gp_list_gdf_sw = gp_list_gdf_sw[~gp_list_gdf_sw['geometry'].is_empty]
+        gp_list_gdf_sw = gp_list_gdf_sw[~gp_list_gdf_sw["geometry"].is_empty]
 
         # Create a geometry list from the GeoDataFrame
-        geo_df_list = [[point.xy[1][0], point.xy[0][0]] for point in gp_list_gdf_sw.geometry]
+        geo_df_list = [
+            [point.xy[1][0], point.xy[0][0]] for point in gp_list_gdf_sw.geometry
+        ]
 
         gp_map_tooltip = folium.Map(
             location=[50.7, -4.2],
             zoom_start=8,
-            tiles='openstreetmap',
-            )
+            tiles="openstreetmap",
+        )
 
         for i, coordinates in enumerate(geo_df_list):
-
             gp_map_tooltip = gp_map_tooltip.add_child(
                 folium.Marker(
                     location=coordinates,
-                    tooltip=gp_list_gdf_sw['name'].values[i],
-                    icon=folium.Icon(icon="user-md", prefix='fa', color="black")
-                    )
+                    tooltip=gp_list_gdf_sw["name"].values[i],
+                    icon=folium.Icon(icon="user-md", prefix="fa", color="black"),
+                )
             )
 
-        st.write("There's a bug preventing interactive maps rendering within tabs! https://github.com/streamlit/streamlit/issues/7376")
+        st.write(
+            "There's a bug preventing interactive maps rendering within tabs! https://github.com/streamlit/streamlit/issues/7376"
+        )
         st_folium(gp_map_tooltip)
 
-        gp_map_tooltip.save('plotly_map_gp.html')
+        gp_map_tooltip.save("plotly_map_gp.html")
 
         with open(filename, "rb") as img:
             btn = st.download_button(
                 label="Download Map",
                 data=img,
-                file_name='plotly_map_gp.html',
-                mime="text/html"
+                file_name="plotly_map_gp.html",
+                mime="text/html",
             )
 
 
 with tab3:
-
     tab11, tab22, tab33, tab44, tab55, tab66, tab77 = st.tabs(
-        ["Tables", "Dataframes", "Editable Dataframes",
-         "Matplotlib Plots", "Plotly Plots", "Static Maps",
-         "Interactive Maps"]
+        [
+            "Tables",
+            "Dataframes",
+            "Editable Dataframes",
+            "Matplotlib Plots",
+            "Plotly Plots",
+            "Static Maps",
+            "Interactive Maps",
+        ]
     )
 
     with tab11:
@@ -862,7 +908,6 @@ with tab3:
         st.table(penguins_df)
 
     with tab22:
-
         if show_code:
             st.code("""
                     penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
@@ -872,9 +917,7 @@ with tab3:
 
         st.dataframe(penguins_df)
 
-
     with tab33:
-
         if show_code:
             st.code("""
                     penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
@@ -888,15 +931,19 @@ with tab3:
 
         penguins_df_edited = st.data_editor(penguins_df)
 
-        st.write(f"The value in row 1 cell 1 is {penguins_df.head(1)['species'].values[0]}")
-        st.write(f"The value in row 1 cell 1 of the edited dataframe is {penguins_df_edited.head(1)['species'].values[0]}")
+        st.write(
+            f"The value in row 1 cell 1 is {penguins_df.head(1)['species'].values[0]}"
+        )
+        st.write(
+            f"The value in row 1 cell 1 of the edited dataframe is {penguins_df_edited.head(1)['species'].values[0]}"
+        )
 
     with tab44:
         st.header("Matplotlib Plots")
 
         if show_code:
             st.code(
-            """
+                """
             penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
             fig, ax = plt.subplots(figsize=(15,10))
@@ -909,7 +956,7 @@ with tab3:
             """
             )
 
-        fig, ax = plt.subplots(figsize=(15,10))
+        fig, ax = plt.subplots(figsize=(15, 10))
         plt.scatter(x=penguins_df["body_mass_g"], y=penguins_df["bill_length_mm"])
         plt.title("Penguin Body Mass (g) versus Bill Length (mm)")
         ax.set_xlabel("Body Mass (g)")
@@ -922,7 +969,7 @@ with tab3:
 
         if show_code:
             st.code(
-            """
+                """
             penguins_df = pd.read_csv("https://github.com/Bergam0t/streamlit_book/raw/refs/heads/main/datasets/penguins_df.csv")
 
             plotly_fig = px.scatter(penguins_df, x="body_mass_g", y="bill_length_mm")
@@ -959,10 +1006,8 @@ with tab3:
         fig, ax = plt.subplots()
 
         lsoa_2011_crime_figures_df.plot(
-            column="sw_5forces_street_by_lsoa_Other crime",
-            legend=True,
-            ax=ax
-            )
+            column="sw_5forces_street_by_lsoa_Other crime", legend=True, ax=ax
+        )
 
         st.pyplot(fig)
 
@@ -999,12 +1044,13 @@ with tab3:
         st_folium(gp_map_tooltip)
                     """)
 
-        st.write("There's a bug preventing interactive maps rendering within tabs! https://github.com/streamlit/streamlit/issues/7376")
+        st.write(
+            "There's a bug preventing interactive maps rendering within tabs! https://github.com/streamlit/streamlit/issues/7376"
+        )
         st_folium(gp_map_tooltip, key="folium_map_2")
 
 
 with tab5:
-
     taba1, tabb1 = st.tabs(["Images", "Videos"])
 
     with taba1:
@@ -1022,7 +1068,9 @@ with tab5:
             st.code("""
                     st.image("https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg")
                     """)
-        st.image("https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg")
+        st.image(
+            "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg"
+        )
 
     with tabb1:
         st.header("Videos")

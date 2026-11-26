@@ -1,5 +1,8 @@
 import streamlit as st
-from streamlit_gsheets import GSheetsConnection # this doesn't exist in the hsma_webdev environment
+from streamlit_gsheets import (
+    GSheetsConnection,
+)  # this doesn't exist in the hsma_webdev environment
+
 # would need to be installed with
 # !pip install st-gsheets-connection
 

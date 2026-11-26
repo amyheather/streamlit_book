@@ -1,7 +1,8 @@
-import streamlit as st
-import simpy
 import random
+
 import pandas as pd
+import simpy
+import streamlit as st
 
 st.title("Simple One-Step DES")
 
@@ -15,20 +16,38 @@ st.write("In this discrete event simulation, patients arrive")
 #     sim_duration = 120
 #     number_of_runs = 5
 
-patient_iat_slider = st.slider("What is the average length of time between patients arriving?",
-                               min_value=1, max_value=30, value=5)
+patient_iat_slider = st.slider(
+    "What is the average length of time between patients arriving?",
+    min_value=1,
+    max_value=30,
+    value=5,
+)
 
-patient_consult_slider = st.slider("What is the mean length of time (in minutes) for a consultation?",
-                                   min_value = 3, max_value=60, value=6)
+patient_consult_slider = st.slider(
+    "What is the mean length of time (in minutes) for a consultation?",
+    min_value=3,
+    max_value=60,
+    value=6,
+)
 
-num_nurses_slider = st.slider("What is the number of nurses in the system?",
-                              min_value=1, max_value=10, value=1)
+num_nurses_slider = st.slider(
+    "What is the number of nurses in the system?", min_value=1, max_value=10, value=1
+)
 
-sim_duration_input = st.number_input("How long should the simulation run for (minutes)?",
-                                      min_value=60, max_value=480, value=120)
+sim_duration_input = st.number_input(
+    "How long should the simulation run for (minutes)?",
+    min_value=60,
+    max_value=480,
+    value=120,
+)
 
-num_runs_input = st.number_input("How many runs of the simulation should be done?",
-                                  min_value=1, max_value=100, value=5)
+num_runs_input = st.number_input(
+    "How many runs of the simulation should be done?",
+    min_value=1,
+    max_value=100,
+    value=5,
+)
+
 
 class g:
     patient_inter = patient_iat_slider
@@ -36,6 +55,7 @@ class g:
     number_of_nurses = num_nurses_slider
     sim_duration = sim_duration_input
     number_of_runs = num_runs_input
+
 
 # Class representing patients coming in to the clinic.
 # Here, patients have two attributes that they carry with them -
@@ -45,6 +65,7 @@ class Patient:
     def __init__(self, p_id):
         self.id = p_id
         self.q_time_nurse = 0
+
 
 # Class representing our model of the clinic.
 class Model:
@@ -134,16 +155,13 @@ class Model:
             # Here, we use an Exponential distribution for simplicity
             # As with sampling the inter-arrival times, we grab the mean from the g class,
             # and pass in 1 / mean as the lambda value.
-            sampled_nurse_act_time = random.expovariate(1.0 /
-                                                        g.mean_n_consult_time)
+            sampled_nurse_act_time = random.expovariate(1.0 / g.mean_n_consult_time)
 
             # Here we'll store the queuing time for the nurse and the sampled
             # time to spend with the nurse in the results DataFrame against the
             # ID for this patient.
-            self.results_df.at[patient.id, "Q Time Nurse"] = (
-                patient.q_time_nurse)
-            self.results_df.at[patient.id, "Time with Nurse"] = (
-                sampled_nurse_act_time)
+            self.results_df.at[patient.id, "Q Time Nurse"] = patient.q_time_nurse
+            self.results_df.at[patient.id, "Time with Nurse"] = sampled_nurse_act_time
 
             # Freeze this function in place for the activity time we sampled
             # above.  This is the patient spending time with the nurse.
@@ -176,12 +194,13 @@ class Model:
         # run results
         self.calculate_run_results()
 
+
 # Class representing a Trial for our simulation - a batch of simulation runs.
 class Trial:
     # The constructor sets up a pandas dataframe that will store the key
     # results from each run (just the mean queuing time for the nurse here)
     # against run number, with run number as the index.
-    def  __init__(self):
+    def __init__(self):
         self.df_trial_results = pd.DataFrame()
         self.df_trial_results["Run Number"] = [0]
         self.df_trial_results["Mean Q Time Nurse"] = [0.0]
@@ -202,6 +221,7 @@ class Trial:
 
         # Once the trial (ie all runs) has completed, return the final results
         return self.df_trial_results
+
 
 results_df = Trial().run_trial()
 

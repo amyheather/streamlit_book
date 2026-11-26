@@ -1,7 +1,9 @@
-import simpy
 import random
+
 import pandas as pd
-from sim_tools.distributions import Exponential ##NEW
+import simpy
+from sim_tools.distributions import Exponential  ##NEW
+
 
 # Class to store global parameter values.  We don't create an instance of this
 # class - we just refer to the class blueprint itself to access the numbers
@@ -15,12 +17,14 @@ class g:
     sim_duration = 600
     number_of_runs = 100
 
+
 # Class representing patients coming in to the clinic.
 class Patient:
     def __init__(self, p_id):
         self.id = p_id
         self.q_time_recep = 0
         self.q_time_nurse = 0
+
 
 # Class representing our model of the clinic.
 class Model:
@@ -34,9 +38,7 @@ class Model:
         self.patient_counter = 0
 
         # Create our resources
-        self.receptionist = simpy.Resource(
-            self.env, capacity=g.number_of_receptionists
-        )
+        self.receptionist = simpy.Resource(self.env, capacity=g.number_of_receptionists)
         self.nurse = simpy.Resource(self.env, capacity=g.number_of_nurses)
 
         # Store the passed in run number
@@ -57,9 +59,15 @@ class Model:
         self.mean_q_time_recep = 0
         self.mean_q_time_nurse = 0
 
-        self.patient_inter_arrival_dist = Exponential(mean = g.patient_inter, random_seed = self.run_number*2)
-        self.patient_reception_time_dist = Exponential(mean = g.mean_reception_time, random_seed = self.run_number*3)
-        self.nurse_consult_time_dist = Exponential(mean = g.mean_n_consult_time, random_seed = self.run_number*4)
+        self.patient_inter_arrival_dist = Exponential(
+            mean=g.patient_inter, random_seed=self.run_number * 2
+        )
+        self.patient_reception_time_dist = Exponential(
+            mean=g.mean_reception_time, random_seed=self.run_number * 3
+        )
+        self.nurse_consult_time_dist = Exponential(
+            mean=g.mean_n_consult_time, random_seed=self.run_number * 4
+        )
 
     # A generator function that represents the DES generator for patient
     # arrivals
@@ -85,7 +93,7 @@ class Model:
             # sample from an exponential distribution (common for inter-arrival
             # times), and pass in a lambda value of 1 / mean.  The mean
             # inter-arrival time is stored in the g class.
-            sampled_inter = self.patient_inter_arrival_dist.sample() ##NEW
+            sampled_inter = self.patient_inter_arrival_dist.sample()  ##NEW
 
             # Freeze this instance of this function in place until the
             # inter-arrival time we sampled above has elapsed.  Note - time in
@@ -107,14 +115,10 @@ class Model:
 
             patient.q_time_recep = end_q_recep - start_q_recep
 
-            sampled_recep_act_time = self.patient_reception_time_dist.sample() ##NEW
+            sampled_recep_act_time = self.patient_reception_time_dist.sample()  ##NEW
 
-            self.results_df.at[patient.id, "Q Time Recep"] = (
-                 patient.q_time_recep
-            )
-            self.results_df.at[patient.id, "Time with Recep"] = (
-                 sampled_recep_act_time
-            )
+            self.results_df.at[patient.id, "Q Time Recep"] = patient.q_time_recep
+            self.results_df.at[patient.id, "Time with Recep"] = sampled_recep_act_time
 
             yield self.env.timeout(sampled_recep_act_time)
 
@@ -148,7 +152,7 @@ class Model:
             # (we'll come back to that).  As with sampling the inter-arrival
             # times, we grab the mean from the g class, and pass in 1 / mean
             # as the lambda value.
-            sampled_nurse_act_time = self.nurse_consult_time_dist.sample() ##NEW
+            sampled_nurse_act_time = self.nurse_consult_time_dist.sample()  ##NEW
 
             # Here we'll store the queuing time for the nurse and the sampled
             # time to spend with the nurse in the results DataFrame against the
@@ -160,10 +164,8 @@ class Model:
             # particular cell in our DataFrame by providing the row and column.
             # Here, we specify the row as the patient ID (the index), and the
             # column for the value we want to update for that patient.
-            self.results_df.at[patient.id, "Q Time Nurse"] = (
-                patient.q_time_nurse)
-            self.results_df.at[patient.id, "Time with Nurse"] = (
-                sampled_nurse_act_time)
+            self.results_df.at[patient.id, "Q Time Nurse"] = patient.q_time_nurse
+            self.results_df.at[patient.id, "Time with Nurse"] = sampled_nurse_act_time
 
             # Freeze this function in place for the activity time we sampled
             # above.  This is the patient spending time with the nurse.
@@ -175,7 +177,6 @@ class Model:
             # something here if we wanted to record something - e.g. a counter
             # for number of patients that left, recording something about the
             # patients that left at a particular sink etc.
-
 
     # This method calculates results over a single run.  Here we just calculate
     # a mean, but in real world models you'd probably want to calculate more.
@@ -202,13 +203,14 @@ class Model:
 
         # Print the run number with the patient-level results from this run of
         # the model
-        return (self.results_df)
+        return self.results_df
+
 
 # Class representing a Trial for our simulation - a batch of simulation runs.
 class Trial:
     # The constructor sets up a pandas dataframe that will store the key
     # results from each run against run number, with run number as the index.
-    def  __init__(self):
+    def __init__(self):
         self.df_trial_results = pd.DataFrame()
         self.df_trial_results["Run Number"] = [0]
         self.df_trial_results["Arrivals"] = [0]
@@ -219,13 +221,13 @@ class Trial:
     # Method to print out the results from the trial.  In real world models,
     # you'd likely save them as well as (or instead of) printing them
     def print_trial_results(self):
-        print ("Trial Results")
-        print (self.df_trial_results.round(2))
+        print("Trial Results")
+        print(self.df_trial_results.round(2))
         print(self.df_trial_results.mean().round(2))
 
     # Method to run a trial
     def run_trial(self):
-        print("") ## NEW: Print a blank line
+        print()  ## NEW: Print a blank line
         # Run the simulation for the number of runs specified in g class.
         # For each run, we create a new instance of the Model class and call its
         # run method, which sets everything else in motion.  Once the run has
@@ -241,8 +243,8 @@ class Trial:
             self.df_trial_results.loc[run] = [
                 len(patient_level_results),
                 my_model.mean_q_time_recep,
-                my_model.mean_q_time_nurse
-                ]
+                my_model.mean_q_time_nurse,
+            ]
 
         # Once the trial (ie all runs) has completed, return the final results
         return self.df_trial_results

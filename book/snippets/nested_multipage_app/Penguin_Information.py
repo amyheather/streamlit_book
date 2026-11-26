@@ -37,10 +37,19 @@ elif chosen_species == "Adelie":
 st.markdown("*All information from wikipedia*")
 """)
 
-st.write("We're going to try loading the `species_options` list in, which just contains the strings 'Gentoo', 'Adelie' and 'Chinstrap'.")
+st.write(
+    "We're going to try loading the `species_options` list in, which just contains the strings 'Gentoo', 'Adelie' and 'Chinstrap'."
+)
 
-st.write("What we'll see is that it doesn't work and instead returns an error. This is because the variables on the other pages are completely separate and can't be accessed on this page.")
+st.write(
+    "What we'll see is that it doesn't work and instead returns an error. This is because the variables on the other pages are completely separate and can't be accessed on this page."
+)
 
-st.write("This is a key thing to be aware of within multipage apps. Without using things like session state, we can't use information from other pages on this page, and vice-versa")
+st.write(
+    "This is a key thing to be aware of within multipage apps. Without using things like session state, we can't use information from other pages on this page, and vice-versa"
+)
 
-chosen_species = st.selectbox("Which penguin species are you interested in finding out more about?", species_options)
+chosen_species = st.selectbox(
+    "Which penguin species are you interested in finding out more about?",
+    species_options,
+)

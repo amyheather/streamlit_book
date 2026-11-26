@@ -1,12 +1,15 @@
-import streamlit as st
-import simpy
 import random
+
+import numpy as np  # For adding some conditional columns to our dataframes
 import pandas as pd
+
 #######
 # NEW #
 #######
-import plotly.express as px # For plotting
-import numpy as np # For adding some conditional columns to our dataframes
+import plotly.express as px  # For plotting
+import simpy
+import streamlit as st
+
 ###########
 # END NEW #
 ###########
@@ -25,20 +28,38 @@ st.write("In this discrete event simulation, patients arrive")
 #     sim_duration = 120
 #     number_of_runs = 5
 
-patient_iat_slider = st.slider("What is the average length of time between patients arriving?",
-                               min_value=1, max_value=30, value=5)
+patient_iat_slider = st.slider(
+    "What is the average length of time between patients arriving?",
+    min_value=1,
+    max_value=30,
+    value=5,
+)
 
-patient_consult_slider = st.slider("What is the mean length of time (in minutes) for a consultation?",
-                                   min_value = 3, max_value=60, value=6)
+patient_consult_slider = st.slider(
+    "What is the mean length of time (in minutes) for a consultation?",
+    min_value=3,
+    max_value=60,
+    value=6,
+)
 
-num_nurses_slider = st.slider("What is the number of nurses in the system?",
-                              min_value=1, max_value=10, value=1)
+num_nurses_slider = st.slider(
+    "What is the number of nurses in the system?", min_value=1, max_value=10, value=1
+)
 
-sim_duration_input = st.number_input("How long should the simulation run for (minutes)?",
-                                      min_value=60, max_value=480, value=480) ## CHANGED - LONGER DEFAULT
+sim_duration_input = st.number_input(
+    "How long should the simulation run for (minutes)?",
+    min_value=60,
+    max_value=480,
+    value=480,
+)  ## CHANGED - LONGER DEFAULT
 
-num_runs_input = st.number_input("How many runs of the simulation should be done?",
-                                  min_value=1, max_value=100, value=20) ## CHANGED - HIGHER DEFAULT
+num_runs_input = st.number_input(
+    "How many runs of the simulation should be done?",
+    min_value=1,
+    max_value=100,
+    value=20,
+)  ## CHANGED - HIGHER DEFAULT
+
 
 class g:
     patient_inter = patient_iat_slider
@@ -46,6 +67,7 @@ class g:
     number_of_nurses = num_nurses_slider
     sim_duration = sim_duration_input
     number_of_runs = num_runs_input
+
 
 # Class representing patients coming in to the clinic.
 # Here, patients have two attributes that they carry with them -
@@ -56,6 +78,7 @@ class Patient:
         self.id = p_id
         self.q_time_nurse = 0
         self.arrival_time = 0  ## NEW
+
 
 # Class representing our model of the clinic.
 class Model:
@@ -80,12 +103,12 @@ class Model:
         # the patient ID (which we'll use as the index).
         self.results_df = pd.DataFrame()
         self.results_df["Patient ID"] = [1]
-        self.results_df["Arrival Time"] = [0.0] ## NEW
-        self.results_df["Time Seen"] = [0.0] ## NEW
+        self.results_df["Arrival Time"] = [0.0]  ## NEW
+        self.results_df["Time Seen"] = [0.0]  ## NEW
         self.results_df["Q Time Nurse"] = [0.0]
         self.results_df["Time with Nurse"] = [0.0]
-        self.results_df["Time Departed"] = [0.0] ## NEW
-        self.results_df["Arrived Within 60 Minutes of Closing Time"] = [False] ## NEW
+        self.results_df["Time Departed"] = [0.0]  ## NEW
+        self.results_df["Arrived Within 60 Minutes of Closing Time"] = [False]  ## NEW
         self.results_df.set_index("Patient ID", inplace=True)
 
         # Create an attribute to store the mean queuing time for the nurse
@@ -135,12 +158,11 @@ class Model:
         # the patient starts waiting for the nurse, we ensure we
         # have a row for every patient in the simulation, not just
         # those who do go on to be seen by the nurse
-        self.results_df.at[patient.id, "Arrival Time"] = (
-                patient.arrival_time)
+        self.results_df.at[patient.id, "Arrival Time"] = patient.arrival_time
 
-        self.results_df.at[patient.id, "Arrived Within 60 Minutes of Closing Time"] = np.where(
-                sim_duration_input - patient.arrival_time <60, True, False
-                )
+        self.results_df.at[patient.id, "Arrived Within 60 Minutes of Closing Time"] = (
+            np.where(sim_duration_input - patient.arrival_time < 60, True, False)
+        )
         ################
         # END NEW      #
         ################
@@ -166,24 +188,23 @@ class Model:
             # Here, we use an Exponential distribution for simplicity
             # As with sampling the inter-arrival times, we grab the mean from the g class,
             # and pass in 1 / mean as the lambda value.
-            sampled_nurse_act_time = random.expovariate(1.0 /
-                                                        g.mean_n_consult_time)
+            sampled_nurse_act_time = random.expovariate(1.0 / g.mean_n_consult_time)
 
             # Here we'll store the queuing time for the nurse and the sampled
             # time to spend with the nurse in the results DataFrame against the
             # ID for this patient.
-            self.results_df.at[patient.id, "Q Time Nurse"] = (
-                patient.q_time_nurse)
-            self.results_df.at[patient.id, "Time with Nurse"] = (
-                sampled_nurse_act_time)
+            self.results_df.at[patient.id, "Q Time Nurse"] = patient.q_time_nurse
+            self.results_df.at[patient.id, "Time with Nurse"] = sampled_nurse_act_time
 
             #########################
             ## NEW                  #
             #########################
             self.results_df.at[patient.id, "Time Seen"] = (
-                patient.q_time_nurse + patient.arrival_time)
+                patient.q_time_nurse + patient.arrival_time
+            )
             self.results_df.at[patient.id, "Time Departed"] = (
-                patient.q_time_nurse + patient.arrival_time + sampled_nurse_act_time)
+                patient.q_time_nurse + patient.arrival_time + sampled_nurse_act_time
+            )
             #########################
             # END NEW               #
             #########################
@@ -221,12 +242,13 @@ class Model:
 
         return self.results_df
 
+
 # Class representing a Trial for our simulation - a batch of simulation runs.
 class Trial:
     # The constructor sets up a pandas dataframe that will store the key
     # results from each run (just the mean queuing time for the nurse here)
     # against run number, with run number as the index.
-    def  __init__(self):
+    def __init__(self):
         self.df_trial_results = pd.DataFrame()
         self.df_trial_results["Run Number"] = [0]
         self.df_trial_results["Mean Q Time Nurse"] = [0.0]
@@ -256,31 +278,37 @@ class Trial:
         # Once the trial (ie all runs) has completed, return the final results
         return self.df_trial_results, pd.concat(run_result_dfs)
 
+
 # A user must press a streamlit button to run the model
 button_run_pressed = st.button("Run simulation")
 
 if button_run_pressed:
-    with st.spinner('Simulating the minor injuries unit...'):
-
+    with st.spinner("Simulating the minor injuries unit..."):
         mean_results_df, detailed_run_results_df = Trial().run_trial()
 
         #############
         ## NEW      #
         #############
 
-        st.write("The median wait to see a nurse across all runs was " +
-                 f"{mean_results_df['Mean Q Time Nurse'].median():.1f} minutes")
+        st.write(
+            "The median wait to see a nurse across all runs was "
+            + f"{mean_results_df['Mean Q Time Nurse'].median():.1f} minutes"
+        )
 
-        st.write("Out of all runs, the run with the shortest average wait had an average wait of " +
-                 f"{mean_results_df['Mean Q Time Nurse'].min():.1f} minutes")
+        st.write(
+            "Out of all runs, the run with the shortest average wait had an average wait of "
+            + f"{mean_results_df['Mean Q Time Nurse'].min():.1f} minutes"
+        )
 
-        st.write("Out of all runs, the run with the longest average wait had an average wait of " +
-                 f"{mean_results_df['Mean Q Time Nurse'].max():.1f} minutes")
+        st.write(
+            "Out of all runs, the run with the longest average wait had an average wait of "
+            + f"{mean_results_df['Mean Q Time Nurse'].max():.1f} minutes"
+        )
 
-
-
-        st.write(f"{len(mean_results_df[mean_results_df['Mean Q Time Nurse'] > 60])} runs of" +
-                 f" {g.number_of_runs} had an average wait that exceeded the target of 60 minutes")
+        st.write(
+            f"{len(mean_results_df[mean_results_df['Mean Q Time Nurse'] > 60])} runs of"
+            + f" {g.number_of_runs} had an average wait that exceeded the target of 60 minutes"
+        )
 
         tab_1, tab_2 = st.tabs(["Charts", "Data Tables"])
 
@@ -288,49 +316,64 @@ if button_run_pressed:
             st.subheader("Variation Across Runs in Mean Queue Time for Nurse")
 
             st.plotly_chart(
-                px.box(mean_results_df,
-                       x="Mean Q Time Nurse",
-                       points="all",
-                       range_x=[0, max(mean_results_df["Mean Q Time Nurse"])*1.1]
-                       )
+                px.box(
+                    mean_results_df,
+                    x="Mean Q Time Nurse",
+                    points="all",
+                    range_x=[0, max(mean_results_df["Mean Q Time Nurse"]) * 1.1],
+                )
             )
 
             st.subheader("Performance Against the 60 Minute Wait Target")
 
             detailed_run_results_df["Wait Target Met"] = np.where(
-                detailed_run_results_df["Q Time Nurse"] < 60, "Seen - Wait Target Met",
-                np.where(detailed_run_results_df["Arrived Within 60 Minutes of Closing Time"] == True,
-                         "Arrived Within 60 Minutes of Closing Time - Not Seen",
-                np.where(detailed_run_results_df["Q Time Nurse"].isna(), "Not Seen Before Clinic Close",
-                         "Seen - Wait Target Not Met")
-                    )
-                )
-
+                detailed_run_results_df["Q Time Nurse"] < 60,
+                "Seen - Wait Target Met",
+                np.where(
+                    detailed_run_results_df["Arrived Within 60 Minutes of Closing Time"]
+                    == True,
+                    "Arrived Within 60 Minutes of Closing Time - Not Seen",
+                    np.where(
+                        detailed_run_results_df["Q Time Nurse"].isna(),
+                        "Not Seen Before Clinic Close",
+                        "Seen - Wait Target Not Met",
+                    ),
+                ),
+            )
 
             st.markdown("#### Percentage of Arrivals meeting wait target")
 
-            in_time_arrivals_only = detailed_run_results_df[detailed_run_results_df["Arrived Within 60 Minutes of Closing Time"] == False]
+            in_time_arrivals_only = detailed_run_results_df[
+                detailed_run_results_df["Arrived Within 60 Minutes of Closing Time"]
+                == False
+            ]
 
-            target_met_summary_df = pd.DataFrame(
-                in_time_arrivals_only
-                .groupby("Run")
-                .value_counts(["Wait Target Met"])
-            ).reset_index(drop=False).pivot(index="Run", columns="Wait Target Met", values="count").fillna(0)
+            target_met_summary_df = (
+                pd.DataFrame(
+                    in_time_arrivals_only.groupby("Run").value_counts(
+                        ["Wait Target Met"]
+                    )
+                )
+                .reset_index(drop=False)
+                .pivot(index="Run", columns="Wait Target Met", values="count")
+                .fillna(0)
+            )
 
-
-            target_met_summary_df['Target Wait Met'] = (
-                target_met_summary_df["Seen - Wait Target Met"] /
-                (target_met_summary_df["Not Seen Before Clinic Close"] +
-                 target_met_summary_df["Seen - Wait Target Met"] +
-                 target_met_summary_df["Seen - Wait Target Not Met"])
-                )*100
+            target_met_summary_df["Target Wait Met"] = (
+                target_met_summary_df["Seen - Wait Target Met"]
+                / (
+                    target_met_summary_df["Not Seen Before Clinic Close"]
+                    + target_met_summary_df["Seen - Wait Target Met"]
+                    + target_met_summary_df["Seen - Wait Target Not Met"]
+                )
+            ) * 100
 
             st.plotly_chart(
                 px.bar(
                     target_met_summary_df.reset_index(drop=False),
                     x="Run",
-                    y='Target Wait Met',
-                    range_y=[0,100]
+                    y="Target Wait Met",
+                    range_y=[0, 100],
                 )
             )
 
@@ -357,19 +400,17 @@ if button_run_pressed:
                      """)
 
             detailed_arrival_fig = px.scatter(
-                    detailed_run_results_df,
-                    x="Arrival Time",
-                    y="Run",
-                    color="Wait Target Met"
-                )
+                detailed_run_results_df,
+                x="Arrival Time",
+                y="Run",
+                color="Wait Target Met",
+            )
 
-            detailed_arrival_fig.add_vline(sim_duration_input-60, line_color="orange")
+            detailed_arrival_fig.add_vline(sim_duration_input - 60, line_color="orange")
 
             detailed_arrival_fig.add_vline(sim_duration_input, line_color="red")
 
-            st.plotly_chart(
-                detailed_arrival_fig
-            )
+            st.plotly_chart(detailed_arrival_fig)
 
         with tab_2:
             col_1, col_2 = st.columns([0.4, 0.6])
@@ -379,9 +420,7 @@ if button_run_pressed:
                 st.dataframe(mean_results_df, use_container_width=True)
             with col_2:
                 st.subheader("Wait Targets Met - Per Run")
-                st.dataframe(
-                    target_met_summary_df
-                )
+                st.dataframe(target_met_summary_df)
 
             st.subheader("Patient-Level Simulation Outputs")
             st.dataframe(detailed_run_results_df, use_container_width=True)
