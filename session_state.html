@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>37&nbsp; Persisting Data Across Pages and Runs with Session State – HSMA - Web Apps with Streamlit</title>
+<title>37&nbsp; Persisting data across pages and runs with session state – HSMA - Web Apps with Streamlit</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -87,8 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5be68f7e89068b753bd4407cdd331613.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -145,6 +145,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-dark"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
@@ -360,7 +361,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caching.html">Advanced Concepts</a></li><li class="breadcrumb-item"><a href="./session_state.html"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting Data Across Pages and Runs with Session State</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caching.html">Advanced Concepts</a></li><li class="breadcrumb-item"><a href="./session_state.html"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting data across pages and runs with session state</span></a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -401,7 +402,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hello_world_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hello World (Wide Web)!</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Create and run your first app</span></span></a>
   </div>
 </li>
       </ul>
@@ -415,61 +416,61 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loading_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An Introduction to Loading and Displaying Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Loading and displaying data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_markdown_and_titles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Text, Markdown, and Titles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Titles, text, and markdown</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./images_and_videos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and Videos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and videos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./warnings_errors_success_messages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, Success, Warning and Error Boxes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, success, warning and error boxes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Display and format dataframes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./metrics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and Dials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and dials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -489,31 +490,31 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./introduction_to_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic Inputs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic inputs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_numeric_and_selection_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An Overview of Available Input Types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An overview of available input types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_uploads.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading Data Files, Images and More</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading data files, images and more</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Dataframes and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional inputs - dataframes and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional inputs - maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -539,19 +540,19 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_images_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_static.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_interactive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading interactive maps</span></span></a>
   </div>
 </li>
       </ul>
@@ -565,13 +566,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wide_layout.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide Layout, Page Tab Titles and Favicons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide layout, page tab titles and favicons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./layout_divider.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page Dividers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page dividers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -601,7 +602,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage Apps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage apps</span></span></a>
   </div>
 </li>
       </ul>
@@ -615,7 +616,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./app_colours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App Colours</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App colours</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -647,13 +648,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./partial_reruns.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial Reruns (fragments)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial reruns (fragments)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./custom_page_navigation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom Page Navigation Buttons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom page navigation buttons</span></span></a>
   </div>
 </li>
       </ul>
@@ -673,7 +674,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./session_state.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting Data Across Pages and Runs with Session State</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting data across pages and runs with session state</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -684,26 +685,8 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./memory_management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">(Coming Soon!) Memory Management</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./authentication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">(Coming Soon!) User Authentication/Login</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./secrets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">(Coming Soon!) Secrets</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./persisting_data_between_sessions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
   </div>
 </li>
       </ul>
@@ -717,25 +700,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./streamlit_community_cloud.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./stlite_desktop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">(Coming Soon!) Making a Desktop App with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./local_server.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">(Coming Soon!) Deploying to an On-premises Server</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
   </div>
 </li>
       </ul>
@@ -743,31 +714,37 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-10-label">Project 1 - DES App</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-10-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_0_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">The Discrete Event Simulation (DES) Code</span></span></a>
+  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Exercise 1: Into the future</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_1_simplest_des_frontend.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">A simple DES frontend</span></span></a>
+  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello streamlit!</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_2_run_buttons_spinners_des.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Adding a run button</span></span></a>
+  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_6_splitting_app_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Splitting the app and DES code</span></span></a>
+  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Exercise 3: Double dash!!(boards)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercise_4_deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Exercise 4: Take me to the clouds above</span></span></a>
   </div>
 </li>
       </ul>
@@ -775,75 +752,13 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-11-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-11-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Exercise 1: Into the Future</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello Streamlit!</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Exercise 3: Double Dash!!(boards)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_4_des_part_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Exercise 4: Fulfil your DEStiny</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_5_des_part_2_multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Exercise 5: DEStiny’s Child</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_6_des_part_3_advanced_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Exercise 6: DESpite Everything, It’s Still You</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_7_deployment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Exercise 7: Take Me To The Clouds Above</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-controls="quarto-sidebar-section-12" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-12-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-      </div>
-      <ul id="quarto-sidebar-section-12" aria-labelledby="quarto-sidebar-section-12-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./other_examples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">(Coming Soon!) Example Streamlit Apps</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./cheat_sheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Streamlit Cheat Sheet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Streamlit cheatsheet</span></span></a>
   </div>
 </li>
       </ul>
@@ -863,9 +778,10 @@ cookieconsent.run({
   <li><a href="#using-the-session-state" id="toc-using-the-session-state" class="nav-link" data-scroll-target="#using-the-session-state"><span class="header-section-number">37.3</span> Using the session state</a></li>
   <li><a href="#a-more-complex-multipage-example" id="toc-a-more-complex-multipage-example" class="nav-link" data-scroll-target="#a-more-complex-multipage-example"><span class="header-section-number">37.4</span> A more complex multipage example</a>
   <ul class="collapse">
-  <li><a href="#app.py" id="toc-app.py" class="nav-link" data-scroll-target="#app.py"><span class="header-section-number">37.4.1</span> app.py</a></li>
-  <li><a href="#page_1.py" id="toc-page_1.py" class="nav-link" data-scroll-target="#page_1.py"><span class="header-section-number">37.4.2</span> page_1.py</a></li>
-  <li><a href="#page_2.py" id="toc-page_2.py" class="nav-link" data-scroll-target="#page_2.py"><span class="header-section-number">37.4.3</span> page_2.py</a></li>
+  <li><a href="#app.py" id="toc-app.py" class="nav-link" data-scroll-target="#app.py"><span class="header-section-number">37.4.1</span> <code>app.py</code></a></li>
+  <li><a href="#page_1.py" id="toc-page_1.py" class="nav-link" data-scroll-target="#page_1.py"><span class="header-section-number">37.4.2</span> <code>page_1.py</code></a></li>
+  <li><a href="#page_2.py" id="toc-page_2.py" class="nav-link" data-scroll-target="#page_2.py"><span class="header-section-number">37.4.3</span> <code>page_2.py</code></a></li>
+  <li><a href="#sample-app" id="toc-sample-app" class="nav-link" data-scroll-target="#sample-app"><span class="header-section-number">37.4.4</span> Sample app</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -874,9 +790,9 @@ cookieconsent.run({
 <main class="content" id="quarto-document-content" tabindex="-1">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caching.html">Advanced Concepts</a></li><li class="breadcrumb-item"><a href="./session_state.html"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting Data Across Pages and Runs with Session State</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caching.html">Advanced Concepts</a></li><li class="breadcrumb-item"><a href="./session_state.html"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting data across pages and runs with session state</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting Data Across Pages and Runs with Session State</span></h1>
+<h1 class="title"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting data across pages and runs with session state</span></h1>
 </div>
 
 
@@ -893,10 +809,12 @@ cookieconsent.run({
 </header>
 
 
+<p><br></p>
 <p>One limitation we’ve mentioned of multipage apps is that variables do not persist across the different pages.</p>
 <p>Once you switch pages, all of that information is lost!</p>
 <p>However - you can use session state to remember things across multiple pages or multiple runs of the same app.</p>
 <p>It doesn’t help with remembering information when leaving or fully reloading the page.</p>
+<p><br></p>
 <section id="initialising-session-state-keys" class="level2" data-number="37.1">
 <h2 data-number="37.1" class="anchored" data-anchor-id="initialising-session-state-keys"><span class="header-section-number">37.1</span> Initialising session state keys</h2>
 <p>First, we need to initialise the session state key with a default value if it doesn’t already exist.</p>
@@ -930,16 +848,17 @@ Tip
 </ul>
 </div>
 </div>
-<div id="08a4b5bb" class="cell" data-execution_count="1">
+<div id="6cbf1c1b" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'your_number'</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    st.session_state.your_number <span class="op">=</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p><br></p>
 </section>
 <section id="assigning-to-session-state-keys" class="level2" data-number="37.2">
 <h2 data-number="37.2" class="anchored" data-anchor-id="assigning-to-session-state-keys"><span class="header-section-number">37.2</span> Assigning to session state keys</h2>
 <p>Session state can be used to store a range of things.</p>
 <p>It can store the input given in a user input widget:</p>
-<div id="1144d999" class="cell" data-execution_count="2">
+<div id="0bea575f" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>st.session_state.your_number <span class="op">=</span> st.number_input(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Pick a number between 1 and 100"</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    min_value<span class="op">=</span><span class="dv">1</span>, max_value<span class="op">=</span><span class="dv">100</span>, value<span class="op">=</span><span class="va">None</span></span>
@@ -964,19 +883,21 @@ Tip
 </div>
 </div>
 <p>Or the result of a calculation (whether that’s a number, a dataframe, a graph, or something else)</p>
-<div id="90fe6c8e" class="cell" data-execution_count="3">
+<div id="de382115" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>st.session_state.the_final_answer <span class="op">=</span> result <span class="op">*</span> <span class="dv">42</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The thing you’re saving to the state could itself optionally use something stored in the session state!</p>
-<div id="0c3c74f4" class="cell" data-execution_count="4">
+<div id="94c9147d" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>st.session_state.the_final_answer <span class="op">=</span> st.session_state.your_number <span class="op">*</span> <span class="dv">42</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p><br></p>
 </section>
 <section id="using-the-session-state" class="level2" data-number="37.3">
 <h2 data-number="37.3" class="anchored" data-anchor-id="using-the-session-state"><span class="header-section-number">37.3</span> Using the session state</h2>
 <p>You can then access the session state key regardless of the page you are using it on!</p>
 <p>Just remember - you need to check for whether the key exists in the session state anywhere you are setting or using the key, and set a default value for it if it doesn’t already exist.</p>
 <p>When your app is deployed, a user could open the app on a page that means they are trying to view the stored session state key before they’ve had a chance to actually input a value - so think about how you could use conditional logic (if/elif/else) to handle this gracefully.</p>
+<p><br></p>
 </section>
 <section id="a-more-complex-multipage-example" class="level2" data-number="37.4">
 <h2 data-number="37.4" class="anchored" data-anchor-id="a-more-complex-multipage-example"><span class="header-section-number">37.4</span> A more complex multipage example</h2>
@@ -985,8 +906,8 @@ Tip
 <p>We’ll have a text input for the user’s name which doesn’t make use of session state.</p>
 <p>Try comparing the behaviour when moving between the different pages of the app.</p>
 <section id="app.py" class="level3" data-number="37.4.1">
-<h3 data-number="37.4.1" class="anchored" data-anchor-id="app.py"><span class="header-section-number">37.4.1</span> app.py</h3>
-<div id="06ee49be" class="cell" data-execution_count="6">
+<h3 data-number="37.4.1" class="anchored" data-anchor-id="app.py"><span class="header-section-number">37.4.1</span> <code>app.py</code></h3>
+<div id="01f14f5e" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>pg <span class="op">=</span> st.navigation([</span>
@@ -998,8 +919,8 @@ Tip
 </div>
 </section>
 <section id="page_1.py" class="level3" data-number="37.4.2">
-<h3 data-number="37.4.2" class="anchored" data-anchor-id="page_1.py"><span class="header-section-number">37.4.2</span> page_1.py</h3>
-<div id="d9c897f8" class="cell" data-execution_count="7">
+<h3 data-number="37.4.2" class="anchored" data-anchor-id="page_1.py"><span class="header-section-number">37.4.2</span> <code>page_1.py</code></h3>
+<div id="8f97efda" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'your_number'</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
@@ -1025,8 +946,8 @@ Tip
 </div>
 </section>
 <section id="page_2.py" class="level3" data-number="37.4.3">
-<h3 data-number="37.4.3" class="anchored" data-anchor-id="page_2.py"><span class="header-section-number">37.4.3</span> page_2.py</h3>
-<div id="7e000657" class="cell" data-execution_count="8">
+<h3 data-number="37.4.3" class="anchored" data-anchor-id="page_2.py"><span class="header-section-number">37.4.3</span> <code>page_2.py</code></h3>
+<div id="4984517b" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'your_number'</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
@@ -1051,6 +972,9 @@ Tip
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span>:</span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    st.write(<span class="st">"I don't seem to remember your name..."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="sample-app" class="level3" data-number="37.4.4">
+<h3 data-number="37.4.4" class="anchored" data-anchor-id="sample-app"><span class="header-section-number">37.4.4</span> Sample app</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1064,7 +988,7 @@ Note
 <p>The sample app linked below also uses a concept known as <code>callbacks</code>, which is often used with session state, to make the button increment work. Head to the callbacks chapter to find out more!</p>
 </div>
 </div>
-<iframe width="780" height="800" src="https://session-state-callbacks-examples-hsma.streamlit.app/" title="Session State example"></iframe>
+<iframe width="100%" height="600" src="https://session-state-callbacks-examples-hsma.streamlit.app/?embed=true" title="Session State example"></iframe>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>43&nbsp; Deploying to Streamlit Community Cloud – HSMA - Web Apps with Streamlit</title>
+<title>40&nbsp; Deploying to Streamlit Community Cloud – HSMA - Web Apps with Streamlit</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -52,8 +52,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5be68f7e89068b753bd4407cdd331613.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,6 +113,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-dark"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
@@ -325,7 +329,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html">Deployment</a></li><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html">Deployment</a></li><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -366,7 +370,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hello_world_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hello World (Wide Web)!</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Create and run your first app</span></span></a>
   </div>
 </li>
       </ul>
@@ -380,61 +384,61 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loading_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An Introduction to Loading and Displaying Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Loading and displaying data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_markdown_and_titles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Text, Markdown, and Titles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Titles, text, and markdown</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./images_and_videos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and Videos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and videos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./warnings_errors_success_messages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, Success, Warning and Error Boxes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, success, warning and error boxes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Display and format dataframes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./metrics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and Dials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and dials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -454,31 +458,31 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./introduction_to_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic Inputs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic inputs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_numeric_and_selection_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An Overview of Available Input Types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An overview of available input types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_uploads.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading Data Files, Images and More</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading data files, images and more</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Dataframes and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional inputs - dataframes and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional inputs - maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -504,19 +508,19 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_images_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_static.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_interactive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading interactive maps</span></span></a>
   </div>
 </li>
       </ul>
@@ -530,13 +534,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wide_layout.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide Layout, Page Tab Titles and Favicons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide layout, page tab titles and favicons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./layout_divider.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page Dividers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page dividers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -566,7 +570,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage Apps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage apps</span></span></a>
   </div>
 </li>
       </ul>
@@ -580,7 +584,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./app_colours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App Colours</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App colours</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -612,13 +616,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./partial_reruns.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial Reruns (fragments)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial reruns (fragments)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./custom_page_navigation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom Page Navigation Buttons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom page navigation buttons</span></span></a>
   </div>
 </li>
       </ul>
@@ -638,7 +642,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./session_state.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting Data Across Pages and Runs with Session State</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting data across pages and runs with session state</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -649,26 +653,8 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./memory_management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">(Coming Soon!) Memory Management</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./authentication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">(Coming Soon!) User Authentication/Login</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./secrets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">(Coming Soon!) Secrets</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./persisting_data_between_sessions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
   </div>
 </li>
       </ul>
@@ -682,25 +668,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./streamlit_community_cloud.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./stlite_desktop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">(Coming Soon!) Making a Desktop App with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./local_server.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">(Coming Soon!) Deploying to an On-premises Server</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
   </div>
 </li>
       </ul>
@@ -708,31 +682,37 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-10-label">Project 1 - DES App</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-10-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_0_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">The Discrete Event Simulation (DES) Code</span></span></a>
+  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Exercise 1: Into the future</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_1_simplest_des_frontend.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">A simple DES frontend</span></span></a>
+  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello streamlit!</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_2_run_buttons_spinners_des.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Adding a run button</span></span></a>
+  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_6_splitting_app_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Splitting the app and DES code</span></span></a>
+  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Exercise 3: Double dash!!(boards)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercise_4_deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Exercise 4: Take me to the clouds above</span></span></a>
   </div>
 </li>
       </ul>
@@ -740,75 +720,13 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-11-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-11-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Exercise 1: Into the Future</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello Streamlit!</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Exercise 3: Double Dash!!(boards)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_4_des_part_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Exercise 4: Fulfil your DEStiny</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_5_des_part_2_multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Exercise 5: DEStiny’s Child</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_6_des_part_3_advanced_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Exercise 6: DESpite Everything, It’s Still You</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_7_deployment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Exercise 7: Take Me To The Clouds Above</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-controls="quarto-sidebar-section-12" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-12-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-      </div>
-      <ul id="quarto-sidebar-section-12" aria-labelledby="quarto-sidebar-section-12-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./other_examples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">(Coming Soon!) Example Streamlit Apps</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./cheat_sheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Streamlit Cheat Sheet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Streamlit cheatsheet</span></span></a>
   </div>
 </li>
       </ul>
@@ -823,10 +741,11 @@ cookieconsent.run({
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#deploying-an-app" id="toc-deploying-an-app" class="nav-link active" data-scroll-target="#deploying-an-app"><span class="header-section-number">43.1</span> Deploying an App</a>
-  <ul class="collapse">
-  <li><a href="#method-1---from-the-deployed-app" id="toc-method-1---from-the-deployed-app" class="nav-link" data-scroll-target="#method-1---from-the-deployed-app"><span class="header-section-number">43.1.1</span> Method 1 - From the deployed app</a></li>
-  </ul></li>
+  <li><a href="#method-1---from-the-app" id="toc-method-1---from-the-app" class="nav-link active" data-scroll-target="#method-1---from-the-app"><span class="header-section-number">40.1</span> Method 1 - from the app</a></li>
+  <li><a href="#method-2---from-the-streamlit-community-cloud-website" id="toc-method-2---from-the-streamlit-community-cloud-website" class="nav-link" data-scroll-target="#method-2---from-the-streamlit-community-cloud-website"><span class="header-section-number">40.2</span> Method 2 - from the Streamlit Community Cloud website</a></li>
+  <li><a href="#managing-your-community-cloud-apps" id="toc-managing-your-community-cloud-apps" class="nav-link" data-scroll-target="#managing-your-community-cloud-apps"><span class="header-section-number">40.3</span> Managing your community cloud apps</a></li>
+  <li><a href="#troubleshooting-your-app" id="toc-troubleshooting-your-app" class="nav-link" data-scroll-target="#troubleshooting-your-app"><span class="header-section-number">40.4</span> Troubleshooting your app</a></li>
+  <li><a href="#updating-your-app" id="toc-updating-your-app" class="nav-link" data-scroll-target="#updating-your-app"><span class="header-section-number">40.5</span> Updating your app</a></li>
   </ul>
 </nav>
     </div>
@@ -834,9 +753,9 @@ cookieconsent.run({
 <main class="content" id="quarto-document-content" tabindex="-1">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html">Deployment</a></li><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html">Deployment</a></li><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></h1>
+<h1 class="title"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></h1>
 </div>
 
 
@@ -853,7 +772,8 @@ cookieconsent.run({
 </header>
 
 
-<p>The Streamlit community cloud allows you to deploy an unlimited number of web apps for free when your app is uploaded to github.</p>
+<p><br></p>
+<p>Streamlit Community Cloud allows you to deploy an unlimited number of web apps for free when your app is uploaded to github.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -869,23 +789,11 @@ Tip
 <p>Each individual app will have limits on the amount of memory, which in turn impacts the number of concurrent (simultaneous) users, though it’s difficult to put an exact number on how many concurrent users can be supported for an app given how different each app is in terms of memory requirements.</p>
 </div>
 </div>
-<section id="deploying-an-app" class="level2" data-number="43.1">
-<h2 data-number="43.1" class="anchored" data-anchor-id="deploying-an-app"><span class="header-section-number">43.1</span> Deploying an App</h2>
-<section id="method-1---from-the-deployed-app" class="level3" data-number="43.1.1">
-<h3 data-number="43.1.1" class="anchored"><span class="header-section-number">43.1.1</span> Method 1 - From the deployed app</h3>
+<p><br></p>
+<section id="method-1---from-the-app" class="level2" data-number="40.1">
+<h2 data-number="40.1" class="anchored" data-anchor-id="method-1---from-the-app"><span class="header-section-number">40.1</span> Method 1 - from the app</h2>
 <p>Before undertaking this step, you will need to have uploaded your repository to Github.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>While Streamlit has some common packages available by default, it’s best to provide a <code>requirements.txt</code> file, and you will need to do this for any non-standard Python packages.</p>
-<p>If you are using the <code>hsma_webdev</code> environment, you can copy the <code>requirements.txt</code> file from either module 7B or 7C in the HSMA course.</p>
+<p>You also need to provide a <code>requirements.txt</code> file. Although Streamlit has some common packages by default, we need the file for any non-standard Python packages.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -917,12 +825,13 @@ fiona==1.9.0</code></pre>
 </div>
 </div>
 </div>
-<p>You can then run the app as normal from the terminal in VSCode.</p>
-<p><img src="assets/images/2024-09-30-16-45-59.png" class="img-fluid"></p>
+<p><br></p>
+<p>Now, we will first run the app as normal from the terminal in VSCode.</p>
+<p><a href="assets/images/2024-09-30-16-45-59.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/2024-09-30-16-45-59.png" class="box img-fluid"></a></p>
 <p>At the top right of the app, there will be a ‘deploy’ button. Click on this.</p>
-<p><img src="assets/images/2024-09-30-16-46-47.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-16-46-47.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="assets/images/2024-09-30-16-46-47.png" class="box img-fluid"></a></p>
 <p>In the pop-up that appears, click on the ‘deploy now’ button for the option on the left.</p>
-<p><img src="assets/images/2024-09-30-16-47-01.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-16-47-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="assets/images/2024-09-30-16-47-01.png" class="box img-fluid"></a></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -936,7 +845,7 @@ Tip
 <p>If you have not previously followed this process, you will be asked to authorize Streamlit to link with your Github account.</p>
 </div>
 </div>
-<p><img src="assets/images/2024-09-30-16-48-24.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-16-48-24.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="assets/images/2024-09-30-16-48-24.png" class="box img-fluid"></a></p>
 <p>You should not need to change the values for ‘Repository’, ‘Branch’ or ‘Main File Path’.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -954,7 +863,7 @@ Note
 <p>Enter an App URL if you don’t want to use an autogenerated Streamlit one. This can contain letters, numbers and hyphens.</p>
 <p>Next, click on ‘Advanced settings’.</p>
 <p>The HSMA webdev environment used in module 7 of the course uses Python 3.11, so it’s best to select this from the dropdown.</p>
-<p><img src="assets/images/2024-09-30-16-50-16.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-16-50-16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="assets/images/2024-09-30-16-50-16.png" class="box img-fluid"></a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -971,7 +880,7 @@ Warning
 <p>You don’t need to worry about the Secrets file for now.</p>
 <p>Click ‘Save’.</p>
 <p>Now you should be back on the original screen, and can click ‘Deploy’.</p>
-<p><img src="assets/images/2024-09-30-16-48-24.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-16-48-24.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="assets/images/2024-09-30-16-48-24.png" class="box img-fluid"></a></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -982,11 +891,13 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><img src="assets/gif/Code_j6hu00OEKH.gif" class="img-fluid"></p>
+<p><a href="assets/gif/Code_j6hu00OEKH.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="assets/gif/Code_j6hu00OEKH.gif" class="box img-fluid"></a></p>
 </div>
 </div>
-<section id="method-2---from-the-streamlit-community-cloud-website" class="level3" data-number="43.1.2">
-<h3 data-number="43.1.2" class="anchored" data-anchor-id="method-2---from-the-streamlit-community-cloud-website"><span class="header-section-number">43.1.2</span> Method 2 - From the Streamlit Community Cloud Website</h3>
+<p><br></p>
+</section>
+<section id="method-2---from-the-streamlit-community-cloud-website" class="level2" data-number="40.2">
+<h2 data-number="40.2" class="anchored" data-anchor-id="method-2---from-the-streamlit-community-cloud-website"><span class="header-section-number">40.2</span> Method 2 - from the Streamlit Community Cloud website</h2>
 <p>For subsequent apps, you may find it quicker to navigate to <a href="https://share.streamlit.io/" class="uri">https://share.streamlit.io/</a> and choose ‘Create App’.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1001,45 +912,44 @@ Tip
 <p>You will first need to log into Streamlit community cloud using your Github account.</p>
 </div>
 </div>
-<p><img src="assets/images/2024-09-30-17-04-51.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-17-04-51.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="assets/images/2024-09-30-17-04-51.png" class="box img-fluid"></a></p>
 <p>Choose ‘Yup, I have an app’.</p>
-<p><img src="assets/images/2024-09-30-17-05-18.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-17-05-18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="assets/images/2024-09-30-17-05-18.png" class="box img-fluid"></a></p>
 <p>Fill in the required details.</p>
-<p><img src="assets/images/2024-09-30-17-05-36.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-17-05-36.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="assets/images/2024-09-30-17-05-36.png" class="box img-fluid"></a></p>
 <p>Clicking on the ‘repository’ field will give you a scrollable list of all repositories available in your Github.</p>
-<p><img src="assets/images/2024-09-30-17-06-32.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-17-06-32.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="assets/images/2024-09-30-17-06-32.png" class="box img-fluid"></a></p>
 <p>When you’re ready, click deploy.</p>
+<p><br></p>
 </section>
-<section id="managing-your-community-cloud-apps" class="level2" data-number="43.2">
-<h2 data-number="43.2" class="anchored" data-anchor-id="managing-your-community-cloud-apps"><span class="header-section-number">43.2</span> Managing your community cloud apps</h2>
+<section id="managing-your-community-cloud-apps" class="level2" data-number="40.3">
+<h2 data-number="40.3" class="anchored" data-anchor-id="managing-your-community-cloud-apps"><span class="header-section-number">40.3</span> Managing your community cloud apps</h2>
 <p>Navigating to <a href="https://share.streamlit.io/" class="uri">https://share.streamlit.io/</a> will give you an overview of the apps you have published to the community cloud.</p>
-<p><img src="assets/images/2024-09-30-16-54-17.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-16-54-17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="assets/images/2024-09-30-16-54-17.png" class="box img-fluid"></a></p>
 <p>Clicking on the three dots will allow you to delete or reboot the app, or change various settings relating to app privacy, secrets, and the app URL.</p>
-<p><img src="assets/images/2024-09-30-16-59-08.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-16-59-08.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="assets/images/2024-09-30-16-59-08.png" class="box img-fluid"></a></p>
+<p><br></p>
 </section>
-<section id="troubleshooting-your-app" class="level2" data-number="43.3">
-<h2 data-number="43.3" class="anchored" data-anchor-id="troubleshooting-your-app"><span class="header-section-number">43.3</span> Troubleshooting your app</h2>
+<section id="troubleshooting-your-app" class="level2" data-number="40.4">
+<h2 data-number="40.4" class="anchored" data-anchor-id="troubleshooting-your-app"><span class="header-section-number">40.4</span> Troubleshooting your app</h2>
 <p>When loading up your app while logged into your Streamlit community cloud account, you will receive additional powers to manage and troubleshoot your app.</p>
 <p>You should see a ‘manage app’ button at the bottom right of the screen.</p>
-<p><img src="assets/images/2024-09-30-17-01-27.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-17-01-27.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="assets/images/2024-09-30-17-01-27.png" class="box img-fluid"></a></p>
 <p>Clicking on this brings up a sidebar that allows you to see the behind-the-scenes activity that occurs when the virtual machine running your app is first loaded up, along with any logging or error messages. This can give you an idea of why your app isn’t working.</p>
-<p><img src="assets/images/2024-09-30-17-01-42.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-17-01-42.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="assets/images/2024-09-30-17-01-42.png" class="box img-fluid"></a></p>
 <p>Clicking on the three dots at the bottom gives you access to some useful commands, like rebooting the app.</p>
-<p><img src="assets/images/2024-09-30-17-03-27.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-17-03-27.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="assets/images/2024-09-30-17-03-27.png" class="box img-fluid"></a></p>
+<p><br></p>
 </section>
-<section id="updating-your-app" class="level2" data-number="43.4">
-<h2 data-number="43.4" class="anchored" data-anchor-id="updating-your-app"><span class="header-section-number">43.4</span> Updating your App</h2>
+<section id="updating-your-app" class="level2" data-number="40.5">
+<h2 data-number="40.5" class="anchored" data-anchor-id="updating-your-app"><span class="header-section-number">40.5</span> Updating your app</h2>
 <p>New changes made to your repository should automatically be reflected in your app.</p>
 <p>The exception to this may be changes to the list of required packages in <code>requirements.txt</code></p>
 <p>If this is the case, you may need to manually reboot the app from the list in <a href="https://share.streamlit.io/" class="uri">https://share.streamlit.io/</a> or from within the ‘manage app’ menu when viewing your app.</p>
-<p><img src="assets/images/2024-09-30-16-59-08.png" class="img-fluid"></p>
-<p><img src="assets/images/2024-09-30-17-03-27.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-09-30-16-59-08.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="assets/images/2024-09-30-16-59-08.png" class="box img-fluid"></a></p>
+<p><a href="assets/images/2024-09-30-17-03-27.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="assets/images/2024-09-30-17-03-27.png" class="box img-fluid"></a></p>
 
 
-</section>
-</div>
-</div>
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -1570,12 +1480,12 @@ Tip
 <nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
       <a href="./persisting_data_between_sessions.html" class="pagination-link" aria-label="Persisting data between sessions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./stlite_github_pages.html" class="pagination-link" aria-label="Deploying to Github Pages with Serverless Streamlit (stlite)">
-        <span class="nav-page-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1593,6 +1503,38 @@ Tip
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

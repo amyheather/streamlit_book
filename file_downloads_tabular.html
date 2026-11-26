@@ -87,11 +87,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5be68f7e89068b753bd4407cdd331613.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/stlite/iframeResizer.min.js"></script>
 <script src="site_libs/quarto-contrib/stlite/stlite.js"></script>
 <link href="site_libs/quarto-contrib/stlite/style.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -148,6 +151,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-dark"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
@@ -404,7 +408,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hello_world_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hello World (Wide Web)!</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Create and run your first app</span></span></a>
   </div>
 </li>
       </ul>
@@ -418,61 +422,61 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loading_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An Introduction to Loading and Displaying Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Loading and displaying data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_markdown_and_titles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Text, Markdown, and Titles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Titles, text, and markdown</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./images_and_videos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and Videos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and videos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./warnings_errors_success_messages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, Success, Warning and Error Boxes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, success, warning and error boxes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Display and format dataframes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./metrics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and Dials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and dials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -492,31 +496,31 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./introduction_to_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic Inputs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic inputs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_numeric_and_selection_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An Overview of Available Input Types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An overview of available input types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_uploads.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading Data Files, Images and More</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading data files, images and more</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Dataframes and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional inputs - dataframes and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional inputs - maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -542,19 +546,19 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_images_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_static.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_interactive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading interactive maps</span></span></a>
   </div>
 </li>
       </ul>
@@ -568,13 +572,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wide_layout.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide Layout, Page Tab Titles and Favicons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide layout, page tab titles and favicons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./layout_divider.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page Dividers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page dividers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -604,7 +608,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage Apps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage apps</span></span></a>
   </div>
 </li>
       </ul>
@@ -618,7 +622,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./app_colours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App Colours</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App colours</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -650,13 +654,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./partial_reruns.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial Reruns (fragments)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial reruns (fragments)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./custom_page_navigation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom Page Navigation Buttons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom page navigation buttons</span></span></a>
   </div>
 </li>
       </ul>
@@ -676,7 +680,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./session_state.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting Data Across Pages and Runs with Session State</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting data across pages and runs with session state</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -687,26 +691,8 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./memory_management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">(Coming Soon!) Memory Management</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./authentication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">(Coming Soon!) User Authentication/Login</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./secrets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">(Coming Soon!) Secrets</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./persisting_data_between_sessions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
   </div>
 </li>
       </ul>
@@ -720,25 +706,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./streamlit_community_cloud.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./stlite_desktop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">(Coming Soon!) Making a Desktop App with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./local_server.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">(Coming Soon!) Deploying to an On-premises Server</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
   </div>
 </li>
       </ul>
@@ -746,31 +720,37 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-10-label">Project 1 - DES App</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-10-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_0_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">The Discrete Event Simulation (DES) Code</span></span></a>
+  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Exercise 1: Into the future</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_1_simplest_des_frontend.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">A simple DES frontend</span></span></a>
+  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello streamlit!</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_2_run_buttons_spinners_des.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Adding a run button</span></span></a>
+  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_6_splitting_app_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Splitting the app and DES code</span></span></a>
+  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Exercise 3: Double dash!!(boards)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercise_4_deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Exercise 4: Take me to the clouds above</span></span></a>
   </div>
 </li>
       </ul>
@@ -778,75 +758,13 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-11-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-11-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Exercise 1: Into the Future</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello Streamlit!</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Exercise 3: Double Dash!!(boards)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_4_des_part_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Exercise 4: Fulfil your DEStiny</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_5_des_part_2_multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Exercise 5: DEStiny’s Child</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_6_des_part_3_advanced_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Exercise 6: DESpite Everything, It’s Still You</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_7_deployment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Exercise 7: Take Me To The Clouds Above</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-controls="quarto-sidebar-section-12" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-12-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-      </div>
-      <ul id="quarto-sidebar-section-12" aria-labelledby="quarto-sidebar-section-12-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./other_examples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">(Coming Soon!) Example Streamlit Apps</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./cheat_sheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Streamlit Cheat Sheet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Streamlit cheatsheet</span></span></a>
   </div>
 </li>
       </ul>
@@ -861,10 +779,10 @@ cookieconsent.run({
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#saving-pandas-dataframes" id="toc-saving-pandas-dataframes" class="nav-link active" data-scroll-target="#saving-pandas-dataframes"><span class="header-section-number">19.1</span> Saving pandas dataframes</a>
-  <ul class="collapse">
-  <li><a href="#saving-as-csv-or-excel-file" id="toc-saving-as-csv-or-excel-file" class="nav-link" data-scroll-target="#saving-as-csv-or-excel-file"><span class="header-section-number">19.1.1</span> Saving as csv or excel file</a></li>
-  </ul></li>
+  <li><a href="#using-the-integrated-download-option" id="toc-using-the-integrated-download-option" class="nav-link active" data-scroll-target="#using-the-integrated-download-option"><span class="header-section-number">19.1</span> Using the integrated download option</a></li>
+  <li><a href="#adding-download-buttons" id="toc-adding-download-buttons" class="nav-link" data-scroll-target="#adding-download-buttons"><span class="header-section-number">19.2</span> Adding download buttons</a></li>
+  <li><a href="#download-button---csv-files" id="toc-download-button---csv-files" class="nav-link" data-scroll-target="#download-button---csv-files"><span class="header-section-number">19.3</span> Download button - CSV files</a></li>
+  <li><a href="#download-button---excel-files" id="toc-download-button---excel-files" class="nav-link" data-scroll-target="#download-button---excel-files"><span class="header-section-number">19.4</span> Download button - excel files</a></li>
   </ul>
 </nav>
     </div>
@@ -891,43 +809,39 @@ cookieconsent.run({
 </header>
 
 
-<p>Many outputs from Streamlit apps benefit from being able to be downloaded after they have been edited or calculated.</p>
-<p>For example, your users may want to be able to download the data that is behind a graph, or a summary csv of the data they have uploaded.</p>
-<p>They may also want to save the graphs or other image outputs they create via your apps, like wordclouds, to their computer.</p>
-<p>In this chapter, we’re going to focus on <strong>tabular</strong> data, as you would display in an Excel file or pandas dataframe.</p>
-<section id="saving-pandas-dataframes" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="saving-pandas-dataframes"><span class="header-section-number">19.1</span> Saving pandas dataframes</h2>
-<p>For now, we’ll assume the tabular data you want to save is in a pandas dataframe.</p>
-<p>This will usually be the case - or it will be data you can easily transform into a pandas dataframe, like a numpy array.</p>
-<p>Let’s start with an app that has some data on the popularity of names.</p>
-<p>This app currently just loads in a dataset, does some simple manipulations, then returns the names that appeared most frequently in the dataset.</p>
-<section id="saving-as-csv-or-excel-file" class="level3" data-number="19.1.1">
-<h3 data-number="19.1.1" class="anchored" data-anchor-id="saving-as-csv-or-excel-file"><span class="header-section-number">19.1.1</span> Saving as csv or excel file</h3>
+<p><br></p>
+<p>Users may often want to download Streamlit outputs - for example, the data behind a graph, a summary CSV, or images like graphs and word clouds.</p>
+<p>This chapter focuses on downloading <strong>tabular</strong> data, as you would display in an Excel file or pandas dataframe. We’ll assume your data is in a pandas dataframe (or if not, you can easily to convert into one from a numpy array, for example).</p>
+<p>Let’s start with an app that loads a dataset on the popularity of names, does some manipulation, and returns the most frequent names.</p>
+<p><br></p>
+<section id="using-the-integrated-download-option" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="using-the-integrated-download-option"><span class="header-section-number">19.1</span> Using the integrated download option</h2>
 <p>If a dataframe is displayed using the standard <code>st.dataframe()</code> command or the <code>st.write()</code> command, a csv download option will become visible when hovering over the dataframe.</p>
-<div id="e6d80340" class="cell" data-execution_count="1">
+<div id="e56065c5" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'https://files.catbox.moe/eor4ta.csv'</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>name_lookup_df <span class="op">=</span> pd.read_csv(url).melt(id_vars<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Gender"</span>]).dropna().rename(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>{<span class="st">"variable"</span>: <span class="st">"Year"</span>, <span class="st">"value"</span>: <span class="st">"Rank"</span>}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>names_appearing_most_years <span class="op">=</span> pd.DataFrame(name_lookup_df[<span class="st">'Name'</span>].value_counts())</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>st.dataframe(names_appearing_most_years)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'https://files.catbox.moe/eor4ta.csv'</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>name_lookup_df <span class="op">=</span> pd.read_csv(url).melt(id_vars<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Gender"</span>]).dropna().rename(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>{<span class="st">"variable"</span>: <span class="st">"Year"</span>, <span class="st">"value"</span>: <span class="st">"Rank"</span>}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>names_appearing_most_years <span class="op">=</span> pd.DataFrame(name_lookup_df[<span class="st">'Name'</span>].value_counts())</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>st.dataframe(names_appearing_most_years)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Aimport%20micropip%0Aawait%20micropip.install%28%22plotly%22%29%0Aimport%20plotly.express%20as%20px%0A%0Aurl%20%3D%20%27https%3A//files.catbox.moe/eor4ta.csv%27%0Aname_lookup_df%20%3D%20pd.read_csv%28url%29.melt%28id_vars%3D%5B%22Name%22%2C%20%22Gender%22%5D%29.dropna%28%29.rename%28%0A%20%20%20%20columns%3D%7B%22variable%22%3A%20%22Year%22%2C%20%22value%22%3A%20%22Rank%22%7D%0A%20%20%20%20%29%0A%0Anames_appearing_most_years%20%3D%20pd.DataFrame%28name_lookup_df%5B%27Name%27%5D.value_counts%28%29%29%0A%0Ast.dataframe%28names_appearing_most_years%29
+<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0A%0Aurl%20%3D%20%27https%3A//files.catbox.moe/eor4ta.csv%27%0Aname_lookup_df%20%3D%20pd.read_csv%28url%29.melt%28id_vars%3D%5B%22Name%22%2C%20%22Gender%22%5D%29.dropna%28%29.rename%28%0A%20%20%20%20columns%3D%7B%22variable%22%3A%20%22Year%22%2C%20%22value%22%3A%20%22Rank%22%7D%0A%20%20%20%20%29%0A%0Anames_appearing_most_years%20%3D%20pd.DataFrame%28name_lookup_df%5B%27Name%27%5D.value_counts%28%29%29%0A%0Ast.dataframe%28names_appearing_most_years%29
 " class="stlite"></iframe>
-<section id="adding-download-buttons" class="level4" data-number="19.1.1.1">
-<h4 data-number="19.1.1.1" class="anchored" data-anchor-id="adding-download-buttons"><span class="header-section-number">19.1.1.1</span> Adding download buttons</h4>
+<p><br></p>
+</section>
+<section id="adding-download-buttons" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="adding-download-buttons"><span class="header-section-number">19.2</span> Adding download buttons</h2>
 <p>However, often we may only be displaying a graph of the data rather than displaying the data as well, or we may want to provide downloads of data files slightly different to the ones we are displaying - for example, ones with more or less columns, or providing the raw data instad of the summarised data we are displaying.</p>
 <p>When this is the case, we can instead provide download buttons to allow any python dataframe in our app’s running environment to be downloaded.</p>
 <p>This is also just a bit more visible than the default .csv download button in streamlit dataframes, which is easy for your end users to miss.</p>
 <p>The function we will use is <code>st.download_button</code>.</p>
 <p>This uses the standard format</p>
-<div id="578566ee" class="cell" data-execution_count="2">
+<div id="73d63e58" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a>st.download_button(</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-2-2" class="code-annotation-target"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a>   <span class="st">"Click here to download the dataframe as a csv file"</span>,</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a>   data<span class="op">=</span>individual_df.to_csv(index<span class="op">=</span><span class="va">False</span>).encode(<span class="st">'utf-8'</span>),</span>
@@ -955,8 +869,10 @@ cookieconsent.run({
 </dl>
 </div>
 </div>
-<section id="csv-files" class="level5" data-number="19.1.1.1.1">
-<h5 data-number="19.1.1.1.1" class="anchored" data-anchor-id="csv-files"><span class="header-section-number">19.1.1.1.1</span> CSV files</h5>
+<p><br></p>
+</section>
+<section id="download-button---csv-files" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="download-button---csv-files"><span class="header-section-number">19.3</span> Download button - CSV files</h2>
 <p>CSV files are relatively simple to provide a download for.</p>
 <p>The key steps are</p>
 <ul>
@@ -966,7 +882,7 @@ cookieconsent.run({
 <li>(OPTIONAL) provide a default file name for the resulting csv - you may want to use an f-string to intelligently provide a filename if the data is reflecting options the user has chosen</li>
 <li>(OPTIONAL) Specify the MIME type of the data as <code>"text/csv"</code> - an automatic value will be inferred from the data type, but it is better practice to more explicitly specify it like this</li>
 </ul>
-<div id="85950011" class="cell" data-execution_count="3">
+<div id="dbc587fa" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
@@ -1012,7 +928,7 @@ cookieconsent.run({
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>   mime<span class="op">=</span><span class="st">"text/csv"</span></span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>   )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Aimport%20micropip%0Aawait%20micropip.install%28%22plotly%22%29%0Aimport%20plotly.express%20as%20px%0A%0Aurl%20%3D%20%27https%3A//files.catbox.moe/eor4ta.csv%27%0Aname_lookup_df%20%3D%20pd.read_csv%28url%29%0A%0Aname_lookup_df%20%3D%20name_lookup_df.melt%28id_vars%3D%5B%22Name%22%2C%20%22Gender%22%5D%29.dropna%28%29.rename%28%0A%20%20%20%20columns%3D%7B%22variable%22%3A%20%22Year%22%2C%20%22value%22%3A%20%22Rank%22%7D%0A%20%20%20%20%29%0A%0Aname_lookup_df%5B%27Year%27%5D%20%3D%20name_lookup_df%5B%27Year%27%5D.astype%28%27int64%27%29%0Aname_lookup_df%5B%27Rank%27%5D%20%3D%20name_lookup_df%5B%27Rank%27%5D.astype%28%27int64%27%29%0A%0Ainput_name%20%3D%20st.text_input%28%22What%20name%20would%20you%20like%20to%20lookup%3F%22%2C%20value%3D%22Daniel%22%29%0A%0Aindividual_df%20%3D%20name_lookup_df%5Bname_lookup_df%5B%27Name%27%5D%20%3D%3D%20input_name%5D%0A%0Aif%20input_name%20is%20not%20None%3A%0A%0A%20%20%20%20st.plotly_chart%28%0A%20%20%20%20%20%20%20%20px.line%28individual_df%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20y%3D%22Rank%22%2C%20x%3D%22Year%22%2C%20color%3D%22Gender%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20range_y%3D%5B1000%2C%200%5D%2C%20range_x%3D%5B1920%2C%202022%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20markers%3DTrue%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%29%0A%0Ast.download_button%28%0A%20%20%20%22Click%20here%20to%20download%20the%20dataframe%20as%20a%20csv%20file%22%2C%0A%20%20%20individual_df.to_csv%28index%3DFalse%29.encode%28%27utf-8%27%29%2C%0A%20%20%20f%22%7Binput_name%7D_historical_popularity.csv%22%2C%0A%20%20%20%22text/csv%22%0A%29
+<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22plotly%22%29%0A%0Aimport%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Afrom%20plotly%20import%20express%20as%20px%0A%0Aurl%20%3D%20%27https%3A//files.catbox.moe/eor4ta.csv%27%0Aname_lookup_df%20%3D%20pd.read_csv%28url%29%0A%0Aname_lookup_df%20%3D%20name_lookup_df.melt%28id_vars%3D%5B%22Name%22%2C%20%22Gender%22%5D%29.dropna%28%29.rename%28%0A%20%20%20%20columns%3D%7B%22variable%22%3A%20%22Year%22%2C%20%22value%22%3A%20%22Rank%22%7D%0A%20%20%20%20%29%0A%0Aname_lookup_df%5B%27Year%27%5D%20%3D%20name_lookup_df%5B%27Year%27%5D.astype%28%27int64%27%29%0Aname_lookup_df%5B%27Rank%27%5D%20%3D%20name_lookup_df%5B%27Rank%27%5D.astype%28%27int64%27%29%0A%0Ainput_name%20%3D%20st.text_input%28%22What%20name%20would%20you%20like%20to%20lookup%3F%22%2C%20value%3D%22Daniel%22%29%0A%0Aindividual_df%20%3D%20name_lookup_df%5Bname_lookup_df%5B%27Name%27%5D%20%3D%3D%20input_name%5D%0A%0Aif%20input_name%20is%20not%20None%3A%0A%0A%20%20%20%20st.plotly_chart%28%0A%20%20%20%20%20%20%20%20px.line%28individual_df%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20y%3D%22Rank%22%2C%20x%3D%22Year%22%2C%20color%3D%22Gender%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20range_y%3D%5B1000%2C%200%5D%2C%20range_x%3D%5B1920%2C%202022%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20markers%3DTrue%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%29%0A%0Ast.download_button%28%0A%20%20%20%22Click%20here%20to%20download%20the%20dataframe%20as%20a%20csv%20file%22%2C%0A%20%20%20individual_df.to_csv%28index%3DFalse%29.encode%28%27utf-8%27%29%2C%0A%20%20%20f%22%7Binput_name%7D_historical_popularity.csv%22%2C%0A%20%20%20%22text/csv%22%0A%29
 " class="stlite"></iframe>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1025,15 +941,16 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>When using plotly, users can hover over the plot and choose ‘Download plot as a png’.</p>
-<p><img src="assets/images/2024-08-12-19-54-14.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-08-12-19-54-14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/2024-08-12-19-54-14.png" class="box img-fluid"></a></p>
 </div>
 </div>
+<p><br></p>
 </section>
-<section id="excel-files" class="level5" data-number="19.1.1.1.2">
-<h5 data-number="19.1.1.1.2" class="anchored" data-anchor-id="excel-files"><span class="header-section-number">19.1.1.1.2</span> Excel Files</h5>
+<section id="download-button---excel-files" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="download-button---excel-files"><span class="header-section-number">19.4</span> Download button - excel files</h2>
 <p>It is slightly more complex to set up the download of a dataframe as an Excel file.</p>
 <p>However, this does have the benefit of being something your end users will be more familiar with - and with advanced usage of the <code>xlsxwriter</code> library that we’ll make use of in the Modern Analytics module + book, it allows us to add in multiple worksheets to a single file, as well as more advanced things like formulas and Excel charts that will update if users update values in the spreadsheet.</p>
-<div id="66474d62" class="cell" data-execution_count="4">
+<div id="22f500c8" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
@@ -1090,13 +1007,10 @@ Tip
 <span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>   mime<span class="op">=</span><span class="st">"application/vnd.ms-excel"</span></span>
 <span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Aimport%20micropip%0Aawait%20micropip.install%28%22plotly%22%29%0Aimport%20plotly.express%20as%20px%0Aawait%20micropip.install%28%22xlsxwriter%22%29%0Aimport%20xlsxwriter%0Afrom%20io%20import%20BytesIO%0A%0Aurl%20%3D%20%27https%3A//files.catbox.moe/eor4ta.csv%27%0Aname_lookup_df%20%3D%20pd.read_csv%28url%29%0A%0Aname_lookup_df%20%3D%20name_lookup_df.melt%28id_vars%3D%5B%22Name%22%2C%20%22Gender%22%5D%29.dropna%28%29.rename%28%0A%20%20%20%20columns%3D%7B%22variable%22%3A%20%22Year%22%2C%20%22value%22%3A%20%22Rank%22%7D%0A%20%20%20%20%29%0A%0Aname_lookup_df%5B%27Year%27%5D%20%3D%20name_lookup_df%5B%27Year%27%5D.astype%28%27int64%27%29%0Aname_lookup_df%5B%27Rank%27%5D%20%3D%20name_lookup_df%5B%27Rank%27%5D.astype%28%27int64%27%29%0A%0Ainput_name%20%3D%20st.text_input%28%22What%20name%20would%20you%20like%20to%20lookup%3F%22%2C%20value%3D%22Daniel%22%29%0A%0Aindividual_df%20%3D%20name_lookup_df%5Bname_lookup_df%5B%27Name%27%5D%20%3D%3D%20input_name%5D%0A%0Aif%20input_name%20is%20not%20None%3A%0A%0A%20%20%20%20st.plotly_chart%28%0A%20%20%20%20%20%20%20%20px.line%28individual_df%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20y%3D%22Rank%22%2C%20x%3D%22Year%22%2C%20color%3D%22Gender%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20range_y%3D%5B1000%2C%200%5D%2C%20range_x%3D%5B1920%2C%202022%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20markers%3DTrue%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%29%0A%0Aoutput%20%3D%20BytesIO%28%29%0A%0Awriter%20%3D%20pd.ExcelWriter%28output%2C%20engine%3D%27xlsxwriter%27%29%0A%0Aindividual_df.to_excel%28writer%2C%20sheet_name%3Df%22%7Binput_name%7D%20Data%22%2C%20index%3DFalse%29%0Aname_lookup_df.to_excel%28writer%2C%20sheet_name%3Df%22Full%20Data%22%2C%20index%3DFalse%29%0A%0Awriter.close%28%29%0A%0Ast.download_button%28%0A%20%20%20%22Click%20here%20to%20download%20the%20dataframe%20as%20an%20Excel%20file%22%2C%0A%20%20%20data%20%3D%20output.getvalue%28%29%2C%0A%20%20%20file_name%3Df%22%7Binput_name%7D_historical_popularity.xlsx%22%2C%0A%20%20%20mime%3D%22application/vnd.ms-excel%22%0A%29
+<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22plotly%22%29%0Aawait%20micropip.install%28%22xlsxwriter%22%29%0A%0Aimport%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Afrom%20plotly%20import%20express%20as%20px%0Aimport%20xlsxwriter%0Afrom%20io%20import%20BytesIO%0A%0Aurl%20%3D%20%27https%3A//files.catbox.moe/eor4ta.csv%27%0Aname_lookup_df%20%3D%20pd.read_csv%28url%29%0A%0Aname_lookup_df%20%3D%20name_lookup_df.melt%28id_vars%3D%5B%22Name%22%2C%20%22Gender%22%5D%29.dropna%28%29.rename%28%0A%20%20%20%20columns%3D%7B%22variable%22%3A%20%22Year%22%2C%20%22value%22%3A%20%22Rank%22%7D%0A%20%20%20%20%29%0A%0Aname_lookup_df%5B%27Year%27%5D%20%3D%20name_lookup_df%5B%27Year%27%5D.astype%28%27int64%27%29%0Aname_lookup_df%5B%27Rank%27%5D%20%3D%20name_lookup_df%5B%27Rank%27%5D.astype%28%27int64%27%29%0A%0Ainput_name%20%3D%20st.text_input%28%22What%20name%20would%20you%20like%20to%20lookup%3F%22%2C%20value%3D%22Daniel%22%29%0A%0Aindividual_df%20%3D%20name_lookup_df%5Bname_lookup_df%5B%27Name%27%5D%20%3D%3D%20input_name%5D%0A%0Aif%20input_name%20is%20not%20None%3A%0A%0A%20%20%20%20st.plotly_chart%28%0A%20%20%20%20%20%20%20%20px.line%28individual_df%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20y%3D%22Rank%22%2C%20x%3D%22Year%22%2C%20color%3D%22Gender%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20range_y%3D%5B1000%2C%200%5D%2C%20range_x%3D%5B1920%2C%202022%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20markers%3DTrue%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%29%0A%0Aoutput%20%3D%20BytesIO%28%29%0A%0Awriter%20%3D%20pd.ExcelWriter%28output%2C%20engine%3D%27xlsxwriter%27%29%0A%0Aindividual_df.to_excel%28writer%2C%20sheet_name%3Df%22%7Binput_name%7D%20Data%22%2C%20index%3DFalse%29%0Aname_lookup_df.to_excel%28writer%2C%20sheet_name%3Df%22Full%20Data%22%2C%20index%3DFalse%29%0A%0Awriter.close%28%29%0A%0Ast.download_button%28%0A%20%20%20%22Click%20here%20to%20download%20the%20dataframe%20as%20an%20Excel%20file%22%2C%0A%20%20%20data%20%3D%20output.getvalue%28%29%2C%0A%20%20%20file_name%3Df%22%7Binput_name%7D_historical_popularity.xlsx%22%2C%0A%20%20%20mime%3D%22application/vnd.ms-excel%22%0A%29
 " class="stlite"></iframe>
 
 
-</section>
-</section>
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -1631,8 +1545,8 @@ Tip
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./file_downloads_images_charts.html" class="pagination-link" aria-label="Downloading Images and Charts">
-        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./file_downloads_images_charts.html" class="pagination-link" aria-label="Downloading images and charts">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1650,6 +1564,38 @@ Tip
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

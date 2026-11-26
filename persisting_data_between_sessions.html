@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>42&nbsp; Persisting data between sessions – HSMA - Web Apps with Streamlit</title>
+<title>39&nbsp; Persisting data between sessions – HSMA - Web Apps with Streamlit</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./streamlit_community_cloud.html" rel="next">
-<link href="./secrets.html" rel="prev">
+<link href="./callbacks.html" rel="prev">
 <link href="./assets/images/hsma_logo_transparent_background_large.png" rel="icon" type="image/png">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -87,8 +87,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5be68f7e89068b753bd4407cdd331613.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -145,6 +145,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-dark"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
@@ -360,7 +361,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caching.html">Advanced Concepts</a></li><li class="breadcrumb-item"><a href="./persisting_data_between_sessions.html"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caching.html">Advanced Concepts</a></li><li class="breadcrumb-item"><a href="./persisting_data_between_sessions.html"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -401,7 +402,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hello_world_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hello World (Wide Web)!</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Create and run your first app</span></span></a>
   </div>
 </li>
       </ul>
@@ -415,61 +416,61 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loading_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An Introduction to Loading and Displaying Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Loading and displaying data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_markdown_and_titles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Text, Markdown, and Titles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Titles, text, and markdown</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./images_and_videos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and Videos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and videos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./warnings_errors_success_messages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, Success, Warning and Error Boxes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, success, warning and error boxes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Display and format dataframes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./metrics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and Dials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and dials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -489,31 +490,31 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./introduction_to_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic Inputs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic inputs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_numeric_and_selection_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An Overview of Available Input Types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An overview of available input types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_uploads.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading Data Files, Images and More</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading data files, images and more</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Dataframes and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional inputs - dataframes and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional inputs - maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -539,19 +540,19 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_images_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_static.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_interactive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading interactive maps</span></span></a>
   </div>
 </li>
       </ul>
@@ -565,13 +566,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wide_layout.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide Layout, Page Tab Titles and Favicons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide layout, page tab titles and favicons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./layout_divider.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page Dividers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page dividers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -601,7 +602,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage Apps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage apps</span></span></a>
   </div>
 </li>
       </ul>
@@ -615,7 +616,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./app_colours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App Colours</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App colours</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -647,13 +648,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./partial_reruns.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial Reruns (fragments)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial reruns (fragments)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./custom_page_navigation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom Page Navigation Buttons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom page navigation buttons</span></span></a>
   </div>
 </li>
       </ul>
@@ -673,7 +674,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./session_state.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting Data Across Pages and Runs with Session State</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting data across pages and runs with session state</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -684,26 +685,8 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./memory_management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">(Coming Soon!) Memory Management</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./authentication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">(Coming Soon!) User Authentication/Login</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./secrets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">(Coming Soon!) Secrets</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./persisting_data_between_sessions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
   </div>
 </li>
       </ul>
@@ -717,25 +700,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./streamlit_community_cloud.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./stlite_desktop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">(Coming Soon!) Making a Desktop App with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./local_server.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">(Coming Soon!) Deploying to an On-premises Server</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
   </div>
 </li>
       </ul>
@@ -743,31 +714,37 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-10-label">Project 1 - DES App</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-10-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_0_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">The Discrete Event Simulation (DES) Code</span></span></a>
+  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Exercise 1: Into the future</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_1_simplest_des_frontend.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">A simple DES frontend</span></span></a>
+  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello streamlit!</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_2_run_buttons_spinners_des.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Adding a run button</span></span></a>
+  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_6_splitting_app_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Splitting the app and DES code</span></span></a>
+  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Exercise 3: Double dash!!(boards)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercise_4_deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Exercise 4: Take me to the clouds above</span></span></a>
   </div>
 </li>
       </ul>
@@ -775,75 +752,13 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-11-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-11-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Exercise 1: Into the Future</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello Streamlit!</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Exercise 3: Double Dash!!(boards)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_4_des_part_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Exercise 4: Fulfil your DEStiny</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_5_des_part_2_multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Exercise 5: DEStiny’s Child</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_6_des_part_3_advanced_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Exercise 6: DESpite Everything, It’s Still You</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_7_deployment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Exercise 7: Take Me To The Clouds Above</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-controls="quarto-sidebar-section-12" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-12-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-      </div>
-      <ul id="quarto-sidebar-section-12" aria-labelledby="quarto-sidebar-section-12-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./other_examples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">(Coming Soon!) Example Streamlit Apps</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./cheat_sheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Streamlit Cheat Sheet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Streamlit cheatsheet</span></span></a>
   </div>
 </li>
       </ul>
@@ -858,18 +773,18 @@ cookieconsent.run({
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#tidb-cloud" id="toc-tidb-cloud" class="nav-link active" data-scroll-target="#tidb-cloud"><span class="header-section-number">42.1</span> TiDB cloud</a></li>
-  <li><a href="#supabase" id="toc-supabase" class="nav-link" data-scroll-target="#supabase"><span class="header-section-number">42.2</span> Supabase</a></li>
-  <li><a href="#google-sheets" id="toc-google-sheets" class="nav-link" data-scroll-target="#google-sheets"><span class="header-section-number">42.3</span> Google Sheets</a>
+  <li><a href="#tidb-cloud" id="toc-tidb-cloud" class="nav-link active" data-scroll-target="#tidb-cloud"><span class="header-section-number">39.1</span> TiDB cloud</a></li>
+  <li><a href="#supabase" id="toc-supabase" class="nav-link" data-scroll-target="#supabase"><span class="header-section-number">39.2</span> Supabase</a></li>
+  <li><a href="#google-sheets" id="toc-google-sheets" class="nav-link" data-scroll-target="#google-sheets"><span class="header-section-number">39.3</span> Google sheets</a>
   <ul class="collapse">
-  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading"><span class="header-section-number">42.3.1</span> Reading</a></li>
-  <li><a href="#app-code" id="toc-app-code" class="nav-link" data-scroll-target="#app-code"><span class="header-section-number">42.3.2</span> App Code</a></li>
-  <li><a href="#example-secrets-file" id="toc-example-secrets-file" class="nav-link" data-scroll-target="#example-secrets-file"><span class="header-section-number">42.3.3</span> Example secrets file</a></li>
-  <li><a href="#writing-private-sheets" id="toc-writing-private-sheets" class="nav-link" data-scroll-target="#writing-private-sheets"><span class="header-section-number">42.3.4</span> Writing + Private Sheets</a></li>
-  <li><a href="#app-code-1" id="toc-app-code-1" class="nav-link" data-scroll-target="#app-code-1"><span class="header-section-number">42.3.5</span> App Code</a></li>
-  <li><a href="#example-secrets-file-1" id="toc-example-secrets-file-1" class="nav-link" data-scroll-target="#example-secrets-file-1"><span class="header-section-number">42.3.6</span> Example Secrets File</a></li>
+  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading"><span class="header-section-number">39.3.1</span> Reading</a></li>
+  <li><a href="#app-code" id="toc-app-code" class="nav-link" data-scroll-target="#app-code"><span class="header-section-number">39.3.2</span> App code</a></li>
+  <li><a href="#example-secrets-file" id="toc-example-secrets-file" class="nav-link" data-scroll-target="#example-secrets-file"><span class="header-section-number">39.3.3</span> Example secrets file</a></li>
+  <li><a href="#writing-and-private-sheets" id="toc-writing-and-private-sheets" class="nav-link" data-scroll-target="#writing-and-private-sheets"><span class="header-section-number">39.3.4</span> Writing and private sheets</a></li>
+  <li><a href="#app-code-1" id="toc-app-code-1" class="nav-link" data-scroll-target="#app-code-1"><span class="header-section-number">39.3.5</span> App code</a></li>
+  <li><a href="#example-secrets-file-1" id="toc-example-secrets-file-1" class="nav-link" data-scroll-target="#example-secrets-file-1"><span class="header-section-number">39.3.6</span> Example secrets file</a></li>
   </ul></li>
-  <li><a href="#writing-to-an-internal-database" id="toc-writing-to-an-internal-database" class="nav-link" data-scroll-target="#writing-to-an-internal-database"><span class="header-section-number">42.4</span> Writing to an internal database</a></li>
+  <li><a href="#writing-to-an-internal-database" id="toc-writing-to-an-internal-database" class="nav-link" data-scroll-target="#writing-to-an-internal-database"><span class="header-section-number">39.4</span> Writing to an internal database</a></li>
   </ul>
 </nav>
     </div>
@@ -877,9 +792,9 @@ cookieconsent.run({
 <main class="content" id="quarto-document-content" tabindex="-1">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caching.html">Advanced Concepts</a></li><li class="breadcrumb-item"><a href="./persisting_data_between_sessions.html"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caching.html">Advanced Concepts</a></li><li class="breadcrumb-item"><a href="./persisting_data_between_sessions.html"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></h1>
+<h1 class="title"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></h1>
 </div>
 
 
@@ -896,6 +811,7 @@ cookieconsent.run({
 </header>
 
 
+<p><br></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -911,8 +827,9 @@ Warning
 </div>
 <p>Because of how Streamlit apps run when deployed on something like Streamlit cloud or an alternative platform like Heroku - data you write to something like a csv in a relative folder to your app will not persist indefinitely.</p>
 <p>This means that for some apps you may find yourself in the situation of needing a place to read and write from outside of the Streamlit ecosystem.</p>
-<section id="tidb-cloud" class="level2" data-number="42.1">
-<h2 data-number="42.1" class="anchored" data-anchor-id="tidb-cloud"><span class="header-section-number">42.1</span> TiDB cloud</h2>
+<p><br></p>
+<section id="tidb-cloud" class="level2" data-number="39.1">
+<h2 data-number="39.1" class="anchored" data-anchor-id="tidb-cloud"><span class="header-section-number">39.1</span> TiDB cloud</h2>
 <p>Here are some details from the Kailo dashboard project on how TiDB cloud was used for this purpose.</p>
 <p><a href="https://kailo-beewell-dashboard.readthedocs.io/en/latest/hosting_data.html">Documentation</a> <a href="https://github.com/kailo-beewell/kailo_beewell_dashboard_package/blob/main/kailo_beewell_dashboard/import_data.py">Code example</a></p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -929,25 +846,27 @@ Tip
 <p>However, you should still consult with all relevant departments in your organisation before using it for any data of a sensitive nature.</p>
 </div>
 </div>
+<p><br></p>
 </section>
-<section id="supabase" class="level2" data-number="42.2">
-<h2 data-number="42.2" class="anchored" data-anchor-id="supabase"><span class="header-section-number">42.2</span> Supabase</h2>
+<section id="supabase" class="level2" data-number="39.2">
+<h2 data-number="39.2" class="anchored" data-anchor-id="supabase"><span class="header-section-number">39.2</span> Supabase</h2>
 <p>Supabase has been confirmed recently as a working option. A code example will follow shortly.</p>
+<p><br></p>
 </section>
-<section id="google-sheets" class="level2" data-number="42.3">
-<h2 data-number="42.3" class="anchored" data-anchor-id="google-sheets"><span class="header-section-number">42.3</span> Google Sheets</h2>
-<section id="reading" class="level3" data-number="42.3.1">
-<h3 data-number="42.3.1" class="anchored" data-anchor-id="reading"><span class="header-section-number">42.3.1</span> Reading</h3>
+<section id="google-sheets" class="level2" data-number="39.3">
+<h2 data-number="39.3" class="anchored" data-anchor-id="google-sheets"><span class="header-section-number">39.3</span> Google sheets</h2>
+<section id="reading" class="level3" data-number="39.3.1">
+<h3 data-number="39.3.1" class="anchored" data-anchor-id="reading"><span class="header-section-number">39.3.1</span> Reading</h3>
 <p>Public google sheets can be easily read from using the <code>st-gsheets-connection</code> extension.</p>
 <p><a href="https://github.com/streamlit/gsheets-connection/tree/main?tab=readme-ov-file" class="uri">https://github.com/streamlit/gsheets-connection/tree/main?tab=readme-ov-file</a></p>
 <p>This app shows an example of reading from a google sheet.</p>
-<iframe width="780" height="500" src="https://hsma-g-sheets-app-read.streamlit.app/" title="Quarto Components"></iframe>
+<iframe width="100%" height="500" src="https://hsma-g-sheets-app-read.streamlit.app/?embed=true" title="Quarto Components"></iframe>
 <p>In this example app, the URL to the sheet is stored inside a <code>secrets.toml</code> file, which is stored in a <code>.streamlit</code> folder when running locally and would generally not be committed to github.</p>
 <p>When deploying this to the community cloud, you click into ‘advanced settings’ when deploying your app and paste the contents of the secrets file there.</p>
 </section>
-<section id="app-code" class="level3" data-number="42.3.2">
-<h3 data-number="42.3.2" class="anchored" data-anchor-id="app-code"><span class="header-section-number">42.3.2</span> App Code</h3>
-<div id="5fa58125" class="cell" data-execution_count="1">
+<section id="app-code" class="level3" data-number="39.3.2">
+<h3 data-number="39.3.2" class="anchored" data-anchor-id="app-code"><span class="header-section-number">39.3.2</span> App code</h3>
+<div id="352b6e73" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> streamlit_gsheets <span class="im">import</span> GSheetsConnection <span class="co"># this doesn't exist in the hsma_webdev environment</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># would need to be installed with</span></span>
@@ -966,8 +885,8 @@ Tip
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>st.dataframe(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="example-secrets-file" class="level3" data-number="42.3.3">
-<h3 data-number="42.3.3" class="anchored" data-anchor-id="example-secrets-file"><span class="header-section-number">42.3.3</span> Example secrets file</h3>
+<section id="example-secrets-file" class="level3" data-number="39.3.3">
+<h3 data-number="39.3.3" class="anchored" data-anchor-id="example-secrets-file"><span class="header-section-number">39.3.3</span> Example secrets file</h3>
 <pre><code>test_secret = "llama"
 
 [connections.gsheets]
@@ -987,14 +906,14 @@ Tip
 </div>
 </div>
 </section>
-<section id="writing-private-sheets" class="level3" data-number="42.3.4">
-<h3 data-number="42.3.4" class="anchored" data-anchor-id="writing-private-sheets"><span class="header-section-number">42.3.4</span> Writing + Private Sheets</h3>
+<section id="writing-and-private-sheets" class="level3" data-number="39.3.4">
+<h3 data-number="39.3.4" class="anchored" data-anchor-id="writing-and-private-sheets"><span class="header-section-number">39.3.4</span> Writing and private sheets</h3>
 <p>To either read from a private sheet, or write to a public or private sheet, you will need to undertake some additional steps using the Google</p>
-<iframe width="780" height="500" src="https://hsma-g-sheets-app-write.streamlit.app/" title="Quarto Components"></iframe>
+<iframe width="100%" height="500" src="https://hsma-g-sheets-app-write.streamlit.app/?embed=true" title="Quarto Components"></iframe>
 </section>
-<section id="app-code-1" class="level3" data-number="42.3.5">
-<h3 data-number="42.3.5" class="anchored" data-anchor-id="app-code-1"><span class="header-section-number">42.3.5</span> App Code</h3>
-<div id="97b298c3" class="cell" data-execution_count="2">
+<section id="app-code-1" class="level3" data-number="39.3.5">
+<h3 data-number="39.3.5" class="anchored" data-anchor-id="app-code-1"><span class="header-section-number">39.3.5</span> App code</h3>
+<div id="b99927b5" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> streamlit_gsheets <span class="im">import</span> GSheetsConnection <span class="co"># this doesn't exist in the hsma_webdev environment</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
@@ -1049,8 +968,8 @@ Tip
 <span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="co"># st.dataframe(df.sort_values("Added", ascending=False))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="example-secrets-file-1" class="level3" data-number="42.3.6">
-<h3 data-number="42.3.6" class="anchored" data-anchor-id="example-secrets-file-1"><span class="header-section-number">42.3.6</span> Example Secrets File</h3>
+<section id="example-secrets-file-1" class="level3" data-number="39.3.6">
+<h3 data-number="39.3.6" class="anchored" data-anchor-id="example-secrets-file-1"><span class="header-section-number">39.3.6</span> Example secrets file</h3>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1095,10 +1014,11 @@ Tip
 <pre><code>st-gsheets-connection</code></pre>
 </div>
 </div>
+<p><br></p>
 </section>
 </section>
-<section id="writing-to-an-internal-database" class="level2" data-number="42.4">
-<h2 data-number="42.4" class="anchored" data-anchor-id="writing-to-an-internal-database"><span class="header-section-number">42.4</span> Writing to an internal database</h2>
+<section id="writing-to-an-internal-database" class="level2" data-number="39.4">
+<h2 data-number="39.4" class="anchored" data-anchor-id="writing-to-an-internal-database"><span class="header-section-number">39.4</span> Writing to an internal database</h2>
 <p>For an internal tool that is deployed on internal server infrastructure, you may wish to write to an existing database in your organisation.</p>
 <p>Streamlit provides details around how to do this with a range of providers, such as <a href="https://docs.streamlit.io/develop/tutorials/databases/mssql">Microsoft SQL Server</a></p>
 <p>Details for different databases can be found here: <a href="https://docs.streamlit.io/develop/tutorials/databases" class="uri">https://docs.streamlit.io/develop/tutorials/databases</a></p>
@@ -1633,13 +1553,13 @@ Tip
   </script>
 <nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
-      <a href="./secrets.html" class="pagination-link" aria-label="(Coming Soon!) Secrets">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">(Coming Soon!) Secrets</span></span>
+      <a href="./callbacks.html" class="pagination-link" aria-label="Callbacks">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Callbacks</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./streamlit_community_cloud.html" class="pagination-link" aria-label="Deploying to Streamlit Community Cloud">
-        <span class="nav-page-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

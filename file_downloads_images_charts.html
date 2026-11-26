@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>20&nbsp; Downloading Images and Charts – HSMA - Web Apps with Streamlit</title>
+<title>20&nbsp; Downloading images and charts – HSMA - Web Apps with Streamlit</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -87,11 +87,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bfabd0ad636e7fb68ece87757d67c3a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b315b23cf9f601adc1b6a9beda4801d7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5be68f7e89068b753bd4407cdd331613.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="site_libs/quarto-contrib/stlite/iframeResizer.min.js"></script>
 <script src="site_libs/quarto-contrib/stlite/stlite.js"></script>
 <link href="site_libs/quarto-contrib/stlite/style.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -148,6 +151,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-dark"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
@@ -363,7 +367,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./file_downloads_tabular.html">Downloading Outputs</a></li><li class="breadcrumb-item"><a href="./file_downloads_images_charts.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./file_downloads_tabular.html">Downloading Outputs</a></li><li class="breadcrumb-item"><a href="./file_downloads_images_charts.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -404,7 +408,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hello_world_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hello World (Wide Web)!</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Create and run your first app</span></span></a>
   </div>
 </li>
       </ul>
@@ -418,61 +422,61 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./loading_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">An Introduction to Loading and Displaying Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Loading and displaying data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_markdown_and_titles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Text, Markdown, and Titles</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Titles, text, and markdown</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./images_and_videos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and Videos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images and videos</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./warnings_errors_success_messages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, Success, Warning and Error Boxes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Info, success, warning and error boxes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dataframes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Display and format dataframes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Static charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_charts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./metrics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and Dials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Metrics and dials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./static_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./interactive_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Interactive maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -492,31 +496,31 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./introduction_to_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic Inputs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Basic inputs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./text_numeric_and_selection_inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An Overview of Available Input Types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">An overview of available input types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_uploads.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading Data Files, Images and More</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uploading data files, images and more</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Dataframes and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Bidirectional inputs - dataframes and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bidirectional_maps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional Inputs - Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Bidirectional inputs - maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -542,19 +546,19 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_images_charts.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_static.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading Static Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading static maps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./file_downloads_maps_interactive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading Interactive Maps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Downloading interactive maps</span></span></a>
   </div>
 </li>
       </ul>
@@ -568,13 +572,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wide_layout.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide Layout, Page Tab Titles and Favicons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Wide layout, page tab titles and favicons</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./layout_divider.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page Dividers</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Page dividers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -604,7 +608,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage Apps</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multipage apps</span></span></a>
   </div>
 </li>
       </ul>
@@ -618,7 +622,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./app_colours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App Colours</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">App colours</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -650,13 +654,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./partial_reruns.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial Reruns (fragments)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Partial reruns (fragments)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./custom_page_navigation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom Page Navigation Buttons</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Custom page navigation buttons</span></span></a>
   </div>
 </li>
       </ul>
@@ -676,7 +680,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./session_state.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting Data Across Pages and Runs with Session State</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Persisting data across pages and runs with session state</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -687,26 +691,8 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./memory_management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">(Coming Soon!) Memory Management</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./authentication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">(Coming Soon!) User Authentication/Login</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./secrets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">(Coming Soon!) Secrets</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./persisting_data_between_sessions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Persisting data between sessions</span></span></a>
   </div>
 </li>
       </ul>
@@ -720,25 +706,13 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./streamlit_community_cloud.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Deploying to Streamlit Community Cloud</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./stlite_desktop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">(Coming Soon!) Making a Desktop App with Serverless Streamlit (stlite)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./local_server.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">(Coming Soon!) Deploying to an On-premises Server</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
   </div>
 </li>
       </ul>
@@ -746,31 +720,37 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-10-label">Project 1 - DES App</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-10-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_0_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">The Discrete Event Simulation (DES) Code</span></span></a>
+  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Exercise 1: Into the future</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_1_simplest_des_frontend.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">A simple DES frontend</span></span></a>
+  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello streamlit!</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_2_run_buttons_spinners_des.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Adding a run button</span></span></a>
+  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./p1_6_splitting_app_des_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Splitting the app and DES code</span></span></a>
+  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Exercise 3: Double dash!!(boards)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercise_4_deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Exercise 4: Take me to the clouds above</span></span></a>
   </div>
 </li>
       </ul>
@@ -778,75 +758,13 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-11-label">Exercises</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+ <span class="menu-text" id="quarto-sidebar-section-11-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
       <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercise_1_identifying_opportunities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Exercise 1: Into the Future</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2a_simple_calculator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Exercise 2a: Hello Streamlit!</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_2b_wordcloud_app.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Exercise 2b: Wordcloudy with a chance of meatballs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_3_dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Exercise 3: Double Dash!!(boards)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_4_des_part_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Exercise 4: Fulfil your DEStiny</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_5_des_part_2_multipage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Exercise 5: DEStiny’s Child</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_6_des_part_3_advanced_streamlit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Exercise 6: DESpite Everything, It’s Still You</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise_7_deployment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Exercise 7: Take Me To The Clouds Above</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-controls="quarto-sidebar-section-12" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-12-label">Additional Resources</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-      </div>
-      <ul id="quarto-sidebar-section-12" aria-labelledby="quarto-sidebar-section-12-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./other_examples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">(Coming Soon!) Example Streamlit Apps</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./cheat_sheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Streamlit Cheat Sheet</span></span></a>
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Streamlit cheatsheet</span></span></a>
   </div>
 </li>
       </ul>
@@ -861,9 +779,19 @@ cookieconsent.run({
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#matplotlib" id="toc-matplotlib" class="nav-link active" data-scroll-target="#matplotlib"><span class="header-section-number">20.0.1</span> Matplotlib</a></li>
-  <li><a href="#seaborn" id="toc-seaborn" class="nav-link" data-scroll-target="#seaborn"><span class="header-section-number">20.0.2</span> Seaborn</a></li>
-  <li><a href="#plotly" id="toc-plotly" class="nav-link" data-scroll-target="#plotly"><span class="header-section-number">20.0.3</span> Plotly</a></li>
+  <li><a href="#matplotlib" id="toc-matplotlib" class="nav-link active" data-scroll-target="#matplotlib"><span class="header-section-number">20.1</span> Matplotlib</a>
+  <ul class="collapse">
+  <li><a href="#saving-the-plot-to-a-file" id="toc-saving-the-plot-to-a-file" class="nav-link" data-scroll-target="#saving-the-plot-to-a-file"><span class="header-section-number">20.1.1</span> Saving the plot to a file</a></li>
+  <li><a href="#saving-the-plot-to-temporary-memory" id="toc-saving-the-plot-to-temporary-memory" class="nav-link" data-scroll-target="#saving-the-plot-to-temporary-memory"><span class="header-section-number">20.1.2</span> Saving the plot to temporary memory</a></li>
+  </ul></li>
+  <li><a href="#wordcloud" id="toc-wordcloud" class="nav-link" data-scroll-target="#wordcloud"><span class="header-section-number">20.2</span> Wordcloud</a></li>
+  <li><a href="#seaborn" id="toc-seaborn" class="nav-link" data-scroll-target="#seaborn"><span class="header-section-number">20.3</span> Seaborn</a></li>
+  <li><a href="#plotly" id="toc-plotly" class="nav-link" data-scroll-target="#plotly"><span class="header-section-number">20.4</span> Plotly</a>
+  <ul class="collapse">
+  <li><a href="#built-in-method-for-downloading-static-plots" id="toc-built-in-method-for-downloading-static-plots" class="nav-link" data-scroll-target="#built-in-method-for-downloading-static-plots"><span class="header-section-number">20.4.1</span> Built-in method for downloading static plots</a></li>
+  <li><a href="#downloading-the-interactive-plots" id="toc-downloading-the-interactive-plots" class="nav-link" data-scroll-target="#downloading-the-interactive-plots"><span class="header-section-number">20.4.2</span> Downloading the interactive plots</a></li>
+  <li><a href="#static-outputs-with-a-download-button" id="toc-static-outputs-with-a-download-button" class="nav-link" data-scroll-target="#static-outputs-with-a-download-button"><span class="header-section-number">20.4.3</span> Static outputs with a download button</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -871,9 +799,9 @@ cookieconsent.run({
 <main class="content" id="quarto-document-content" tabindex="-1">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./file_downloads_tabular.html">Downloading Outputs</a></li><li class="breadcrumb-item"><a href="./file_downloads_images_charts.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./file_downloads_tabular.html">Downloading Outputs</a></li><li class="breadcrumb-item"><a href="./file_downloads_images_charts.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading Images and Charts</span></h1>
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Downloading images and charts</span></h1>
 </div>
 
 
@@ -890,11 +818,19 @@ cookieconsent.run({
 </header>
 
 
-<section id="matplotlib" class="level3" data-number="20.0.1">
-<h3 data-number="20.0.1" class="anchored" data-anchor-id="matplotlib"><span class="header-section-number">20.0.1</span> Matplotlib</h3>
+<p><br></p>
+<section id="matplotlib" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="matplotlib"><span class="header-section-number">20.1</span> Matplotlib</h2>
 <p>We can provide two possible ways of downloading the output of a matplotlib plot.</p>
-<p>The first involves saving the resulting plot to a file, then serving that file to the user. This is a reliable and simple method that is probably the best to use in most situations - it will generally work even when the file is deployed.</p>
-<div id="eaade74d" class="cell" data-execution_count="1">
+<ol type="1">
+<li>Saving the plot to a file, then serving that file to the user.</li>
+<li>Saving the plot to temporary memory, then serving that instead.</li>
+</ol>
+<p><br></p>
+<section id="saving-the-plot-to-a-file" class="level3" data-number="20.1.1">
+<h3 data-number="20.1.1" class="anchored" data-anchor-id="saving-the-plot-to-a-file"><span class="header-section-number">20.1.1</span> Saving the plot to a file</h3>
+<p>This is a reliable and simple method that is probably the best to use in most situations - it will generally work even when the file is deployed.</p>
+<div id="a612be41" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -920,22 +856,25 @@ cookieconsent.run({
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        mime<span class="op">=</span><span class="st">"image/png"</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22setuptools%22%29%0Aawait%20micropip.install%28%22palmerpenguins%22%29%0Aimport%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Aimport%20matplotlib.pyplot%20as%20plt%0Afrom%20palmerpenguins%20import%20load_penguins%0A%0Apenguins%20%3D%20load_penguins%28%29%0A%0Afig%2C%20ax%20%3D%20plt.subplots%28figsize%3D%2815%2C10%29%29%0Aplt.scatter%28x%3Dpenguins%5B%22body_mass_g%22%5D%2C%20y%3Dpenguins%5B%22bill_length_mm%22%5D%29%0Aplt.title%28%22Penguin%20Body%20Mass%20%28g%29%20versus%20Bill%20Length%20%28mm%29%22%29%0Aax.set_xlabel%28%22Body%20Mass%20%28g%29%22%29%0Aax.set_ylabel%28%22Bill%20Length%20%28mm%29%22%29%0A%0Ast.pyplot%28fig%29%0A%0Afilename%20%3D%20%27penguins_scatter_method_1.png%27%0Aplt.savefig%28filename%29%0Awith%20open%28filename%2C%20%22rb%22%29%20as%20img%3A%0A%20%20%20%20btn%20%3D%20st.download_button%28%0A%20%20%20%20%20%20%20%20label%3D%22Download%20image%22%2C%0A%20%20%20%20%20%20%20%20data%3Dimg%2C%0A%20%20%20%20%20%20%20%20file_name%3Dfilename%2C%0A%20%20%20%20%20%20%20%20mime%3D%22image/png%22%0A%20%20%20%20%29%0A
+<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22setuptools%22%29%0Aawait%20micropip.install%28%22matplotlib%22%29%0Aawait%20micropip.install%28%22palmerpenguins%22%29%0Aimport%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Afrom%20matplotlib%20import%20pyplot%20as%20plt%0Afrom%20palmerpenguins%20import%20load_penguins%0A%0Apenguins%20%3D%20load_penguins%28%29%0A%0Afig%2C%20ax%20%3D%20plt.subplots%28figsize%3D%2815%2C10%29%29%0Aplt.scatter%28x%3Dpenguins%5B%22body_mass_g%22%5D%2C%20y%3Dpenguins%5B%22bill_length_mm%22%5D%29%0Aplt.title%28%22Penguin%20Body%20Mass%20%28g%29%20versus%20Bill%20Length%20%28mm%29%22%29%0Aax.set_xlabel%28%22Body%20Mass%20%28g%29%22%29%0Aax.set_ylabel%28%22Bill%20Length%20%28mm%29%22%29%0A%0Ast.pyplot%28fig%29%0A%0Afilename%20%3D%20%27penguins_scatter_method_1.png%27%0Aplt.savefig%28filename%29%0Awith%20open%28filename%2C%20%22rb%22%29%20as%20img%3A%0A%20%20%20%20btn%20%3D%20st.download_button%28%0A%20%20%20%20%20%20%20%20label%3D%22Download%20image%22%2C%0A%20%20%20%20%20%20%20%20data%3Dimg%2C%0A%20%20%20%20%20%20%20%20file_name%3Dfilename%2C%0A%20%20%20%20%20%20%20%20mime%3D%22image/png%22%0A%20%20%20%20%29%0A
 " class="stlite"></iframe>
+<p><br></p>
+</section>
+<section id="saving-the-plot-to-temporary-memory" class="level3" data-number="20.1.2">
+<h3 data-number="20.1.2" class="anchored" data-anchor-id="saving-the-plot-to-temporary-memory"><span class="header-section-number">20.1.2</span> Saving the plot to temporary memory</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Advanced Method
+<span class="screen-reader-only">Note</span>Advanced method
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The second involves saving the image to tempory memory, then serving that instead.</p>
-<div id="0c0291fa" class="cell" data-execution_count="2">
+<div id="69469b7a" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -962,17 +901,20 @@ cookieconsent.run({
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    mime<span class="op">=</span><span class="st">"image/png"</span></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22setuptools%22%29%0Aawait%20micropip.install%28%22palmerpenguins%22%29%0Aimport%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Aimport%20matplotlib.pyplot%20as%20plt%0Afrom%20palmerpenguins%20import%20load_penguins%0Afrom%20io%20import%20BytesIO%0A%0Apenguins%20%3D%20load_penguins%28%29%0A%0Afig%2C%20ax%20%3D%20plt.subplots%28figsize%3D%2815%2C10%29%29%0Aplt.scatter%28x%3Dpenguins%5B%22body_mass_g%22%5D%2C%20y%3Dpenguins%5B%22bill_length_mm%22%5D%29%0Aplt.title%28%22Penguin%20Body%20Mass%20%28g%29%20versus%20Bill%20Length%20%28mm%29%22%29%0Aax.set_xlabel%28%22Body%20Mass%20%28g%29%22%29%0Aax.set_ylabel%28%22Bill%20Length%20%28mm%29%22%29%0A%0Ast.pyplot%28fig%29%0A%0Aimg%20%3D%20BytesIO%28%29%0Aplt.savefig%28img%29%0A%0Abtn%20%3D%20st.download_button%28%0A%20%20%20%20label%3D%22Download%20image%22%2C%0A%20%20%20%20data%3Dimg%2C%0A%20%20%20%20file_name%3D%27penguins_scatter_method_2.png%27%2C%0A%20%20%20%20mime%3D%22image/png%22%0A%29%0A
+<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22setuptools%22%29%0Aawait%20micropip.install%28%22palmerpenguins%22%29%0Aawait%20micropip.install%28%22matplotlib%22%29%0Aimport%20streamlit%20as%20st%0Aimport%20pandas%20as%20pd%0Afrom%20matplotlib%20import%20pyplot%20as%20plt%0Afrom%20palmerpenguins%20import%20load_penguins%0Afrom%20io%20import%20BytesIO%0A%0Apenguins%20%3D%20load_penguins%28%29%0A%0Afig%2C%20ax%20%3D%20plt.subplots%28figsize%3D%2815%2C10%29%29%0Aplt.scatter%28x%3Dpenguins%5B%22body_mass_g%22%5D%2C%20y%3Dpenguins%5B%22bill_length_mm%22%5D%29%0Aplt.title%28%22Penguin%20Body%20Mass%20%28g%29%20versus%20Bill%20Length%20%28mm%29%22%29%0Aax.set_xlabel%28%22Body%20Mass%20%28g%29%22%29%0Aax.set_ylabel%28%22Bill%20Length%20%28mm%29%22%29%0A%0Ast.pyplot%28fig%29%0A%0Aimg%20%3D%20BytesIO%28%29%0Aplt.savefig%28img%29%0A%0Abtn%20%3D%20st.download_button%28%0A%20%20%20%20label%3D%22Download%20image%22%2C%0A%20%20%20%20data%3Dimg%2C%0A%20%20%20%20file_name%3D%27penguins_scatter_method_2.png%27%2C%0A%20%20%20%20mime%3D%22image/png%22%0A%29%0A
 " class="stlite"></iframe>
 </div>
 </div>
 </div>
-<section id="wordcloud-example" class="level4" data-number="20.0.1.1">
-<h4 data-number="20.0.1.1" class="anchored" data-anchor-id="wordcloud-example"><span class="header-section-number">20.0.1.1</span> Wordcloud Example</h4>
+<p><br></p>
+</section>
+</section>
+<section id="wordcloud" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="wordcloud"><span class="header-section-number">20.2</span> Wordcloud</h2>
 <p>The popular <code>wordcloud</code> package is actually using matplotlib for its plotting!</p>
 <p>This means that the same approach works for saving a wordcloud.</p>
 <p>Here, we are just showing the approach of saving and then serving the image - both to display it in the app and to offer it up to the end user for download.</p>
-<div id="a476b88b" class="cell" data-execution_count="3">
+<div id="b8ed7c1d" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud, STOPWORDS</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> string</span>
@@ -1024,14 +966,14 @@ cookieconsent.run({
 <span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>        mime<span class="op">=</span><span class="st">"image/png"</span>,</span>
 <span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0Aimport%20micropip%0Aawait%20micropip.install%28%22wordcloud%22%29%0Afrom%20wordcloud%20import%20WordCloud%2C%20STOPWORDS%0Aimport%20string%0Aimport%20matplotlib.pyplot%20as%20plt%0A%0Astopwords%20%3D%20set%28STOPWORDS%29%0A%0Adef%20make_wordcloud%28text_input%29%3A%0A%20%20%20%20tokens%20%3D%20text_input.split%28%29%0A%20%20%20%20punctuation_mapping_table%20%3D%20str.maketrans%28%27%27%2C%20%27%27%2C%20string.punctuation%29%0A%20%20%20%20tokens_stripped_of_punctuation%20%3D%20%5Btoken.translate%28punctuation_mapping_table%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20for%20token%20in%20tokens%5D%0A%20%20%20%20lower_tokens%20%3D%20%5Btoken.lower%28%29%20for%20token%20in%20tokens_stripped_of_punctuation%5D%0A%0A%20%20%20%20joined_string%20%3D%20%28%22%20%22%29.join%28lower_tokens%29%0A%0A%20%20%20%20wordcloud%20%3D%20WordCloud%28width%3D1800%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20height%3D1800%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20background_color%3D%27white%27%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20stopwords%3Dstopwords%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20min_font_size%3D20%29.generate%28joined_string%29%0A%0A%20%20%20%20plt.figure%28figsize%3D%2830%2C40%29%29%0A%20%20%20%20%23%20Turn%20off%20axes%0A%20%20%20%20plt.axis%28%22off%22%29%0A%20%20%20%20%23%20Then%20use%20imshow%20to%20plot%20an%20image%20%28here%2C%20our%20wordcloud%29%0A%20%20%20%20plt.imshow%28wordcloud%29%0A%20%20%20%20%23%20The%20easiest%20way%20to%20do%20this%20today%20is%20to%20save%20the%20image%20and%20reload%20it%0A%20%20%20%20%23%20This%20works%20during%20local%20testing%20but%20would%20also%20work%20if%20we%20deployed%20this%0A%20%20%20%20plt.savefig%28%22wordcloud.png%22%29%0A%0Asample_text%20%3D%20%22%22%22%0APenguins%20are%20a%20group%20of%20aquatic%20flightless%20birds%20from%20the%20family%20Spheniscidae%20of%20the%20order%20Sphenisciformes.%20They%20live%20almost%20exclusively%20in%20the%20Southern%20Hemisphere%3A%20only%20one%20species%2C%20the%20Gal%C3%A1pagos%20penguin%2C%20is%20found%20north%20of%20the%20Equator.%20Highly%20adapted%20for%20life%20in%20the%20ocean%20water%2C%20penguins%20have%20countershaded%20dark%20and%20white%20plumage%20and%20flippers%20for%20swimming.%20Most%20penguins%20feed%20on%20krill%2C%20fish%2C%20squid%20and%20other%20forms%20of%20sea%20life%20which%20they%20catch%20with%20their%20bills%20and%20swallow%20whole%20while%20swimming.%20A%20penguin%20has%20a%20spiny%20tongue%20and%20powerful%20jaws%20to%20grip%20slippery%20prey.%0A%0AThey%20spend%20about%20half%20of%20their%20lives%20on%20land%20and%20the%20other%20half%20in%20the%20sea.%20The%20largest%20living%20species%20is%20the%20emperor%20penguin%20%28Aptenodytes%20forsteri%29%3A%20on%20average%2C%20adults%20are%20about%201.1%20m%20%283%20ft%207%20in%29%20tall%20and%20weigh%2035%20kg%20%2877%20lb%29.%20The%20smallest%20penguin%20species%20is%20the%20little%20blue%20penguin%20%28Eudyptula%20minor%29%2C%20also%20known%20as%20the%20fairy%20penguin%2C%20which%20stands%20around%2030%E2%80%9333%20cm%20%2812%E2%80%9313%20in%29%20tall%20and%20weighs%201.2%E2%80%931.3%20kg%20%282.6%E2%80%932.9%20lb%29.%20Today%2C%20larger%20penguins%20generally%20inhabit%20colder%20regions%2C%20and%20smaller%20penguins%20inhabit%20regions%20with%20temperate%20or%20tropical%20climates.%20Some%20prehistoric%20penguin%20species%20were%20enormous%3A%20as%20tall%20or%20heavy%20as%20an%20adult%20human.%20There%20was%20a%20great%20diversity%20of%20species%20in%20subantarctic%20regions%2C%20and%20at%20least%20one%20giant%20species%20in%20a%20region%20around%202%2C000%20km%20south%20of%20the%20equator%2035%20mya%2C%20during%20the%20Late%20Eocene%2C%20a%20climate%20decidedly%20warmer%20than%20today.%0A%22%22%22%0A%0Ayour_text%20%3D%20st.text_area%28label%3D%22Enter%20your%20text%20here%22%2C%20value%3Dsample_text%29%0A%0Amake_wordcloud%28text_input%3Dyour_text%29%0A%0Ast.image%28%22wordcloud.png%22%29%0A%0Awith%20open%28%22wordcloud.png%22%2C%20%22rb%22%29%20as%20file%3A%0A%20%20%20%20btn%20%3D%20st.download_button%28%0A%20%20%20%20%20%20%20%20label%3D%22Click%20Here%20to%20Download%20Your%20Word%20Cloud%21%22%2C%0A%20%20%20%20%20%20%20%20data%3Dfile%2C%0A%20%20%20%20%20%20%20%20file_name%3D%22my_wordcloud.png%22%2C%0A%20%20%20%20%20%20%20%20mime%3D%22image/png%22%2C%0A%20%20%20%20%29%0A
+<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22wordcloud%22%29%0Aawait%20micropip.install%28%22matplotlib%22%29%0A%0Aimport%20streamlit%20as%20st%0Afrom%20wordcloud%20import%20WordCloud%2C%20STOPWORDS%0Aimport%20string%0Afrom%20matplotlib%20import%20pyplot%20as%20plt%0A%0Astopwords%20%3D%20set%28STOPWORDS%29%0A%0Adef%20make_wordcloud%28text_input%29%3A%0A%20%20%20%20tokens%20%3D%20text_input.split%28%29%0A%20%20%20%20punctuation_mapping_table%20%3D%20str.maketrans%28%27%27%2C%20%27%27%2C%20string.punctuation%29%0A%20%20%20%20tokens_stripped_of_punctuation%20%3D%20%5Btoken.translate%28punctuation_mapping_table%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20for%20token%20in%20tokens%5D%0A%20%20%20%20lower_tokens%20%3D%20%5Btoken.lower%28%29%20for%20token%20in%20tokens_stripped_of_punctuation%5D%0A%0A%20%20%20%20joined_string%20%3D%20%28%22%20%22%29.join%28lower_tokens%29%0A%0A%20%20%20%20wordcloud%20%3D%20WordCloud%28width%3D1800%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20height%3D1800%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20background_color%3D%27white%27%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20stopwords%3Dstopwords%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20min_font_size%3D20%29.generate%28joined_string%29%0A%0A%20%20%20%20plt.figure%28figsize%3D%2830%2C40%29%29%0A%20%20%20%20%23%20Turn%20off%20axes%0A%20%20%20%20plt.axis%28%22off%22%29%0A%20%20%20%20%23%20Then%20use%20imshow%20to%20plot%20an%20image%20%28here%2C%20our%20wordcloud%29%0A%20%20%20%20plt.imshow%28wordcloud%29%0A%20%20%20%20%23%20The%20easiest%20way%20to%20do%20this%20today%20is%20to%20save%20the%20image%20and%20reload%20it%0A%20%20%20%20%23%20This%20works%20during%20local%20testing%20but%20would%20also%20work%20if%20we%20deployed%20this%0A%20%20%20%20plt.savefig%28%22wordcloud.png%22%29%0A%0Asample_text%20%3D%20%22%22%22%0APenguins%20are%20a%20group%20of%20aquatic%20flightless%20birds%20from%20the%20family%20Spheniscidae%20of%20the%20order%20Sphenisciformes.%20They%20live%20almost%20exclusively%20in%20the%20Southern%20Hemisphere%3A%20only%20one%20species%2C%20the%20Gal%C3%A1pagos%20penguin%2C%20is%20found%20north%20of%20the%20Equator.%20Highly%20adapted%20for%20life%20in%20the%20ocean%20water%2C%20penguins%20have%20countershaded%20dark%20and%20white%20plumage%20and%20flippers%20for%20swimming.%20Most%20penguins%20feed%20on%20krill%2C%20fish%2C%20squid%20and%20other%20forms%20of%20sea%20life%20which%20they%20catch%20with%20their%20bills%20and%20swallow%20whole%20while%20swimming.%20A%20penguin%20has%20a%20spiny%20tongue%20and%20powerful%20jaws%20to%20grip%20slippery%20prey.%0A%0AThey%20spend%20about%20half%20of%20their%20lives%20on%20land%20and%20the%20other%20half%20in%20the%20sea.%20The%20largest%20living%20species%20is%20the%20emperor%20penguin%20%28Aptenodytes%20forsteri%29%3A%20on%20average%2C%20adults%20are%20about%201.1%20m%20%283%20ft%207%20in%29%20tall%20and%20weigh%2035%20kg%20%2877%20lb%29.%20The%20smallest%20penguin%20species%20is%20the%20little%20blue%20penguin%20%28Eudyptula%20minor%29%2C%20also%20known%20as%20the%20fairy%20penguin%2C%20which%20stands%20around%2030%E2%80%9333%20cm%20%2812%E2%80%9313%20in%29%20tall%20and%20weighs%201.2%E2%80%931.3%20kg%20%282.6%E2%80%932.9%20lb%29.%20Today%2C%20larger%20penguins%20generally%20inhabit%20colder%20regions%2C%20and%20smaller%20penguins%20inhabit%20regions%20with%20temperate%20or%20tropical%20climates.%20Some%20prehistoric%20penguin%20species%20were%20enormous%3A%20as%20tall%20or%20heavy%20as%20an%20adult%20human.%20There%20was%20a%20great%20diversity%20of%20species%20in%20subantarctic%20regions%2C%20and%20at%20least%20one%20giant%20species%20in%20a%20region%20around%202%2C000%20km%20south%20of%20the%20equator%2035%20mya%2C%20during%20the%20Late%20Eocene%2C%20a%20climate%20decidedly%20warmer%20than%20today.%0A%22%22%22%0A%0Ayour_text%20%3D%20st.text_area%28label%3D%22Enter%20your%20text%20here%22%2C%20value%3Dsample_text%29%0A%0Amake_wordcloud%28text_input%3Dyour_text%29%0A%0Ast.image%28%22wordcloud.png%22%29%0A%0Awith%20open%28%22wordcloud.png%22%2C%20%22rb%22%29%20as%20file%3A%0A%20%20%20%20btn%20%3D%20st.download_button%28%0A%20%20%20%20%20%20%20%20label%3D%22Click%20Here%20to%20Download%20Your%20Word%20Cloud%21%22%2C%0A%20%20%20%20%20%20%20%20data%3Dfile%2C%0A%20%20%20%20%20%20%20%20file_name%3D%22my_wordcloud.png%22%2C%0A%20%20%20%20%20%20%20%20mime%3D%22image/png%22%2C%0A%20%20%20%20%29%0A
 " class="stlite"></iframe>
+<p><br></p>
 </section>
-</section>
-<section id="seaborn" class="level3" data-number="20.0.2">
-<h3 data-number="20.0.2" class="anchored" data-anchor-id="seaborn"><span class="header-section-number">20.0.2</span> Seaborn</h3>
+<section id="seaborn" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="seaborn"><span class="header-section-number">20.3</span> Seaborn</h2>
 <p>Saving the file and then serving this is a good way to work with seaborn as well.</p>
-<div id="9c8d4569" class="cell" data-execution_count="4">
+<div id="48ab81b5" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -1064,19 +1006,22 @@ cookieconsent.run({
 </div>
 <iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22setuptools%22%29%0Aawait%20micropip.install%28%22palmerpenguins%22%29%0Aawait%20micropip.install%28%22seaborn%22%29%0Aimport%20streamlit%20as%20st%0Afrom%20palmerpenguins%20import%20load_penguins%0Aimport%20seaborn%20as%20sns%0A%0Apenguins%20%3D%20load_penguins%28%29%0A%0Apairplot_fig%20%3D%20sns.pairplot%28penguins%2C%20hue%3D%22species%22%29%0A%0Apairplot_fig.figure.savefig%28%22pairplot_sns_penguins.png%22%29%0A%0Awith%20open%28%22pairplot_sns_penguins.png%22%2C%20%22rb%22%29%20as%20file%3A%0A%20%20%20%20btn%20%3D%20st.download_button%28%0A%20%20%20%20%20%20%20%20label%3D%22Click%20Here%20to%20Download%20Your%20Pair%20Plot%21%22%2C%0A%20%20%20%20%20%20%20%20data%3Dfile%2C%0A%20%20%20%20%20%20%20%20file_name%3D%22pairplot_penguin_species.png%22%2C%0A%20%20%20%20%20%20%20%20mime%3D%22image/png%22%2C%0A%20%20%20%20%29%0A%0Aboxplot_fig%20%3D%20sns.boxplot%28penguins%2C%20x%3D%22island%22%2C%20y%3D%22bill_length_mm%22%29%0A%0Aboxplot_fig.figure.savefig%28%22boxplot_sns_penguins.png%22%29%0A%0Awith%20open%28%22boxplot_sns_penguins.png%22%2C%20%22rb%22%29%20as%20file%3A%0A%20%20%20%20btn%20%3D%20st.download_button%28%0A%20%20%20%20%20%20%20%20label%3D%22Click%20Here%20to%20Download%20Your%20Box%20Plot%21%22%2C%0A%20%20%20%20%20%20%20%20data%3Dfile%2C%0A%20%20%20%20%20%20%20%20file_name%3D%22boxplot_penguin_species.png%22%2C%0A%20%20%20%20%20%20%20%20mime%3D%22image/png%22%2C%0A%20%20%20%20%29
 " class="stlite"></iframe>
+<p><br></p>
 </section>
-<section id="plotly" class="level3" data-number="20.0.3">
-<h3 data-number="20.0.3" class="anchored" data-anchor-id="plotly"><span class="header-section-number">20.0.3</span> Plotly</h3>
+<section id="plotly" class="level2" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="plotly"><span class="header-section-number">20.4</span> Plotly</h2>
 <p>Plotly is a bit different because the plots it produces are interactive - but it is possible to save this too.</p>
 <p>The resulting file is completely self-contained and can even be used offline. The file could be emailed or placed on a shared site like sharepoint or google drive and would work - though sometimes it requires the user to download the html file to their own machine for it to display correctly rather than just previewing the underlying html data, depending on the platform.</p>
-<section id="built-in-method-for-downloading-static-plots" class="level4" data-number="20.0.3.1">
-<h4 data-number="20.0.3.1" class="anchored" data-anchor-id="built-in-method-for-downloading-static-plots"><span class="header-section-number">20.0.3.1</span> Built-in method for downloading static plots</h4>
+<p><br></p>
+<section id="built-in-method-for-downloading-static-plots" class="level3" data-number="20.4.1">
+<h3 data-number="20.4.1" class="anchored" data-anchor-id="built-in-method-for-downloading-static-plots"><span class="header-section-number">20.4.1</span> Built-in method for downloading static plots</h3>
 <p>When using plotly, users can hover over the plot and choose ‘Download plot as a png’.</p>
-<p><img src="assets/images/2024-08-12-19-54-14.png" class="img-fluid"></p>
+<p><a href="assets/images/2024-08-12-19-54-14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/2024-08-12-19-54-14.png" class="box img-fluid"></a></p>
+<p><br></p>
 </section>
-<section id="downloading-the-interactive-plots" class="level4" data-number="20.0.3.2">
-<h4 data-number="20.0.3.2" class="anchored" data-anchor-id="downloading-the-interactive-plots"><span class="header-section-number">20.0.3.2</span> Downloading the interactive plots</h4>
-<div id="86815e44" class="cell" data-execution_count="5">
+<section id="downloading-the-interactive-plots" class="level3" data-number="20.4.2">
+<h3 data-number="20.4.2" class="anchored" data-anchor-id="downloading-the-interactive-plots"><span class="header-section-number">20.4.2</span> Downloading the interactive plots</h3>
+<div id="9636640e" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
@@ -1090,7 +1035,7 @@ cookieconsent.run({
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>axis_options.remove(col_1)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>col_2 <span class="op">=</span> st.selectbox(<span class="st">"Select the column to use for the x axis"</span>, axis_options)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>col_2 <span class="op">=</span> st.selectbox(<span class="st">"Select the column to use for the y axis"</span>, axis_options)</span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>color_factor <span class="op">=</span> st.selectbox(<span class="st">"Select the column to colour the chart by"</span>,</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>[<span class="st">"species"</span>, <span class="st">"sex"</span>, <span class="st">"island"</span>])</span>
@@ -1110,7 +1055,7 @@ cookieconsent.run({
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        mime<span class="op">=</span><span class="st">'text/html'</span></span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22setuptools%22%29%0Aawait%20micropip.install%28%22palmerpenguins%22%29%0Aawait%20micropip.install%28%22plotly%22%29%0Aimport%20streamlit%20as%20st%0Afrom%20palmerpenguins%20import%20load_penguins%0Aimport%20plotly.express%20as%20px%0A%0Apenguins%20%3D%20load_penguins%28%29%0A%0Aaxis_options%20%3D%20%5B%27bill_length_mm%27%2C%20%27bill_depth_mm%27%2C%0A%20%20%20%20%20%20%20%27flipper_length_mm%27%2C%20%27body_mass_g%27%5D%0A%0Acol_1%20%3D%20st.selectbox%28%22Select%20the%20column%20to%20use%20for%20the%20x%20axis%22%2C%20axis_options%29%0A%0Aaxis_options.remove%28col_1%29%0A%0Acol_2%20%3D%20st.selectbox%28%22Select%20the%20column%20to%20use%20for%20the%20x%20axis%22%2C%20axis_options%29%0A%0Acolor_factor%20%3D%20st.selectbox%28%22Select%20the%20column%20to%20colour%20the%20chart%20by%22%2C%0A%5B%22species%22%2C%20%22sex%22%2C%20%22island%22%5D%29%0A%0Afig%20%3D%20px.scatter%28penguins%2C%20x%3Dcol_1%2C%20y%3Dcol_2%2C%20color%3Dcolor_factor%2C%0Atitle%3Df%22Penguins%20Dataset%20-%20%7Bcol_1%7D%20vs%20%7Bcol_2%7D%2C%20coloured%20by%20%7Bcolor_factor%7D%22%29%0A%0Ast.plotly_chart%28fig%29%0A%0Afig.write_html%28%22plotly_chart.html%22%29%0A%0Awith%20open%28%22plotly_chart.html%22%2C%20%22rb%22%29%20as%20file%3A%0A%20%20%20%20st.download_button%28%0A%20%20%20%20%20%20%20%20label%3D%27Download%20This%20Plot%20as%20an%20Interactive%20HTML%20file%27%2C%0A%20%20%20%20%20%20%20%20data%3Dfile%2C%0A%20%20%20%20%20%20%20%20file_name%3Df%27%7Bcol_1%7D_vs_%7Bcol_2%7D_by_%7Bcolor_factor%7D.html%27%2C%0A%20%20%20%20%20%20%20%20mime%3D%27text/html%27%0A%20%20%20%20%29
+<iframe src="https://share.stlite.net/?embed=true#code=import%20micropip%0Aawait%20micropip.install%28%22setuptools%22%29%0Aawait%20micropip.install%28%22palmerpenguins%22%29%0Aawait%20micropip.install%28%22plotly%22%29%0Aimport%20streamlit%20as%20st%0Afrom%20palmerpenguins%20import%20load_penguins%0Afrom%20plotly%20import%20express%20as%20px%0A%0Apenguins%20%3D%20load_penguins%28%29%0A%0Aaxis_options%20%3D%20%5B%27bill_length_mm%27%2C%20%27bill_depth_mm%27%2C%0A%20%20%20%20%20%20%20%27flipper_length_mm%27%2C%20%27body_mass_g%27%5D%0A%0Acol_1%20%3D%20st.selectbox%28%22Select%20the%20column%20to%20use%20for%20the%20x%20axis%22%2C%20axis_options%29%0A%0Aaxis_options.remove%28col_1%29%0A%0Acol_2%20%3D%20st.selectbox%28%22Select%20the%20column%20to%20use%20for%20the%20y%20axis%22%2C%20axis_options%29%0A%0Acolor_factor%20%3D%20st.selectbox%28%22Select%20the%20column%20to%20colour%20the%20chart%20by%22%2C%0A%5B%22species%22%2C%20%22sex%22%2C%20%22island%22%5D%29%0A%0Afig%20%3D%20px.scatter%28penguins%2C%20x%3Dcol_1%2C%20y%3Dcol_2%2C%20color%3Dcolor_factor%2C%0Atitle%3Df%22Penguins%20Dataset%20-%20%7Bcol_1%7D%20vs%20%7Bcol_2%7D%2C%20coloured%20by%20%7Bcolor_factor%7D%22%29%0A%0Ast.plotly_chart%28fig%29%0A%0Afig.write_html%28%22plotly_chart.html%22%29%0A%0Awith%20open%28%22plotly_chart.html%22%2C%20%22rb%22%29%20as%20file%3A%0A%20%20%20%20st.download_button%28%0A%20%20%20%20%20%20%20%20label%3D%27Download%20This%20Plot%20as%20an%20Interactive%20HTML%20file%27%2C%0A%20%20%20%20%20%20%20%20data%3Dfile%2C%0A%20%20%20%20%20%20%20%20file_name%3Df%27%7Bcol_1%7D_vs_%7Bcol_2%7D_by_%7Bcolor_factor%7D.html%27%2C%0A%20%20%20%20%20%20%20%20mime%3D%27text/html%27%0A%20%20%20%20%29
 " class="stlite"></iframe>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -1118,7 +1063,7 @@ cookieconsent.run({
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Advanced Method
+<span class="screen-reader-only">Note</span>Advanced method
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1130,9 +1075,10 @@ cookieconsent.run({
 </div>
 </div>
 </div>
+<p><br></p>
 </section>
-<section id="static-outputs-with-a-download-button" class="level4" data-number="20.0.3.3">
-<h4 data-number="20.0.3.3" class="anchored" data-anchor-id="static-outputs-with-a-download-button"><span class="header-section-number">20.0.3.3</span> Static outputs with a download button</h4>
+<section id="static-outputs-with-a-download-button" class="level3" data-number="20.4.3">
+<h3 data-number="20.4.3" class="anchored" data-anchor-id="static-outputs-with-a-download-button"><span class="header-section-number">20.4.3</span> Static outputs with a download button</h3>
 <p>With some additional libraries, it becomes possible to output static images when using plotly, which can give you additional control over things like the filetype and filename.</p>
 <p>It requires an additional library called <code>kaleido</code> to be installed.</p>
 <p>More about the process can be found in the Plotly documentation.</p>
@@ -1152,7 +1098,7 @@ Warning
 <p>The kaleido library is not possible to use with stlite, so we cannot provide an interactive demo here.</p>
 </div>
 </div>
-<div id="a807c88d" class="cell" data-execution_count="6">
+<div id="dec34a50" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
@@ -1168,7 +1114,7 @@ Warning
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>axis_options.remove(col_1)</span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>col_2 <span class="op">=</span> st.selectbox(<span class="st">"Select the column to use for the x axis"</span>, axis_options)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>col_2 <span class="op">=</span> st.selectbox(<span class="st">"Select the column to use for the y axis"</span>, axis_options)</span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>color_factor <span class="op">=</span> st.selectbox(<span class="st">"Select the column to colour the chart by"</span>,</span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>[<span class="st">"species"</span>, <span class="st">"sex"</span>, <span class="st">"island"</span>])</span>
@@ -1184,7 +1130,7 @@ Warning
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>        label<span class="op">=</span><span class="st">'Download This Plot as an Static Image File'</span>,</span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>        data<span class="op">=</span>fig.to_image(engine<span class="op">=</span><span class="st">'kaleido'</span>),</span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>        file_name<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>col_1<span class="sc">}</span><span class="ss">_vs_</span><span class="sc">{</span>col_2<span class="sc">}</span><span class="ss">_by_</span><span class="sc">{</span>color_factor<span class="sc">}</span><span class="ss">.png'</span>,</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>        mime<span class="op">=</span><span class="st">'img/png'</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>        mime<span class="op">=</span><span class="st">'image/png'</span></span>
 <span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -1738,8 +1684,8 @@ Important
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./file_downloads_maps_static.html" class="pagination-link" aria-label="Downloading Static Maps">
-        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading Static Maps</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./file_downloads_maps_static.html" class="pagination-link" aria-label="Downloading static maps">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Downloading static maps</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1757,6 +1703,38 @@ Important
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
