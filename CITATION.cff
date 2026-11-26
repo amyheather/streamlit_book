@@ -13,6 +13,11 @@ authors:
     orcid: 'https://orcid.org/0000-0002-9552-8988'
     affiliation: University of Exeter
     email: s.j.rosser@exeter.ac.uk
+  - given-names: Amy
+    family-names: Heather
+    orcid: 'https://orcid.org/0000-0002-6596-3479'
+    affiliation: University of Exeter
+    email: a.heather2@exeter.ac.uk
 repository-code: 'https://github.com/hsma-programme/streamlit_book'
 url: 'https://webapps.hsma.co.uk/'
 abstract: >-

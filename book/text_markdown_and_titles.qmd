@@ -1,40 +1,30 @@
 ---
-title: "Text, Markdown, and Titles"
+title: "Titles, text, and markdown"
 filters:
   - whitphx/stlite
 ---
 
+<br>
+
 Most apps will require a good amount of titles, subheaders and general text.
 
-## Text Types
+<br>
 
-### Titles
+## Titles and text
 
 ```{python}
 #| eval: false
+
+import streamlit as st
+
 st.title("This is a title")
-```
 
-### Subheaders
-
-```{python}
-#| eval: false
 st.subheader("This is a subheader")
-```
 
-### Text
-
-```{python}
-#| eval: false
 st.text("This is text displayed with st.text")
-```
 
-```{python}
-#| eval: false
 st.write("This is text displayed with st.write")
 ```
-
-### Interactive Examples
 
 ```{stlite-python}
 import streamlit as st
@@ -47,6 +37,8 @@ st.text("This is text displayed with st.text")
 
 st.write("This is text displayed with st.write")
 ```
+
+<br>
 
 ## Markdown
 

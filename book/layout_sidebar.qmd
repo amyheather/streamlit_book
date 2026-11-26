@@ -4,7 +4,9 @@ filters:
   - whitphx/stlite
 ---
 
-## Collapsible Sidebars
+<br>
+
+## Collapsible sidebars
 
 The Streamlit sidebar gives us a distinct area on the left-hand side of the screen to use.
 
@@ -50,24 +52,27 @@ else:
 st.container(height=200)
 ```
 
+<br>
 
-### Collapsing, expanding and resizing the sidebar
+## Collapsing, expanding and resizing the sidebar
 
 When hovering over the sidebar, we can see this arrow appear.
 
-![](assets/images/2024-08-20-12-35-54.png)
+![](assets/images/2024-08-20-12-35-54.png){.box}
 
 Clicking on this collapses the sidebar, making the main body of the app take up the full width.
 
-![](assets/images/2024-08-20-12-36-24.png)
+![](assets/images/2024-08-20-12-36-24.png){.box}
 
 This can be very handy - but be aware that it may make for a non-intuitive experience for your end users.
 
 Hovering over the point where the sidebar ends and the main part of the app begins, our cursor will change to indicate that the sidebar can be resized. Clicking and dragging will allow us to make the sidebar narrower and wider, within some predefined limits.
 
-![](assets/images/2024-08-20-12-37-49.png)
+![](assets/images/2024-08-20-12-37-49.png){.box}
 
-![](assets/images/2024-08-20-12-38-24.png)
+![](assets/images/2024-08-20-12-38-24.png){.box}
+
+<br>
 
 ## Alternative sidebar syntax
 
@@ -118,6 +123,8 @@ else:
 You can often mix and match the approaches within an app too - though picking one approach may be easier for the next person who interacts with your code to follow. If it's a good way of achieving what you need to, though, then you can go ahead and do this!
 :::
 
+<br>
+
 ## Initial sidebar state
 
 While there are not many ways to customise your sidebar from within streamlit, you can adjust whether it displays as being visible or not by default using `st.set_page_config()`.
@@ -156,11 +163,15 @@ st.title("Collapsed Sidebar Demo!")
 st.write("The sidebar in this app is closed by default. Click on the arrow in the top left of the screen to open it.")
 ```
 
+<br>
+
 ## Multipage app navigation
 
 Later in the book we discuss multipage apps, which use the sidebar by default for page navigation.
 
 Any things you add to your app's sidebar will just appear below the list of pages.
+
+<br>
 
 ## Sidebar styling
 
@@ -226,7 +237,7 @@ st.title("Sidebar Demo!")
 st.write("The button to expand or close the sidebar is bigger in this example")
 ```
 
-### Sidebar Font colour and size
+### Sidebar font colour and size
 
 If using multipage apps, you may need some futher customisations to make the sidebar look good with the colour changes you make. However, more advanced customisations require using CSS.
 

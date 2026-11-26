@@ -1,10 +1,10 @@
 ---
-title: "Interactive Maps"
+title: "Interactive maps"
 filters:
   - whitphx/stlite
 ---
 
-## Interactive maps with Folium
+<br>
 
 Folium is an easy way to make interactive maps.
 
@@ -111,7 +111,9 @@ st_folium(gp_map_tooltip)
 Take a look at the [HSMA geographic modelling and visualisation book](https://hsma-programme.github.io/hsma6_geographic_optimisation_and_visualisation_book/python_geopandas_folium_intro.html) to find out more about creating and modifying interactive maps in Python.
 :::
 
-### Sneak Peak - Updating the map based on inputs
+<br>
+
+## Updating the map based on user inputs
 
 Let's use a simple text input to filter the dataframe we are passing to the map.
 
@@ -222,7 +224,9 @@ st_folium(gp_map_tooltip)
 
 ```
 
-### Updating the app based on the map zoom
+<br>
+
+## Updating the app based on the map zoom
 
 You can do things like filter a dataframe down to only the subset of points that are on the screen within the Folium component.
 

@@ -1,8 +1,10 @@
 ---
-title: "Dataframes"
+title: "Display and format dataframes"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 Pandas dataframes are very common in data-focussed applications.
 
@@ -17,6 +19,10 @@ Later chapters cover a range of additional dataframe topics, such as
 - saving dataframes to csv or Excel files
 :::
 
+<br>
+
+## Loading your data
+
 In this example, we use `pd.read_csv` to read a dataframe from a URL - take a look at the previous chapter for more details on this.
 
 We then use one of the available dataframe-displaying functions from streamlit. In the previous chapter, we used `st.write()`, which automatically chose one of these to display our dataframe with, but by specifying the precise method ourselves, we can exercise more control and pass in a range of additional parameters to refine the output.
@@ -30,7 +36,9 @@ This is covered more in a later chapter.
 However - loading a file from a public web-based data option is an easy way to ensure you don't run into issues with actually finding the files, as you don't have to worry so much about working out where the file actually is relative to your app on your machine, or to your deployed app!
 :::
 
-## st.table()
+<br>
+
+## Display a static table with `st.table()`
 
 Let's start with `st.table`.
 
@@ -88,7 +96,9 @@ st.table(name_lookup_df)
 
 This can be useful when we don't want users to be able to do things like sort the dataframe columns.
 
-## st.dataframe()
+<br>
+
+## Displaying an interactive table with `st.dataframe()`
 
 `st.dataframe` gives more interactivity by default.
 
@@ -133,9 +143,11 @@ st.dataframe(name_lookup_df)
 
 A simple search functionality is available when hovering over it, as well as the option to make the table take up the full screen.
 
-![](assets/images/2024-08-19-15-56-02.png)
+![](assets/images/2024-08-19-15-56-02.png){.box}
 
-### Polishing the display of different data types with the column API
+<br>
+
+## Formatting columns with the column configuration API
 
 The column configuration API is a powerful way to enhance the display of data tables in Streamlit.
 
@@ -266,10 +278,13 @@ For editable dataframes (covered in a later chapter), checkboxes, select dropdow
 
 The full documentation can be found [here](https://docs.streamlit.io/develop/api-reference/data/st.column_config) and is well worth a read to understand the full range of powerful options available to you via the column configuration API.
 
+<br>
+
+## Other display options
+
 ### Pandas stylers
 
 Pandas has a 'styler' API, which can be used to enhance table displays with conditional formatting and other stylistic enhancements. At present, within Streamlit, cell background colours, font colours and custom value displays are supported. Take a look at the pandas styler documentation for more information, and pass in the pandas styler object instead of the basic dataframe to `st.dataframe`.
-
 
 ### Other kinds of tabular data
 

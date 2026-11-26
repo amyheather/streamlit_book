@@ -4,12 +4,16 @@ filters:
   - whitphx/stlite
 ---
 
+<br>
+
+## Logos
+
 Streamlit has basic support for small logos in your app.
 
 It will look for a file you specify relative to the currently running streamlit file
 here, for example, it looks for a folder called ‘resources’ and then looks for the ‘hsma_logo.png’ file.
 
-![](assets/images/2024-09-16-22-24-06.png)
+![](assets/images/2024-09-16-22-24-06.png){.box}
 
 The logo will appear in the top left of your app.
 
@@ -50,8 +54,9 @@ st.text(f"The answer is {output}")
 
 ```
 
+<br>
 
-If it’s a multi page app or an app using a streamlit sidebar that you have manually defined, it will appear at the top of the sidebar.
+If it's a multi page app or an app using a streamlit sidebar that you have manually defined, it will appear at the top of the sidebar.
 
 ```{python}
 #| eval: false
@@ -85,11 +90,13 @@ st.text(f"The answer is {output}")
 Ideally, your logo should be close to 24 pixels tall by 240 pixels wide.
 :::
 
+<br>
+
 ## Larger logos
 
 It is possible to include larger logos through more advanced tricks, but they are fragile and prone to breaking as changes are made to the Streamlit library.
 
-![](assets/images/2024-09-16-22-27-41.png)
+![](assets/images/2024-09-16-22-27-41.png){.box}
 
 The approach requires using some markdown to inject some custom CSS (see the fonts chapter for more details on CSS).
 

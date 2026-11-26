@@ -1,0 +1,11 @@
+/* Box will centre and give a border to images */
+/* This is helpful when they are dark / full of text, as otherwise */
+/* they blend in easily with the rest of the page and text */
+img.box {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.25rem auto 2rem;
+  border: 3px solid #8a8a8a;
+  border-radius: 6px;
+}

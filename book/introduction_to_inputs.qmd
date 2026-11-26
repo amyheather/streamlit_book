@@ -1,16 +1,20 @@
 ---
-title: "Basic Inputs"
+title: "Basic inputs"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 One of the most important things about Streamlit apps is that they can take and react to user input.
 
 There are a huge range of input types available - but let's start with a simple one.
 
-Let's create a drop-down select box with a couple of options.
+Let's create a drop-down select box with a couple of options. The function we need is `st.selectbox()`.
 
-The function we need is `st.selectbox()`.
+<br>
+
+## `st.selectbox`
 
 We first pass in a label that will be displayed to the user so they know what the input is for.
 
@@ -70,7 +74,9 @@ image_url = {"Back to the Future": "https://upload.wikimedia.org/wikipedia/en/d/
 st.image(image_url[chosen_option])
 ```
 
-## Streamlit Running Order
+<br>
+
+## Streamlit running order
 
 A key concept of Streamlit is that each time something changes, the app reruns from top to bottom.
 

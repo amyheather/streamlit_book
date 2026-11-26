@@ -4,13 +4,15 @@ filters:
   - whitphx/stlite
 ---
 
+<br>
+
 Callbacks are custom functions that will execute when a user interacts with an input.
 
 They are often used in conjunction with session state.
 
 For example - we could increment a counter every time the user clicks on a button.
 
-![](assets/gif/callback_gif.gif)
+![](assets/gif/callback_gif.gif){.box}
 
 :::{.callout-tip}
 In standard Streamlit, this would be impossible because it would forget that you clicked the button every time you did so!
@@ -18,7 +20,9 @@ In standard Streamlit, this would be impossible because it would forget that you
 Callbacks + session state get around that problem.
 :::
 
-## Callbacks Code Example
+<br>
+
+## Callbacks code example
 
 To begin, we initialise our session state variable like before.
 
@@ -64,11 +68,12 @@ st.write(f"You've clicked the button {st.session_state.button_click_count} times
 ```
 
 ```{=html}
-<iframe width="780" height="500" src="https://hsma-session-state-callbacks.streamlit.app?embed=true" title="Session State and Callbacks App Example"></iframe>
+<iframe width="100%" height="600" src="https://hsma-session-state-callbacks.streamlit.app?embed=true" title="Session State and Callbacks App Example"></iframe>
 ```
 
 [Click here to load the app in a new page](https://hsma-session-state-callbacks.streamlit.app/)
 
+<br>
 
 ## More detail on callbacks
 

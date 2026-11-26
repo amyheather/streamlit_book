@@ -4,7 +4,9 @@ filters:
   - whitphx/stlite
 ---
 
-## Tabs in Streamlit
+<br>
+
+## Tabs in streamlit
 
 Tabs are an extremely useful way to organise your page into something that is easier to navigate.
 
@@ -69,6 +71,8 @@ with tab3:
 
 ```
 
+<br>
+
 ## The two main syntax options for streamlit tabs
 
 There are two main ways to put content inside of tabs.
@@ -105,6 +109,8 @@ tab_b.text("This is some content within tab 2")
 The outputs of both of these bits of code are identical!
 
 It's up to you to choose which you prefer.
+
+<br>
 
 ## Automatically generating variable numbers of tabs
 
@@ -182,8 +188,9 @@ for idx, tab in enumerate(tab_list):
 
 ```
 
+<br>
 
-## Custom Styling of Tabs
+## Custom styling of tabs
 
 Here is an example of how to change the tab formatting.
 

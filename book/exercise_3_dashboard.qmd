@@ -1,4 +1,6 @@
-# Exercise 3: Double Dash!!(boards)
+# Exercise 3: Double dash!!(boards)
+
+<br>
 
 You’re now going to create a dashboard in Streamlit.
 

@@ -4,7 +4,9 @@ filters:
   - whitphx/stlite
 ---
 
-## Creating Columns in Streamlit
+<br>
+
+## Creating columns in streamlit
 
 Streamlit has a very easy to use column interface for improving the layout of your apps.
 
@@ -77,8 +79,9 @@ with col3:
 
 ```
 
+<br>
 
-## The two main syntax options for Streamlit columns
+## The two main syntax options for streamlit columns
 
 There are two main ways to put content inside of columns.
 
@@ -113,8 +116,9 @@ col_b.text("This is some content within column 2")
 
 The outputs of both of these bits of code are identical!
 
+<br>
 
-## Adjusting Column Width
+## Adjusting column width
 
 Column width can be controlled by passing in a list with the same number of decimals in as the number of columns you want to create. These numbers must sum to 1.
 
@@ -172,7 +176,9 @@ with col_c:
     st.text("This is some content within column 3")
 ```
 
-## Advanced Column Layouts
+<br>
+
+## Advanced column layouts
 
 The great thing about columns is that we can have multiple sets of columns, allowing you to build up fairly complex grid-like layouts.
 

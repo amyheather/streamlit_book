@@ -1,14 +1,16 @@
 ---
-title: "Static Maps"
+title: "Static maps"
 filters:
   - whitphx/stlite
 ---
 
-## Static maps
+<br>
 
-In the HSMA course, we have generally used the geopandas plot method - which is using matplotlib behind the scenes - to produce static maps.
+In the HSMA course, we generally use the geopandas plot method - which is using matplotlib behind the scenes - to produce static maps.
 
 This means that maps are simple to display as we can just use the `st.pyplot()` function that we used for standard matplotlib charts.
+
+<br>
 
 ```{python}
 #| eval: false

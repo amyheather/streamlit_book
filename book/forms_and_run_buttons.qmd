@@ -4,6 +4,10 @@ filters:
   - whitphx/stlite
 ---
 
+<br>
+
+## Buttons
+
 One simple way to control app flow is by using the `st.button`.
 
 Let's take a look at a simple simulation model.
@@ -58,6 +62,9 @@ When a slider or other user input is next adjusted, any outputs that appeared af
 :::
 
 ```{stlite-python}
+import micropip
+await micropip.install("simpy")
+
 import streamlit as st
 import simpy
 import random
@@ -280,6 +287,7 @@ if button_run_pressed:
 
 ```
 
+<br>
 
 ## Streamlit forms
 

@@ -1,10 +1,14 @@
 ---
-title: "Metrics and Dials"
+title: "Metrics and dials"
 filters:
   - whitphx/stlite
 ---
 
+<br>
+
 If using Streamlit to create a dashboard, there will often be a requirement to create various elements displaying key performance indicators and performance trends prominently.
+
+<br>
 
 ## Metrics
 
@@ -74,7 +78,9 @@ st.metric(label="This Won't Be Displayed", value=5, delta=3, label_visibility="c
 
 ```
 
-### Layout
+<br>
+
+## Organising metrics with `st.columns`
 
 By combining metrics with [st.columns](layout_columns.qmd), we can make better use of the screen to start building up more of a dashboard layout. The column layout is covered in more detail in the linked chapter.
 
@@ -158,7 +164,9 @@ st.plotly_chart(   # <5>
 
 ```
 
-### Styling Metric Cards
+<br>
+
+## Styling metric cards
 
 The Streamlit Extras package provides us with options to apply a style to our metric cards.
 
@@ -303,6 +311,7 @@ st.plotly_chart(
 
 ```
 
+<br>
 
 ## Indicators
 

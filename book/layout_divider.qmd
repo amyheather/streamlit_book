@@ -1,14 +1,17 @@
 ---
-title: "Page Dividers"
+title: "Page dividers"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 The divider is a simple function that puts a horizontal line across the width of the page.
 
 This can make it easier to indicate different sections of the page that should be looked at together.
 
 ```{python}
+#| eval: false
 import streamlit as st
 
 st.title("This is a title")
