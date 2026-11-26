@@ -1,11 +1,11 @@
 
 ---
-title: "Downloading Interactive Maps"
+title: "Downloading interactive maps"
 filters:
   - whitphx/stlite
 ---
 
-### Folium
+<br>
 
 Interactive maps can be created using the Folium package.
 

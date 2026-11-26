@@ -1,11 +1,11 @@
 
 ---
-title: "Downloading Static Maps"
+title: "Downloading static maps"
 filters:
   - whitphx/stlite
 ---
 
-## Maps
+<br>
 
 While there are various other libraries available for displaying maps in Python and Streamlit, we are going to focus on the two we used in module 3 of the HSMA course
 
@@ -14,7 +14,9 @@ While there are various other libraries available for displaying maps in Python 
 
 For more of a reminder on how to work with geographic data and create maps, you can refer to the [HSMA geographic modelling and visualisation book](https://hsma-programme.github.io/hsma6_geographic_optimisation_and_visualisation_book/).
 
-## Downloading Static Maps Made With Matplotlib
+<br>
+
+## Downloading static matplotlib map
 
 Let's just start by plotting a map.
 
@@ -58,12 +60,13 @@ with open(filename, "rb") as img:
 ```
 
 
-<!-- ```{stlite-python}
+<!--```{stlite-python}
 import micropip
 await micropip.install("geopandas")
+await micropip.install("matplotlib")
 import geopandas
 import pandas as pd
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 import streamlit as st
 
 st.title("Crime in Devon by Type")
@@ -96,9 +99,11 @@ with open(filename, "rb") as img:
         mime="image/png"
     )
 
-``` -->
+```-->
 
-#### A map with subplots
+<br>
+
+## A map with subplots
 
 Static maps with subplots are much the same - you are just interested in saving the `fig` object to a temporary `.png` image file before then serving that temporary file to the user.
 
@@ -235,7 +240,9 @@ with open(filename, "rb") as img:
 
 ``` -->
 
-#### Multiple Separate Maps
+<br>
+
+## Multiple separate maps
 
 What if we want to create several different maps instead of using the subplot feature?
 
