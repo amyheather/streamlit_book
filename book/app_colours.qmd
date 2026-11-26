@@ -1,35 +1,43 @@
 ---
-title: "App Colours"
+title: "App colours"
 filters:
   - whitphx/stlite
 ---
 
+<br>
+
 There are a few parts of Streamlit’s theming that we can officially change using a configuration file.
 
-This file needs to be called config.toml and lives inside a subfolder called .streamlit
+This file needs to be called `config.toml` and lives inside a subfolder called `.streamlit/`.
 
-![](assets/images/2024-09-16-22-11-49.png)
+![](assets/images/2024-09-16-22-11-49.png){.box}
 
-The config.toml file contains a variable number of parameters.
+<br>
+
+The `config.toml` file contains a variable number of parameters.
 
 It can determine whether the default colourscheme is light or dark, and whether the default streamlit colours are overridden.
 
 You can create a template config.toml from within streamlit, then paste the output into a config.toml file you create yourself.
 
-![](assets/gif/firefox_qB7kSDDCyA.gif)
+![](assets/gif/firefox_qB7kSDDCyA.gif){.box}
 
 Let's look at an example app.
 
-### config.toml
+<br>
 
-```
+## `config.toml`
+
+```{toml}
 [theme]
 base="light"
 primaryColor="#005EB8"
 secondaryBackgroundColor="#00e0ff"
 ```
 
-### app.py
+<br>
+
+## `app.py`
 
 ```{python}
 #| eval: false
@@ -57,4 +65,4 @@ st.text(f"The answer is {output}")
 
 ```
 
-![](assets/images/2024-09-16-22-22-29.png)
+![](assets/images/2024-09-16-22-22-29.png){.box}
