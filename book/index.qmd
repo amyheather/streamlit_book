@@ -24,7 +24,13 @@ This does mean that the app examples within each page do take a while to load, a
 <br>
 
 ::: {.callout-note collapse="true"}
-## Dataset acknowledgements
+## Acknowledgements
+
+### Stlite extension for Quarto
+
+The `whitphx/quarto-stlite` Quarto extension has enabled interactivity in this book that greatly improves the reader experience.
+
+We would like to thank [Yuichiro Tachibana (Tsuchiya)](https://github.com/whitphx) for developing this extension, which is available at <https://github.com/whitphx/quarto-stlite>.
 
 ### Palmer Penguins
 
