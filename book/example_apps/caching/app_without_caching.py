@@ -1,6 +1,6 @@
-import streamlit as st
 import pandas as pd
 import plotly.express as px
+import streamlit as st
 
 st.set_page_config(layout="wide")
 
@@ -27,26 +27,30 @@ athlete_statistics = pd.read_csv("datasets/athlete_details_eventwise.csv")
 
 
 # The code that follows
-selected_sport = st.selectbox("Select a sport",
-                              athlete_statistics["Sport"].drop_duplicates().tolist())
+selected_sport = st.selectbox(
+    "Select a sport", athlete_statistics["Sport"].drop_duplicates().tolist()
+)
 
-athlete_statistics_sport = athlete_statistics[athlete_statistics["Sport"] == selected_sport]
+athlete_statistics_sport = athlete_statistics[
+    athlete_statistics["Sport"] == selected_sport
+]
 
 events_per_year_by_sport = (
-    athlete_statistics_sport[['Year', 'Event']]
+    athlete_statistics_sport[["Year", "Event"]]
     .drop_duplicates()
-    .value_counts(['Year'])
+    .value_counts(["Year"])
     .reset_index()
 )
 
 st.plotly_chart(
-    px.line(events_per_year_by_sport.sort_values("Year"),
-            x="Year", y="count",
-            markers=True,
-            title=f"{selected_sport} Events Per Olympics",
-            range_x=[athlete_statistics.Year.min(), athlete_statistics.Year.max()])
+    px.line(
+        events_per_year_by_sport.sort_values("Year"),
+        x="Year",
+        y="count",
+        markers=True,
+        title=f"{selected_sport} Events Per Olympics",
+        range_x=[athlete_statistics.Year.min(), athlete_statistics.Year.max()],
+    )
 )
 
-st.dataframe(
-    events_per_year_by_sport
-)
+st.dataframe(events_per_year_by_sport)

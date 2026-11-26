@@ -1,18 +1,18 @@
 import streamlit as st
 
-st.title('Simple Calculator App')
+st.title("Simple Calculator App")
 
 num_1 = st.number_input(label="First Number", step=1, value=10)
 
 num_2 = st.number_input(label="Second Number", step=1, value=10)
 
-operator = st.radio(label="Operation",
-                    options=["Add", "Subtract", "Multiply", "Divide"])
+operator = st.radio(
+    label="Operation", options=["Add", "Subtract", "Multiply", "Divide"]
+)
 
 calculate_button_pressed = st.button(label="Calculate")
 
 if calculate_button_pressed:
-
     if operator == "Add":
         output = num_1 + num_2
     elif operator == "Subtract":

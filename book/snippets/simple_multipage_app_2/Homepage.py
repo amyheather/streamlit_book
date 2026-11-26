@@ -6,7 +6,10 @@ st.title("Welcome to the penguin app!")
 
 species_options = ["Gentoo", "Chinstrap", "Adelie"]
 
-chosen_species = st.selectbox("Which penguin species are you interested in finding out more about?", species_options)
+chosen_species = st.selectbox(
+    "Which penguin species are you interested in finding out more about?",
+    species_options,
+)
 
 if chosen_species == "Gentoo":
     st.write(

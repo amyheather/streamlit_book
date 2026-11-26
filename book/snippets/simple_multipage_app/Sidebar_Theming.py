@@ -1,8 +1,7 @@
 import streamlit as st
-import plotly.express as px
 
 st.markdown(
-  """
+    """
 <style>
 /* Sidebar font color as default is to set non-selected to more transparent */
 [data-testid=stSidebarNavItems] > li > div > a > span
@@ -18,7 +17,7 @@ st.markdown(
 
 </style>
   """,
-  unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 
@@ -26,11 +25,13 @@ st.title("Sidebar Theming and Additions")
 
 st.write("Finally, let's look at the impact of some custom CSS on the sidebar.")
 
-st.write("We've embedded some code when the page first loads that should increase the size of the page names in the sidebar, and also make the page names in the sidebar darker.")
+st.write(
+    "We've embedded some code when the page first loads that should increase the size of the page names in the sidebar, and also make the page names in the sidebar darker."
+)
 
 with st.expander("Click here to view the code"):
     st.code(
-    '''
+        """
 <style>
 /* Sidebar font color as default is to set non-selected to more transparent */
 [data-testid=stSidebarNavItems] > li > div > a > span
@@ -45,12 +46,14 @@ with st.expander("Click here to view the code"):
     }
 
 </style>
-    '''
+    """
     )
 
 
 with st.sidebar:
-    st.write("Let's also explore what happens when we add additional things to the sidebar")
+    st.write(
+        "Let's also explore what happens when we add additional things to the sidebar"
+    )
 
     st.write("It looks like it automatically appears below the navigation")
 

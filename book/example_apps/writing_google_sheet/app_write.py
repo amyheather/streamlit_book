@@ -1,9 +1,13 @@
-import streamlit as st
-from streamlit_gsheets import GSheetsConnection # this doesn't exist in the hsma_webdev environment
 import random
+from datetime import datetime
+
 import numpy as np
 import pandas as pd
-from datetime import datetime
+import streamlit as st
+from streamlit_gsheets import (
+    GSheetsConnection,
+)  # this doesn't exist in the hsma_webdev environment
+
 # would need to be installed with
 # !pip install st-gsheets-connection
 
@@ -27,20 +31,17 @@ if st.button("Update worksheet"):
     unit_cost = np.round((random.random() + random.randint(1, 10)), 2)
 
     additional_row = [
-        {'Item': "Additional HSMA Merchandise",
-        "Category": random.choice(["Stickers", "Pets", "Clothing", "Mugs"]),
-        "Units": units,
-        "Unit Cost": unit_cost,
-        "Total": units * unit_cost,
-        "Added": datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        {
+            "Item": "Additional HSMA Merchandise",
+            "Category": random.choice(["Stickers", "Pets", "Clothing", "Mugs"]),
+            "Units": units,
+            "Unit Cost": unit_cost,
+            "Total": units * unit_cost,
+            "Added": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
         }
     ]
 
-    df_updated = pd.concat(
-        [df,
-        pd.DataFrame(additional_row)
-        ]
-    )
+    df_updated = pd.concat([df, pd.DataFrame(additional_row)])
 
     df = conn.update(
         worksheet=0,
