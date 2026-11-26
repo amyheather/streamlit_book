@@ -135,6 +135,8 @@ format:
       - assets/fonts/css/lexend.css
     css:
       - assets/css/styles.css
+    include-in-header:
+      - assets/html/stlite-wrap.html
     lightbox: true
     grid:
       sidebar-width: 250px
