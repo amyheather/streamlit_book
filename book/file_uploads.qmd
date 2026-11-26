@@ -1,14 +1,18 @@
 ---
-title: "Uploading Data Files, Images and More"
+title: "Uploading data files, images and more"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 File uploads can be a very powerful way of making your app more useful to users.
 
 Let's explore some of the things we can upload.
 
-## A simple csv file upload
+<br>
+
+## Uploading a CSV file
 
 Let's start off by asking the user to upload any csv file of data.
 
@@ -70,6 +74,7 @@ if uploaded_file is not None:
         st.write(f"The first 5 values in column {col} are {', '.join(uploaded_df[col].head().astype('str'))}")
 ```
 
+<br>
 
 ### Limiting the file types
 
@@ -95,6 +100,8 @@ if uploaded_file is not None:
 
 1. We pass in a list of acceptable file types for the upload. This will filter the files on the user's system to the acceptable types unless they manually choose to view all file types, and if they attempt to upload the wrong file type, it will tell the user that it is not a valid file.
 
+<br>
+
 ```{stlite-python}
 import streamlit as st
 import pandas as pd
@@ -107,15 +114,19 @@ if uploaded_file is not None:
     st.write(uploaded_df.head())
 ```
 
+<br>
+
 The app will try to prevent us from uploading the wrong type of file by only showing the correct type of file in our file explorer.
 
-![](assets/images/2024-08-09-15-55-05.png)
+![](assets/images/2024-08-09-15-55-05.png){.box}
 
 If we now try to upload a file with a different extension, we'll receive a more user-friendly error message.
 
-![](assets/images/2024-08-09-15-54-23.png)
+![](assets/images/2024-08-09-15-54-23.png){.box}
 
 If we passed more possible extensions to the list, we would allow more extensions to be uploaded - but we'd also have to adapt our code to deal with each of the possible types that can be uploaded!
+
+<br>
 
 ## Uploading image files
 
@@ -153,7 +164,9 @@ if uploaded_image is not None:
 
 ```
 
-### Advanced: Manipulating uploaded image files
+<br>
+
+### Advanced: manipulating uploaded image files
 
 We have to undertake a few extra steps to be able to manipulate image files people have uploaded.
 

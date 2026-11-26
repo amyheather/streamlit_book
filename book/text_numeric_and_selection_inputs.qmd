@@ -1,12 +1,18 @@
 ---
-title: "An Overview of Available Input Types"
+title: "An overview of available input types"
 filters:
   - whitphx/stlite
 ---
 
+<br>
+
 There are a large number of different input types available in Streamlit.
 
 In streamlit, if we save the output of one of the built-in input widgets to a variable, this variable will be the value the user has selected, and will be used anywhere you subsequently reference this value in the app.
+
+<br>
+
+## Text input
 
 Let's start by having a text input to greet the user.
 
@@ -31,7 +37,9 @@ st.write(f"Hello {name}! Welcome to Streamlit.")
 
 ```
 
-## Using inputs in calculations
+<br>
+
+## Numeric input and slider
 
 In addition to text, we often want to be able to get numeric inputs from users.
 
@@ -52,7 +60,7 @@ It's highly recommended that you take a look at the [documentation](https://docs
 :::
 
 
-### Numeric Input
+### Numeric input
 
 ```{python}
 #| eval: False
@@ -73,7 +81,7 @@ st.write(f"Your number multiplied by 5 is {chosen_number_multiplied_by_5}")
 st.write(f"Your number plus 7 is {chosen_number + 7}")
 ```
 
-### Numeric Slider
+### Numeric slider
 
 ```{python}
 #| eval: false
@@ -95,7 +103,7 @@ st.write(f"Your number multiplied by 8 is {chosen_number_slider_multiplied_by_8}
 st.write(f"Your number plus 3 is {chosen_number_slider + 3}")
 ```
 
-### Interactive Example
+### Interactive examples
 
 ```{stlite-python}
 
@@ -147,6 +155,8 @@ st.write(f"Your number multiplied by 8 is {chosen_number_slider_multiplied_by_8}
 st.write(f"Your number plus 3 is {chosen_number_slider + 3}")
 ```
 
+<br>
+
 ## Other numeric, date and time inputs
 
 Let's have a very quick look at some of the other inputs available to us within Streamlit.
@@ -163,7 +173,7 @@ The maximum and minimum allowed values for numeric, date and time sliders can be
 It's highly recommended that you take a look at the [documentation](https://docs.streamlit.io/develop/api-reference/widgets) to understand the full range of options available.
 :::
 
-### Range Slider
+### Range slider
 
 ```{python}
 #| eval: false
@@ -175,7 +185,7 @@ lower_value, upper_value = st.slider(
     )
 ```
 
-### Time Slider
+### Time slider
 
 ```{python}
 #| eval: false
@@ -185,7 +195,7 @@ chosen_time = st.slider(
 )
 ```
 
-### Date Slider
+### Date slider
 
 ```{python}
 #| eval: false
@@ -196,7 +206,7 @@ selected_date = st.slider(
 )
 ```
 
-### Date Range Slider
+### Date range slider
 
 ```{python}
 #| eval: false
@@ -207,7 +217,7 @@ start_date, end_date = st.slider(
 )
 ```
 
-### Time Range Slider
+### Time range slider
 
 ```{python}
 #| eval: false
@@ -217,7 +227,7 @@ start_time, end_time = st.slider(
 )
 ```
 
-### Datetime Slider
+### Datetime slider
 
 ```{python}
 #| eval: false
@@ -228,7 +238,7 @@ chosen_datetime = st.slider(
 )
 ```
 
-### Date Calendar Picker
+### Date calendar picker
 
 ```{python}
 #| eval: false
@@ -237,7 +247,7 @@ selected_date = st.date_input(
     )
 ```
 
-### Time Calendar Picker
+### Time calendar picker
 
 ```{python}
 #| eval: false
@@ -246,7 +256,7 @@ selected_time = st.time_input(
     )
 ```
 
-### Interactive Examples
+### Interactive examples
 
 ```{stlite-python}
 
@@ -384,7 +394,9 @@ st.write(f"Your input is {selected_time}")
 st.write(f"It is of type {type(selected_time)}")
 ```
 
-## Text Inputs
+<br>
+
+## Text inputs
 
 :::{.callout-tip}
 All of the input types given below can take a huge range of additional parameters to further refine their behaviour.
@@ -413,7 +425,7 @@ shorter_text_input = st.text_input(
     )
 ```
 
-### Interactive Examples
+### Interactive examples
 
 ```{stlite-python}
 import streamlit as st
@@ -448,6 +460,7 @@ st.write(f"It is of type {type(shorter_text_input)}")
 
 ```
 
+<br>
 
 ## Selection inputs
 
@@ -497,7 +510,7 @@ multiselect_colour_select = st.multiselect(
 
 ```
 
-### Select Slider
+### Select slider
 
 ```{python}
 #| eval: false
@@ -507,7 +520,7 @@ slider_colour_select = st.select_slider(
     )
 ```
 
-### Interactive Examples
+### Interactive examples
 
 ```{stlite-python}
 import streamlit as st
@@ -584,7 +597,9 @@ slider_colour_select = st.select_slider(
 
 ```
 
-## Other useful inputs - Boolean (True/False) Flags
+<br>
+
+## Other useful inputs - boolean (True/False) flags
 
 The final inputs we'll take a quick look at are checkbox and toggle inputs.
 
@@ -613,7 +628,7 @@ toggle_value = st.toggle("Tick or untick me!")
 
 ```
 
-### Interactive Examples
+### Interactive examples
 
 ```{stlite-python}
 
@@ -648,19 +663,17 @@ st.write(f"The value of the toggle is {toggle_value}")
 
 ```
 
-## Additional Input Types Not Covered Here
+<br>
 
-You can always refer to the excellent Streamlit documentation to see what other input widgets are available.
+## Other input types
+
+You can always refer to the excellent Streamlit documentation at <https://docs.streamlit.io/develop/api-reference/widgets> to see what other input widgets are available.
 
 New official ones are sometimes added, and there are additional ones made by the community that become available over time.
 
-```{=html}
-<iframe width="780" height="500" src="https://docs.streamlit.io/develop/api-reference/widgets" title="Webpage example"></iframe>
-```
+![Widgets from <https://docs.streamlit.io/develop/api-reference/widgets>](assets/images/widgets.png)
 
-:::{.callout-note}
-Embedded page not working? Use the following link instead: [https://docs.streamlit.io/develop/api-reference/widgets](https://docs.streamlit.io/develop/api-reference/widgets)
-:::
+<br>
 
 ## Next steps with inputs
 

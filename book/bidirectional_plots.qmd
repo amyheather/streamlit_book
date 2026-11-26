@@ -1,8 +1,10 @@
 ---
-title: "Bidirectional Inputs - Dataframes and Charts"
+title: "Bidirectional inputs - dataframes and charts"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 In more recent versions of Streamlit, it has become possible to feed certain interactions with graphs - like selecting a series of points on a scatterplot - or with maps - like zooming to focus in on a subset of markers - back into the app.
 
@@ -11,6 +13,8 @@ This can allow you to do things like provide a dataframe below a map that respon
 :::{.callout-warning}
 This is a more advanced topic. It is recommended that you have become comfortable with inputs and outputs in Streamlit before attempting to use the contents of this chapter.
 :::
+
+<br>
 
 ## Dataframes
 
@@ -60,12 +64,14 @@ st.write(selected_rows)
 :::{.callout-tip}
 Note that selecting a subset of cells like this is not sufficient.
 
-![](assets/images/2024-08-19-15-10-02.png)
+![](assets/images/2024-08-19-15-10-02.png){.box}
 
 You must select the full rows using the dataset column at the far left, to the left of the index column if displayed.
 
-![](assets/images/2024-08-19-15-11-10.png)
+![](assets/images/2024-08-19-15-11-10.png){.box}
 :::
+
+<br>
 
 We can then use the selected row indices to restrict the rows we use for subsequent calculations.
 
@@ -147,6 +153,8 @@ The `selection_mode` parameter can be passed to `st.dataframe` to allow selectio
 Note that enabling column selection disables column sorting.
 :::
 
+<br>
+
 ## Graphs
 
 Streamlit also supports monitoring `st.plotly_chart`, `st.altair_chart`, and `st.vega_lite_chart` for point selections and using this as an input for further actions.
@@ -157,7 +165,7 @@ In this book we focus on the use of plotly; take a look at the Streamlit documen
 
 When hovering over the plot, users are given options such as 'box select' (to choose a box-shaped subset of points) or lasso select (to select an irregular set of points.)
 
-![](assets/images/2024-08-19-14-41-40.png)
+![](assets/images/2024-08-19-14-41-40.png){.box}
 
 Let's start by creating a scatterplot of the penguins dataset.
 

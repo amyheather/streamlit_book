@@ -4,6 +4,7 @@ filters:
   - whitphx/stlite
 ---
 
+<br>
 
 Any pandas dataframe can be turned into an editable dataframe using the `st.data_editor()` function.
 
