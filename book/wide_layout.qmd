@@ -1,8 +1,10 @@
 ---
-title: "Wide Layout, Page Tab Titles and Favicons"
+title: "Wide layout, page tab titles and favicons"
 filters:
   - whitphx/stlite
 ---
+
+<br>
 
 You may have noticed that Streamlit apps only seem to use part of the screen.
 
@@ -45,7 +47,9 @@ st.write("Look at all this space we're using!")
 
 ```
 
-## Other settings in set_page_config
+<br>
+
+## Other settings in `set_page_config`
 
 Within st.set_page_config, you can also
 

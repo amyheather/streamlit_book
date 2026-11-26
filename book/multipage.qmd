@@ -1,11 +1,12 @@
 ---
-title: "Multipage Apps"
+title: "Multipage apps"
 filters:
   - whitphx/stlite
   - include-code-files
 
 ---
 
+<br>
 
 As your apps become more complex, you are likely to find yourself wanting to split the app across multiple pages.
 
@@ -17,12 +18,14 @@ In the early days of Streamlit, people came up with various creative workarounds
 Information prior to 2022 is likely to be from before Streamlit supported this natively, so is not likely to be as relevant.
 :::
 
-## Method 1: 'st.Page' and 'st.navigation'
+<br>
+
+## Method 1: `st.Page` and `st.navigation`
 
 Let's first take a look at the multipage app itself and explore how a multipage app behaves.
 
 ```{=html}
-<iframe width="1100" height="800" src="https://penguin-trends-multipage-example-method-1.streamlit.app?embed=True" title="Quarto Components"></iframe>
+<iframe width="100%" height="400" src="https://penguin-trends-multipage-example-method-1.streamlit.app?embed=True" title="Quarto Components"></iframe>
 ```
 
 [Click here to load the sample app in a new tab](https://penguin-trends-multipage-example-method-1.streamlit.app)
@@ -34,6 +37,8 @@ The key things to take away are that
 - moving to a different page will reset the value of any inputs
 :::
 
+<br>
+
 The recommended method for multipage apps in Streamlit is to
 
 - create a page that is responsible for routing users to different pages
@@ -42,11 +47,13 @@ The recommended method for multipage apps in Streamlit is to
 
 In this example, we have a folder that looks like this
 
-![](assets/images/2024-08-20-17-18-02.png)
+![](assets/images/2024-08-20-17-18-02.png){.box}
+
+<br>
 
 When starting up the app, we will simply be running `streamlit run app.py` from within the folder.
 
-Let's take a look at the contents of app.py
+Let's take a look at the contents of `app.py`...
 
 ```{.python code-line-numbers="true"}
 import streamlit as st
@@ -78,8 +85,9 @@ The `.streamlit` folder contains `config.toml`, which is used to set the colours
 The `requirements.txt` file contains the required packages for the app, which will then be installed automatically when we deploy the app to the streamlit community cloud.
 :::
 
+<br>
 
-### Nested Sidebars
+### Nested sidebars
 
 By modifying our main page's code, we can create subsections within our navigation bars, which can be very helpful for more complex apps.
 
@@ -107,10 +115,12 @@ pg.run()
 2. We can then create a dictionary where the keys (the values before the :) are strings representing what we want our subsection names to be. The values of the dictionary are lists containing the variables we defined above. For example, here section 1 will contain only the homepage, while sections 2 and 3 will contain 2 pages each.
 
 ```{=html}
-<iframe width="1100" height="800" src="https://penguin-trends-multipage-example-nested-sidebar.streamlit.app?embed=True" title="Quarto Components"></iframe>
+<iframe width="100%" height="400" src="https://penguin-trends-multipage-example-nested-sidebar.streamlit.app?embed=True" title="Quarto Components"></iframe>
 ```
 
 [Click here to load the sample app in a new tab](https://penguin-trends-multipage-example-nested-sidebar.streamlit.app)
+
+<br>
 
 ## Method 2: 'pages' subfolder
 
@@ -127,20 +137,20 @@ We would start this app by running `streamlit run Homepage.py` when we have navi
 Let's look at an example multipage app with 5 pages.
 
 ```{=html}
-<iframe width="1100" height="800" src="https://penguin-trends-multipage-example-method-2.streamlit.app?embed=True" title="Quarto Components"></iframe>
+<iframe width="100%" height="400" src="https://penguin-trends-multipage-example-method-2.streamlit.app?embed=True" title="Quarto Components"></iframe>
 ```
 
 [Click here to load the sample app in a new tab](https://penguin-trends-multipage-example-method-2.streamlit.app)
 
+<br>
 
 The structure of our app in our filesystem looks like this; in Windows explorer, this is how the files and folders appear.
 
-![](assets/images/2024-08-20-16-04-46.png)
-
+![](assets/images/2024-08-20-16-04-46.png){.box}
 
 **The 'pages' folder**
 
-![](assets/images/2024-08-20-16-05-41.png)
+![](assets/images/2024-08-20-16-05-41.png){.box}
 
 The numbers at the beginning of the filenames indicate the order these will appear in the sidebar.
 

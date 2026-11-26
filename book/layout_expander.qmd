@@ -4,6 +4,10 @@ filters:
   - whitphx/stlite
 ---
 
+<br>
+
+## Expanders
+
 The expander allows additional information to be hidden away until the user clicks in the relevant spot.
 
 This can be a handy way to keep an app clear and easy-to-use while allowing users the flexibility to dive deeper into the data or find out additional information about the processes.
@@ -38,7 +42,7 @@ await micropip.install("palmerpenguins")
 await micropip.install("plotly")
 import streamlit as st
 from palmerpenguins import load_penguins
-import plotly.express as px
+from plotly import express as px
 
 penguins = load_penguins()
 
@@ -53,6 +57,7 @@ with st.expander("Click here to view the underlying data"):
 st.write("This is some text that appears after the expander.") # <3>
 ```
 
+<br>
 
 As with many other layout elements, you can write expanders in a different way to achieve the same result.
 
@@ -89,7 +94,7 @@ await micropip.install("palmerpenguins")
 await micropip.install("plotly")
 import streamlit as st
 from palmerpenguins import load_penguins
-import plotly.express as px
+from plotly import express as px
 
 penguins = load_penguins()
 
@@ -107,6 +112,7 @@ extra_data_expander.write("This is some additional text I'm later adding in to t
 
 ```
 
+<br>
 
 ## Nesting expanders in other layout elements
 
@@ -179,7 +185,7 @@ await micropip.install("palmerpenguins")
 await micropip.install("plotly")
 import streamlit as st
 from palmerpenguins import load_penguins
-import plotly.express as px
+from plotly import express as px
 
 tab1, tab2 = st.tabs(["Penguin Graphs", "Penguin Facts"])
 
