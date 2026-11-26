@@ -4,9 +4,13 @@ filters:
   - whitphx/stlite
 ---
 
+<br>
+
 :::{.callout-error}
 This page is unfinished and so far contains just the code examples for some stlite apps with very little in the way of example. This page will be enhanced further in the future.
 :::
+
+<br>
 
 ## stlite
 
@@ -35,7 +39,9 @@ Positives include
 While stlite code in theory avoids data leaving the user's browser, the limitations and security have not fully yet been investigated by the HSMA team in the context of sensitive data, so it should not be used for sensitive data until further assurances can be given.
 :::
 
-## Single Page stlite apps
+<br>
+
+## Single page stlite apps
 
 stlite apps only require a single file - `index.html`
 
@@ -95,6 +101,8 @@ st.title("Simple One-Step DES")
 ### Example Repository
 
 Click [here](https://github.com/Bergam0t/stlite_example_hsma) to view an example repository containing a working multipage stlite app.
+
+<br>
 
 ## Multipage stlite apps
 
@@ -174,47 +182,47 @@ pg.run()
 
 Click [here](https://github.com/Bergam0t/stlite_multipage_example_hsma) to view an example repository containing a working multipage stlite app.
 
+<br>
 
-## Deploying to github pages
+## Deploying to GitHub Pages
 
 From your github repository, click on 'settings'.
 
-![](assets/images/2024-09-30-17-29-21.png)
+![](assets/images/2024-09-30-17-29-21.png){.box}
 
 In the sidebar on the left, click on 'pages'.
 
-![](assets/images/2024-09-30-17-29-45.png)
+![](assets/images/2024-09-30-17-29-45.png){.box}
 
 Choose 'Branch' and 'Main'.
 
-![](assets/images/2024-09-30-17-30-04.png)
+![](assets/images/2024-09-30-17-30-04.png){.box}
 
 Leave the folder as 'root' and click 'Save'.
 
-![](assets/images/2024-09-30-17-30-25.png)
+![](assets/images/2024-09-30-17-30-25.png){.box}
 
 After saving, it should look like this:
 
-![](assets/images/2024-09-30-17-30-46.png)
+![](assets/images/2024-09-30-17-30-46.png){.box}
 
 Next, head back to your repository and click on the cog next to 'about'.
 
-![](assets/images/2024-09-30-17-31-20.png)
+![](assets/images/2024-09-30-17-31-20.png){.box}
 
 Tick 'use your github pages website'.
 
-![](assets/images/2024-09-30-17-31-37.png)
+![](assets/images/2024-09-30-17-31-37.png){.box}
 
 This will automatically generate a github pages link.
 
-![](assets/images/2024-09-30-17-32-04.png)
+![](assets/images/2024-09-30-17-32-04.png){.box}
 
 Click 'Save Changes'
 
 Now click on the URL to view your app.
 
-![](assets/images/2024-09-30-17-32-58.png)
-
+![](assets/images/2024-09-30-17-32-58.png){.box}
 
 :::{.callout-warning}
 Pages deployed with stlite do not work on Firefox (as of September 2024)
@@ -222,6 +230,7 @@ Pages deployed with stlite do not work on Firefox (as of September 2024)
 Chrome, Edge and Safari are all known to work fine.
 :::
 
+<br>
 
 ## Stlite tips
 
