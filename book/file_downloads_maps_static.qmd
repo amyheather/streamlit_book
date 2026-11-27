@@ -7,7 +7,7 @@ filters:
 
 <br>
 
-While there are various other libraries available for displaying maps in Python and Streamlit, we are going to focus on the two we used in module 3 of the HSMA course
+While there are various other libraries available for displaying maps in Python and Streamlit, we are going to focus on:
 
 - matplotlib (which creates static maps)
 - folium (which creates a _leaflet.js_ interactive map)
