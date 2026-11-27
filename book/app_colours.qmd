@@ -6,13 +6,58 @@ filters:
 
 <br>
 
-There are a few parts of Streamlit’s theming that we can officially change using a configuration file.
+There are a few parts of Streamlit's theming that we can officially change using a configuration file.
 
-This file needs to be called `config.toml` and lives inside a subfolder called `.streamlit/`.
+This file must be called `config.toml` and lives inside a subfolder called `.streamlit/`.
 
 ![](assets/images/2024-09-16-22-11-49.png){.box}
 
 <br>
+
+## Where to put the `.streamlit/` folder
+
+Streamlit looks for `.streamlit/config.toml` in your **working directory**. That is the folder you are in when you run `streamlit.run`.
+
+It is not necessarily the folder that contains `app.py`.
+
+<br>
+
+If `app.py` is in the same folder you run the command from, the two sit side-by-side:
+
+```
+my_project/
+├── .streamlit/
+│   └── config.toml
+└── app.py
+```
+
+```
+cd my_project
+streamlit run app.py
+```
+
+<br>
+
+If `app.py` is in a subfolder, `.streamlit/` goes into the folder you run the command from (often the project root), not next to `app.py`.
+
+```
+my_project/
+├── .streamlit/
+│   └── config.toml
+└── src/
+    └── app.py
+```
+
+```
+cd my_project
+streamlit run src/app.py
+```
+
+If you ran `streamlit run app.py` from inside `src/`, streamlit would look for `src/.streamlit/` instead.
+
+<br>
+
+## Creating a template `config.toml` from streamlit
 
 The `config.toml` file contains a variable number of parameters.
 
@@ -26,7 +71,9 @@ Let's look at an example app.
 
 <br>
 
-## `config.toml`
+## Example app with custom colours
+
+### `config.toml`
 
 ```{toml}
 [theme]
@@ -37,7 +84,7 @@ secondaryBackgroundColor="#00e0ff"
 
 <br>
 
-## `app.py`
+### `app.py`
 
 ```{python}
 #| eval: false
@@ -64,5 +111,9 @@ elif operator == "Divide":
 st.text(f"The answer is {output}")
 
 ```
+
+<br>
+
+### App
 
 ![](assets/images/2024-09-16-22-22-29.png){.box}

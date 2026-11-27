@@ -50,7 +50,7 @@ st_folium(gp_map_tooltip) # <11>
 
 1. To work with geographic data, we need to import the geopandas library.
 2. We'll also need the folium library to help set up our interactive map.
-3. Finally we need to use the streamlit_folium library, which we have to install separately (but is included in the hsma_webdev environment if you are following the HSMA course). From that library, we import just the function `st_folium()`.
+3. Finally we need to use the streamlit_folium library, which we have to install separately. From that library, we import just the function `st_folium()`.
 4. We load in a geopackage file. We don't need to specify a coordinate reference system for this kind of file; it's recorded within the file itself and geopandas will automatically read and apply this, though as Folium expects the coordinates to be in latitude and longitude (not Northings and Eastings), you may need to convert the CRS of your own data. See the HSMA geographic book for more details.
 5. Folium does not cope well with missing data, so we filter out any rows where our 'geometry' column is empty.
 6. To set up our map of points, we will need to create a list of coordinate pairs, though Folium expects them in the order longitude, latitude, so we swap the order of the points from our geometry column when placing them in the list.

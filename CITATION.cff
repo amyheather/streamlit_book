@@ -21,9 +21,10 @@ authors:
 repository-code: 'https://github.com/hsma-programme/streamlit_book'
 url: 'https://webapps.hsma.co.uk/'
 abstract: >-
-  An interactive ebook summarising the content of the Streamlit module in the
-  HSMA programme and covering additional concepts that wouldn't fit in the
-  course.
+  An interactive feature-by-feature guide to building Python web apps with
+  Streamlit. It accompanies the Streamlit sessions in the HSMA programme and
+  works as a reference to revisit, with runnable in-browser examples and
+  additional concepts that wouldn't fit in the course.
 keywords:
   - app
   - streamlit

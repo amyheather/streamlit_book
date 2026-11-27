@@ -19,7 +19,7 @@ app_column_1, app_column_2 = st.columns(2)
 # Then, instead of just creating the inputs and outputs straight in the app, we need to wrap them
 # in a function. This function doesn’t need to return anything, and we can call it
 # whatever we like.
-# Note that there is no blank line between the @st.fragment() decorator and the function definition.
+# Note that there is no blank line between the @st.fragment decorator and the function definition.
 # Here, we’ve counted the select dropdown for species, the pandas dataframe filter action,
 # and the creation of the barplot figure as being a single thing we want to rerun
 # when any element within those three changes in a way that would trigger a rerun usually.

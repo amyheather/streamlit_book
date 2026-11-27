@@ -19,7 +19,7 @@ gp_list = pd.read_csv(
 # Create the map in Folium
 ###########################
 # This is no different to usual!
-# In fact, this is the code from the HSMA geographic modelling book (module 3)
+# In fact, this is the code from the HSMA geographic modelling book
 # https://hsma-programme.github.io/hsma6_geographic_optimisation_and_visualisation_book/python_geopandas_folium_point_data.html
 
 gp_list_gdf = geopandas.GeoDataFrame(
