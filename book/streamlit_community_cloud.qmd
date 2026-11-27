@@ -82,10 +82,6 @@ Choose the appropriate Python version from the dropdown.
 
 ![](assets/images/2024-09-30-16-50-16.png){.box}
 
-:::{.callout-warning}
-You can't change the Python version for a deployed app at a later stage - you would have to delete the app from your community cloud and start the deployment process again.
-:::
-
 You don't need to worry about the Secrets file for now.
 
 Click 'Save'.
