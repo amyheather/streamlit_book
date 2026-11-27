@@ -11,7 +11,7 @@ app_column_1, app_column_2 = st.columns(2)
 axis_options = ["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"]
 
 
-@st.fragment()
+@st.fragment
 def penguin_barchart():
     time.sleep(3)
     species = st.selectbox(
@@ -21,7 +21,7 @@ def penguin_barchart():
     st.plotly_chart(px.bar(filtered_df_species["sex"].value_counts(), y="count"))
 
 
-@st.fragment()
+@st.fragment
 def penguin_scatterplot():
     time.sleep(3)
     col_1 = st.selectbox("Select the column to use for the x axis", axis_options)
