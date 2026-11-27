@@ -69,6 +69,10 @@ The closing tags at the end mark where the app, page body and HTML document fini
 
 These lines are pinned to a particular stlite version, `@stlite/browser@1.12.2`. stlite recommend pinning because their API may change without backwards compatibility in future releases. If a newer version has been released, you may wish to upgrade. See the [stlite releases](https://github.com/whitphx/stlite/releases).
 
+:::{.callout-warning}
+Pinning stlite protects you from breaking changes in new releases, but it doesn't guarantee an old version will keep working indefinitely. An app built on an older release can stop working over time. Test your deployed app periodically, and when it breaks, try upgrading to a recent stlite version and re-testing.
+:::
+
 **Parts that stay the same:**
 
 ```{.html source-line-numbers="1-5,7-10,20-21"}
