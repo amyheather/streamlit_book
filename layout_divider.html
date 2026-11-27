@@ -146,6 +146,25 @@ cookieconsent.run({
 });
 </script> 
   
+<script>
+(function () {
+  function wrap(iframe) {
+    if (iframe.dataset.wrapped) return;
+    iframe.dataset.wrapped = "1";
+    const box = document.createElement("div");
+    box.className = "stlite-box";
+    const header = document.createElement("div");
+    header.className = "stlite-header";
+    header.textContent = "Interactive app: wait for it to load, then try it!";
+    iframe.parentNode.insertBefore(box, iframe);
+    box.appendChild(header);
+    box.appendChild(iframe);
+  }
+  function run() { document.querySelectorAll("iframe.stlite").forEach(wrap); }
+  document.addEventListener("DOMContentLoaded", run);
+  new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -709,7 +728,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></span></a>
   </div>
 </li>
       </ul>
@@ -800,7 +819,7 @@ cookieconsent.run({
 <p><br></p>
 <p>The divider is a simple function that puts a horizontal line across the width of the page.</p>
 <p>This can make it easier to indicate different sections of the page that should be looked at together.</p>
-<div id="c3130cf9" class="cell" data-execution_count="1">
+<div id="34f51c15" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>st.title(<span class="st">"This is a title"</span>)</span>

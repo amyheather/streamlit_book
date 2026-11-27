@@ -146,6 +146,25 @@ cookieconsent.run({
 });
 </script> 
   
+<script>
+(function () {
+  function wrap(iframe) {
+    if (iframe.dataset.wrapped) return;
+    iframe.dataset.wrapped = "1";
+    const box = document.createElement("div");
+    box.className = "stlite-box";
+    const header = document.createElement("div");
+    header.className = "stlite-header";
+    header.textContent = "Interactive app: wait for it to load, then try it!";
+    iframe.parentNode.insertBefore(box, iframe);
+    box.appendChild(header);
+    box.appendChild(iframe);
+  }
+  function run() { document.querySelectorAll("iframe.stlite").forEach(wrap); }
+  document.addEventListener("DOMContentLoaded", run);
+  new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -709,7 +728,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></span></a>
   </div>
 </li>
       </ul>
@@ -776,8 +795,14 @@ cookieconsent.run({
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#config.toml" id="toc-config.toml" class="nav-link active" data-scroll-target="#config.toml"><span class="header-section-number">30.1</span> <code>config.toml</code></a></li>
-  <li><a href="#app.py" id="toc-app.py" class="nav-link" data-scroll-target="#app.py"><span class="header-section-number">30.2</span> <code>app.py</code></a></li>
+  <li><a href="#where-to-put-the-.streamlit-folder" id="toc-where-to-put-the-.streamlit-folder" class="nav-link active" data-scroll-target="#where-to-put-the-.streamlit-folder"><span class="header-section-number">30.1</span> Where to put the <code>.streamlit/</code> folder</a></li>
+  <li><a href="#creating-a-template-config.toml-from-streamlit" id="toc-creating-a-template-config.toml-from-streamlit" class="nav-link" data-scroll-target="#creating-a-template-config.toml-from-streamlit"><span class="header-section-number">30.2</span> Creating a template <code>config.toml</code> from streamlit</a></li>
+  <li><a href="#example-app-with-custom-colours" id="toc-example-app-with-custom-colours" class="nav-link" data-scroll-target="#example-app-with-custom-colours"><span class="header-section-number">30.3</span> Example app with custom colours</a>
+  <ul class="collapse">
+  <li><a href="#config.toml" id="toc-config.toml" class="nav-link" data-scroll-target="#config.toml"><span class="header-section-number">30.3.1</span> <code>config.toml</code></a></li>
+  <li><a href="#app.py" id="toc-app.py" class="nav-link" data-scroll-target="#app.py"><span class="header-section-number">30.3.2</span> <code>app.py</code></a></li>
+  <li><a href="#app" id="toc-app" class="nav-link" data-scroll-target="#app"><span class="header-section-number">30.3.3</span> App</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -806,50 +831,84 @@ cookieconsent.run({
 
 <p><br></p>
 <p>There are a few parts of Streamlit’s theming that we can officially change using a configuration file.</p>
-<p>This file needs to be called <code>config.toml</code> and lives inside a subfolder called <code>.streamlit/</code>.</p>
+<p>This file must be called <code>config.toml</code> and lives inside a subfolder called <code>.streamlit/</code>.</p>
 <p><a href="assets/images/2024-09-16-22-11-49.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/2024-09-16-22-11-49.png" class="box img-fluid"></a></p>
 <p><br></p>
+<section id="where-to-put-the-.streamlit-folder" class="level2" data-number="30.1">
+<h2 data-number="30.1" class="anchored" data-anchor-id="where-to-put-the-.streamlit-folder"><span class="header-section-number">30.1</span> Where to put the <code>.streamlit/</code> folder</h2>
+<p>Streamlit looks for <code>.streamlit/config.toml</code> in your <strong>working directory</strong>. That is the folder you are in when you run <code>streamlit.run</code>.</p>
+<p>It is not necessarily the folder that contains <code>app.py</code>.</p>
+<p><br></p>
+<p>If <code>app.py</code> is in the same folder you run the command from, the two sit side-by-side:</p>
+<pre><code>my_project/
+├── .streamlit/
+│   └── config.toml
+└── app.py</code></pre>
+<pre><code>cd my_project
+streamlit run app.py</code></pre>
+<p><br></p>
+<p>If <code>app.py</code> is in a subfolder, <code>.streamlit/</code> goes into the folder you run the command from (often the project root), not next to <code>app.py</code>.</p>
+<pre><code>my_project/
+├── .streamlit/
+│   └── config.toml
+└── src/
+    └── app.py</code></pre>
+<pre><code>cd my_project
+streamlit run src/app.py</code></pre>
+<p>If you ran <code>streamlit run app.py</code> from inside <code>src/</code>, streamlit would look for <code>src/.streamlit/</code> instead.</p>
+<p><br></p>
+</section>
+<section id="creating-a-template-config.toml-from-streamlit" class="level2" data-number="30.2">
+<h2 data-number="30.2" class="anchored" data-anchor-id="creating-a-template-config.toml-from-streamlit"><span class="header-section-number">30.2</span> Creating a template <code>config.toml</code> from streamlit</h2>
 <p>The <code>config.toml</code> file contains a variable number of parameters.</p>
 <p>It can determine whether the default colourscheme is light or dark, and whether the default streamlit colours are overridden.</p>
 <p>You can create a template config.toml from within streamlit, then paste the output into a config.toml file you create yourself.</p>
 <p><a href="assets/gif/firefox_qB7kSDDCyA.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="assets/gif/firefox_qB7kSDDCyA.gif" class="box img-fluid"></a></p>
 <p>Let’s look at an example app.</p>
 <p><br></p>
-<section id="config.toml" class="level2" data-number="30.1">
-<h2 data-number="30.1" class="anchored" data-anchor-id="config.toml"><span class="header-section-number">30.1</span> <code>config.toml</code></h2>
+</section>
+<section id="example-app-with-custom-colours" class="level2" data-number="30.3">
+<h2 data-number="30.3" class="anchored" data-anchor-id="example-app-with-custom-colours"><span class="header-section-number">30.3</span> Example app with custom colours</h2>
+<section id="config.toml" class="level3" data-number="30.3.1">
+<h3 data-number="30.3.1" class="anchored" data-anchor-id="config.toml"><span class="header-section-number">30.3.1</span> <code>config.toml</code></h3>
 <pre class="{toml}"><code>[theme]
 base="light"
 primaryColor="#005EB8"
 secondaryBackgroundColor="#00e0ff"</code></pre>
 <p><br></p>
 </section>
-<section id="app.py" class="level2" data-number="30.2">
-<h2 data-number="30.2" class="anchored" data-anchor-id="app.py"><span class="header-section-number">30.2</span> <code>app.py</code></h2>
-<div id="04490ef1" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>st.title(<span class="st">'Simple Calculator App'</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>num_1 <span class="op">=</span> st.number_input(label<span class="op">=</span><span class="st">"First Number"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>num_2 <span class="op">=</span> st.number_input(label<span class="op">=</span><span class="st">"Second Number"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>operator <span class="op">=</span> st.selectbox(label<span class="op">=</span><span class="st">"Operation"</span>, options<span class="op">=</span>[<span class="st">"Add"</span>, <span class="st">"Subtract"</span>, <span class="st">"Multiply"</span>, <span class="st">"Divide"</span>])</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> operator <span class="op">==</span> <span class="st">"Add"</span>:</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> num_1 <span class="op">+</span> num_2</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> operator <span class="op">==</span> <span class="st">"Subtract"</span>:</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> num_1 <span class="op">-</span> num_2</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> operator <span class="op">==</span> <span class="st">"Multiply"</span>:</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> num_1 <span class="op">*</span> num_2</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> operator <span class="op">==</span> <span class="st">"Divide"</span>:</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> num_1 <span class="op">/</span> num_2</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>st.text(<span class="ss">f"The answer is </span><span class="sc">{</span>output<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="app.py" class="level3" data-number="30.3.2">
+<h3 data-number="30.3.2" class="anchored" data-anchor-id="app.py"><span class="header-section-number">30.3.2</span> <code>app.py</code></h3>
+<div id="6af7885e" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>st.title(<span class="st">'Simple Calculator App'</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>num_1 <span class="op">=</span> st.number_input(label<span class="op">=</span><span class="st">"First Number"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>num_2 <span class="op">=</span> st.number_input(label<span class="op">=</span><span class="st">"Second Number"</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>operator <span class="op">=</span> st.selectbox(label<span class="op">=</span><span class="st">"Operation"</span>, options<span class="op">=</span>[<span class="st">"Add"</span>, <span class="st">"Subtract"</span>, <span class="st">"Multiply"</span>, <span class="st">"Divide"</span>])</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> operator <span class="op">==</span> <span class="st">"Add"</span>:</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> num_1 <span class="op">+</span> num_2</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> operator <span class="op">==</span> <span class="st">"Subtract"</span>:</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> num_1 <span class="op">-</span> num_2</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> operator <span class="op">==</span> <span class="st">"Multiply"</span>:</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> num_1 <span class="op">*</span> num_2</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> operator <span class="op">==</span> <span class="st">"Divide"</span>:</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> num_1 <span class="op">/</span> num_2</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>st.text(<span class="ss">f"The answer is </span><span class="sc">{</span>output<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p><br></p>
+</section>
+<section id="app" class="level3" data-number="30.3.3">
+<h3 data-number="30.3.3" class="anchored" data-anchor-id="app"><span class="header-section-number">30.3.3</span> App</h3>
 <p><a href="assets/images/2024-09-16-22-22-29.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="assets/images/2024-09-16-22-22-29.png" class="box img-fluid"></a></p>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

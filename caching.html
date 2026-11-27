@@ -146,6 +146,25 @@ cookieconsent.run({
 });
 </script> 
   
+<script>
+(function () {
+  function wrap(iframe) {
+    if (iframe.dataset.wrapped) return;
+    iframe.dataset.wrapped = "1";
+    const box = document.createElement("div");
+    box.className = "stlite-box";
+    const header = document.createElement("div");
+    header.className = "stlite-header";
+    header.textContent = "Interactive app: wait for it to load, then try it!";
+    iframe.parentNode.insertBefore(box, iframe);
+    box.appendChild(header);
+    box.appendChild(iframe);
+  }
+  function run() { document.querySelectorAll("iframe.stlite").forEach(wrap); }
+  document.addEventListener("DOMContentLoaded", run);
+  new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -709,7 +728,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></span></a>
   </div>
 </li>
       </ul>
@@ -841,7 +860,7 @@ cookieconsent.run({
 <h2 data-number="36.1" class="anchored" data-anchor-id="a-caching-code-example"><span class="header-section-number">36.1</span> A caching code example</h2>
 <section id="without-caching" class="level3" data-number="36.1.1">
 <h3 data-number="36.1.1" class="anchored" data-anchor-id="without-caching"><span class="header-section-number">36.1.1</span> Without caching</h3>
-<div id="e1e885ad" class="cell" data-execution_count="1">
+<div id="dcddb7fe" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -853,7 +872,7 @@ cookieconsent.run({
 </section>
 <section id="loading-in-the-same-dataset-with-caching" class="level3" data-number="36.1.2">
 <h3 data-number="36.1.2" class="anchored" data-anchor-id="loading-in-the-same-dataset-with-caching"><span class="header-section-number">36.1.2</span> Loading in the same dataset with caching</h3>
-<div id="3014eb18" class="cell" data-execution_count="2">
+<div id="f7ebb1d7" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -905,7 +924,7 @@ Note
 <h2 data-number="36.3" class="anchored" data-anchor-id="caching-other-steps"><span class="header-section-number">36.3</span> Caching other steps</h2>
 <p>If you have certain actions that take a long time, then you may wish to cache those too.</p>
 <p>For example, if you had a long-running data cleaning step that you ran when the data was loaded into the app, then you could cache that as well.</p>
-<div id="fb2dd572" class="cell" data-execution_count="3">
+<div id="606c48bd" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -954,7 +973,7 @@ Note
 <h3 data-number="36.6.1" class="anchored" data-anchor-id="ttl-time-to-live"><span class="header-section-number">36.6.1</span> TTL (time to live)</h3>
 <p>TTL determines how long to keep cached data before rerunning it.</p>
 <p>For example, if data is likely to change over time, you could set the ttl parameter to set the number of seconds to keep cached data for.</p>
-<div id="a6c272b9" class="cell" data-execution_count="4">
+<div id="cca9c125" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">@st.cache_data</span>(ttl<span class="op">=</span><span class="dv">3600</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> your_function_here():</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    …</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -964,7 +983,7 @@ Note
 <section id="max_entries" class="level3" data-number="36.6.2">
 <h3 data-number="36.6.2" class="anchored" data-anchor-id="max_entries"><span class="header-section-number">36.6.2</span> max_entries</h3>
 <p>Once the cache contains the maximum number of objects you have specified, the oldest ones will be deleted to make way for new ones.</p>
-<div id="6f0a77b8" class="cell" data-execution_count="5">
+<div id="49a761ea" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="at">@st.cache_data</span>(max_entries<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> your_function_here():</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    …</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>

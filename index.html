@@ -8,7 +8,7 @@
 
 <meta name="author" content="Sammi Rosser">
 <meta name="author" content="Amy Heather">
-<meta name="dcterms.date" content="2026-11-26">
+<meta name="dcterms.date" content="2026-11-27">
 
 <title>HSMA - Web Apps with Streamlit</title>
 <style>
@@ -110,6 +110,25 @@ cookieconsent.run({
 });
 </script> 
   
+<script>
+(function () {
+  function wrap(iframe) {
+    if (iframe.dataset.wrapped) return;
+    iframe.dataset.wrapped = "1";
+    const box = document.createElement("div");
+    box.className = "stlite-box";
+    const header = document.createElement("div");
+    header.className = "stlite-header";
+    header.textContent = "Interactive app: wait for it to load, then try it!";
+    iframe.parentNode.insertBefore(box, iframe);
+    box.appendChild(header);
+    box.appendChild(iframe);
+  }
+  function run() { document.querySelectorAll("iframe.stlite").forEach(wrap); }
+  document.addEventListener("DOMContentLoaded", run);
+  new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -673,7 +692,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></span></a>
   </div>
 </li>
       </ul>
@@ -772,7 +791,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Book last updated</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 26, 2026</p>
+      <p class="date">November 27, 2026</p>
     </div>
   </div>
   
@@ -810,17 +829,24 @@ cookieconsent.run({
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Dataset acknowledgements
+<span class="screen-reader-only">Note</span>Acknowledgements
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<section id="palmer-penguins" class="level3 callout-body-container callout-body">
+<div class="callout-body-container callout-body">
+<section id="stlite-extension-for-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="stlite-extension-for-quarto">Stlite extension for Quarto</h3>
+<p>The <code>whitphx/quarto-stlite</code> Quarto extension has enabled interactivity in this book that greatly improves the reader experience.</p>
+<p>We would like to thank <a href="https://github.com/whitphx">Yuichiro Tachibana (Tsuchiya)</a> for developing this extension, which is available at <a href="https://github.com/whitphx/quarto-stlite" class="uri">https://github.com/whitphx/quarto-stlite</a>.</p>
+</section>
+<section id="palmer-penguins" class="level3">
 <h3 class="anchored" data-anchor-id="palmer-penguins">Palmer Penguins</h3>
 <p>Several examples use the Palmer Penguins dataset, loaded through the <a href="https://github.com/mcnakhaee/palmerpenguins"><code>palmerpenguins</code> Python package</a>.</p>
 <p>We thank Muhammad Chenariyan Nakhaee for the Python port, and Allison Horst, Alison Hill and Kristen Gorman for the <a href="https://allisonhorst.github.io/palmerpenguins/">original R package</a>. The data were collected and made available by Dr Kristen Gorman and the Palmer Station Antarctica Long Term Ecological Research (LTER) programme.</p>
 <pre><code>Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. https://allisonhorst.github.io/palmerpenguins/. doi: 10.5281/zenodo.3960218.</code></pre>
 </section>
+</div>
 </div>
 </div>
 

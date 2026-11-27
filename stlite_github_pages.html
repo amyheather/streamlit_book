@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>41&nbsp; Deploying to Github Pages with Serverless Streamlit (stlite) – HSMA - Web Apps with Streamlit</title>
+<title>41&nbsp; Deploying an app with stlite and GitHub Pages – HSMA - Web Apps with Streamlit</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -89,6 +89,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-5537363d5912ba7a5fd516a303c9f4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-5be68f7e89068b753bd4407cdd331613.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -146,6 +147,25 @@ cookieconsent.run({
 });
 </script> 
   
+<script>
+(function () {
+  function wrap(iframe) {
+    if (iframe.dataset.wrapped) return;
+    iframe.dataset.wrapped = "1";
+    const box = document.createElement("div");
+    box.className = "stlite-box";
+    const header = document.createElement("div");
+    header.className = "stlite-header";
+    header.textContent = "Interactive app: wait for it to load, then try it!";
+    iframe.parentNode.insertBefore(box, iframe);
+    box.appendChild(header);
+    box.appendChild(iframe);
+  }
+  function run() { document.querySelectorAll("iframe.stlite").forEach(wrap); }
+  document.addEventListener("DOMContentLoaded", run);
+  new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -364,7 +384,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html">Deployment</a></li><li class="breadcrumb-item"><a href="./stlite_github_pages.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html">Deployment</a></li><li class="breadcrumb-item"><a href="./stlite_github_pages.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -709,7 +729,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></span></a>
   </div>
 </li>
       </ul>
@@ -776,17 +796,28 @@ cookieconsent.run({
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#stlite" id="toc-stlite" class="nav-link active" data-scroll-target="#stlite"><span class="header-section-number">41.1</span> stlite</a></li>
-  <li><a href="#single-page-stlite-apps" id="toc-single-page-stlite-apps" class="nav-link" data-scroll-target="#single-page-stlite-apps"><span class="header-section-number">41.2</span> Single page stlite apps</a>
+  <li><a href="#stlite" id="toc-stlite" class="nav-link active" data-scroll-target="#stlite"><span class="header-section-number">41.1</span> stlite</a>
   <ul class="collapse">
-  <li><a href="#example-repository" id="toc-example-repository" class="nav-link" data-scroll-target="#example-repository"><span class="header-section-number">41.2.1</span> Example Repository</a></li>
+  <li><a href="#how-does-stlite-work" id="toc-how-does-stlite-work" class="nav-link" data-scroll-target="#how-does-stlite-work"><span class="header-section-number">41.1.1</span> How does stlite work?</a></li>
   </ul></li>
-  <li><a href="#multipage-stlite-apps" id="toc-multipage-stlite-apps" class="nav-link" data-scroll-target="#multipage-stlite-apps"><span class="header-section-number">41.3</span> Multipage stlite apps</a>
+  <li><a href="#pros-and-cons" id="toc-pros-and-cons" class="nav-link" data-scroll-target="#pros-and-cons"><span class="header-section-number">41.2</span> Pros and cons</a></li>
+  <li><a href="#running-a-streamlit-app-with-stlite" id="toc-running-a-streamlit-app-with-stlite" class="nav-link" data-scroll-target="#running-a-streamlit-app-with-stlite"><span class="header-section-number">41.3</span> Running a Streamlit app with stlite</a>
   <ul class="collapse">
-  <li><a href="#example-repository-1" id="toc-example-repository-1" class="nav-link" data-scroll-target="#example-repository-1"><span class="header-section-number">41.3.1</span> Example Repository</a></li>
+  <li><a href="#parts-that-stay-the-same" id="toc-parts-that-stay-the-same" class="nav-link" data-scroll-target="#parts-that-stay-the-same"><span class="header-section-number">41.3.1</span> Parts that stay the same</a></li>
+  <li><a href="#parts-to-amend-for-your-app" id="toc-parts-to-amend-for-your-app" class="nav-link" data-scroll-target="#parts-to-amend-for-your-app"><span class="header-section-number">41.3.2</span> Parts to amend for your app</a></li>
   </ul></li>
-  <li><a href="#deploying-to-github-pages" id="toc-deploying-to-github-pages" class="nav-link" data-scroll-target="#deploying-to-github-pages"><span class="header-section-number">41.4</span> Deploying to GitHub Pages</a></li>
-  <li><a href="#stlite-tips" id="toc-stlite-tips" class="nav-link" data-scroll-target="#stlite-tips"><span class="header-section-number">41.5</span> Stlite tips</a></li>
+  <li><a href="#multipage-stlite-apps" id="toc-multipage-stlite-apps" class="nav-link" data-scroll-target="#multipage-stlite-apps"><span class="header-section-number">41.4</span> Multipage stlite apps</a></li>
+  <li><a href="#trying-the-app-locally" id="toc-trying-the-app-locally" class="nav-link" data-scroll-target="#trying-the-app-locally"><span class="header-section-number">41.5</span> Trying the app locally</a></li>
+  <li><a href="#hosting-on-github-pages" id="toc-hosting-on-github-pages" class="nav-link" data-scroll-target="#hosting-on-github-pages"><span class="header-section-number">41.6</span> Hosting on GitHub Pages</a>
+  <ul class="collapse">
+  <li><a href="#file-locations" id="toc-file-locations" class="nav-link" data-scroll-target="#file-locations"><span class="header-section-number">41.6.1</span> File locations</a></li>
+  </ul></li>
+  <li><a href="#streamlit-versions-in-stlite" id="toc-streamlit-versions-in-stlite" class="nav-link" data-scroll-target="#streamlit-versions-in-stlite"><span class="header-section-number">41.7</span> Streamlit versions in stlite</a>
+  <ul class="collapse">
+  <li><a href="#find-streamlit-version-in-use-via-github" id="toc-find-streamlit-version-in-use-via-github" class="nav-link" data-scroll-target="#find-streamlit-version-in-use-via-github"><span class="header-section-number">41.7.1</span> Find streamlit version in use via GitHub</a></li>
+  <li><a href="#find-streamlit-version-in-use-via-app" id="toc-find-streamlit-version-in-use-via-app" class="nav-link" data-scroll-target="#find-streamlit-version-in-use-via-app"><span class="header-section-number">41.7.2</span> Find streamlit version in use via app</a></li>
+  </ul></li>
+  <li><a href="#using-st.spinner-in-older-versions-of-stlite" id="toc-using-st.spinner-in-older-versions-of-stlite" class="nav-link" data-scroll-target="#using-st.spinner-in-older-versions-of-stlite"><span class="header-section-number">41.8</span> Using <code>st.spinner</code> in older versions of stlite</a></li>
   </ul>
 </nav>
     </div>
@@ -794,9 +825,9 @@ cookieconsent.run({
 <main class="content" id="quarto-document-content" tabindex="-1">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html">Deployment</a></li><li class="breadcrumb-item"><a href="./stlite_github_pages.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./streamlit_community_cloud.html">Deployment</a></li><li class="breadcrumb-item"><a href="./stlite_github_pages.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></h1>
+<h1 class="title"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></h1>
 </div>
 
 
@@ -814,29 +845,24 @@ cookieconsent.run({
 
 
 <p><br></p>
-<div class="callout-error">
-<p>This page is unfinished and so far contains just the code examples for some stlite apps with very little in the way of example. This page will be enhanced further in the future.</p>
-</div>
-<p><br></p>
 <section id="stlite" class="level2" data-number="41.1">
 <h2 data-number="41.1" class="anchored" data-anchor-id="stlite"><span class="header-section-number">41.1</span> stlite</h2>
-<p><a href="https://github.com/whitphx/stlite">Stlite</a> makes use of the Pyodide framework to run Python in the user’s browser instead of on a remote server.</p>
+<p><a href="https://github.com/whitphx/stlite">stlite</a> runs Python directly in the user’s browser. Instead of sending requests to a server to run your code, the user’s own device does the work.</p>
+<section id="how-does-stlite-work" class="level3" data-number="41.1.1">
+<h3 data-number="41.1.1" class="anchored" data-anchor-id="how-does-stlite-work"><span class="header-section-number">41.1.1</span> How does stlite work?</h3>
+<ol type="1">
+<li><p>A browser can display your app, but can’t normally run its Python code. Browsers usually use <strong>JavaScript</strong>, a programming language designed for web pages.</p></li>
+<li><p>In 2017, <strong>WebAssembly (Wasm)</strong> was released. It lets browsers run compiled code alongside JavaScript, including software they wouldn’t normally support.</p></li>
+<li><p><strong>Pyodide</strong> uses WebAssembly to provide a Python environment. It includes an interpreter (which reads and runs Python code) and support for packages.</p></li>
+<li><p>stlite uses this environment to run your Streamlit app on the user’s device.</p></li>
+</ol>
 <p>While some kind of hosting is still required to allow the website code to be served, the hosting requirements are significantly smaller as the host server does not need to actually run any processes itself, and simply acts as a distributor of the code files.</p>
-<p>Downsides of stlite include</p>
-<ul>
-<li>some limitations on the Python packages that are available
-<ul>
-<li>many key packages including pandas, geopandas, plotly and simpy are available</li>
-</ul></li>
-<li>slower running of code (between 3x and 20x slower)
-<ul>
-<li>execution speed is linked to the speed of the user’s device, so using devices like phones will give significantly poorer performance</li>
-</ul></li>
-<li>slower initial startup of the app</li>
-<li>apps don’t work on the Firefox browser</li>
-<li>possibility of Pyodide being blocked by organisational policies in the future (though this does not seem to occur at present)</li>
-</ul>
-<p>Positives include</p>
+<p><br></p>
+</section>
+</section>
+<section id="pros-and-cons" class="level2" data-number="41.2">
+<h2 data-number="41.2" class="anchored" data-anchor-id="pros-and-cons"><span class="header-section-number">41.2</span> Pros and cons</h2>
+<p><strong>Pros</strong></p>
 <ul>
 <li>lighter requirements for the machine hosting the files
 <ul>
@@ -858,142 +884,170 @@ Warning
 <p>While stlite code in theory avoids data leaving the user’s browser, the limitations and security have not fully yet been investigated by the HSMA team in the context of sensitive data, so it should not be used for sensitive data until further assurances can be given.</p>
 </div>
 </div>
+<p><strong>Cons</strong></p>
+<ul>
+<li>some limitations on the Python packages that are available
+<ul>
+<li>many key packages including pandas, geopandas, plotly and simpy are available</li>
+</ul></li>
+<li>slower running of code (between 3x and 20x slower)
+<ul>
+<li>execution speed is linked to the speed of the user’s device, so using devices like phones will give significantly poorer performance</li>
+</ul></li>
+<li>slower initial startup of the app</li>
+<li>apps using older versions of stlite don’t work on the Firefox browser</li>
+<li>possibility of Pyodide being blocked by organisational policies in the future (though this does not seem to occur at present)</li>
+</ul>
 <p><br></p>
 </section>
-<section id="single-page-stlite-apps" class="level2" data-number="41.2">
-<h2 data-number="41.2" class="anchored" data-anchor-id="single-page-stlite-apps"><span class="header-section-number">41.2</span> Single page stlite apps</h2>
-<p>stlite apps only require a single file - <code>index.html</code></p>
-<p>This will contain all your Streamlit code.</p>
-<pre class="{html}"><code>// This initial code is the same for all stlite apps
-&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
-    &lt;meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    /&gt;
-    &lt;title&gt;Stlite App&lt;/title&gt;
-    &lt;link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.63.1/build/stlite.css"
-    /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="root"&gt;&lt;/div&gt;
-    &lt;script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.63.1/build/stlite.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-    // The code prior to this point is the same for every Stlite app you create
-
-      stlite.mount(
-        {
-        requirements: ["simpy"], // Packages to install, provided as a list
-        entrypoint: "streamlit_app.py", // Which page to start on - essential even if only providing a single page
-        // We then pass in a dictionary of files, with the keys being the filenames and the values being code
-        // The name of one file must match the file given as the entrypoint
-        // The file itself doesn't have to exist - it's just a reference to use
-        // The Streamlit code is wrapped in backticks (which are different to single quotes)
-        files: {"streamlit_app.py":`
-import streamlit as st
-import simpy
-import random
-import pandas as pd
-
-st.title("Simple One-Step DES")
-
-######### THE REST OF YOUR STREAMLIT APP CODE HERE
-
-`}
-// The code after this point is the same for every stlite app you create
-        },
-        document.getElementById("root"),
-      );
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<section id="example-repository" class="level3" data-number="41.2.1">
-<h3 data-number="41.2.1" class="anchored" data-anchor-id="example-repository"><span class="header-section-number">41.2.1</span> Example Repository</h3>
-<p>Click <a href="https://github.com/Bergam0t/stlite_example_hsma">here</a> to view an example repository containing a working multipage stlite app.</p>
-<p><br></p>
+<section id="running-a-streamlit-app-with-stlite" class="level2" data-number="41.3">
+<h2 data-number="41.3" class="anchored" data-anchor-id="running-a-streamlit-app-with-stlite"><span class="header-section-number">41.3</span> Running a Streamlit app with stlite</h2>
+<p>To use stlite, add an <code>index.html</code> file to your app folder. HTML defines the structure and content of a web page. This file loads stlite and tells it how to launch your app. You can reuse a standard template and change a few details.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-code-line-numbers=""><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">"viewport"</span><span class="ot"> content</span><span class="op">=</span><span class="st">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Single-page app<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.2/build/stlite.css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">"module"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.2/build/stlite.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">streamlit-app</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./app.py"</span><span class="dt">&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-file</span><span class="ot"> name</span><span class="op">=</span><span class="st">"model.py"</span><span class="ot"> url</span><span class="op">=</span><span class="st">"./model.py"</span><span class="dt">&gt;&lt;/</span><span class="kw">app-file</span><span class="dt">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-requirements</span><span class="dt">&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            simpy==4.1.2</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            numpy</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            pandas</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            sim-tools==1.3.0</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">app-requirements</span><span class="dt">&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">streamlit-app</span><span class="dt">&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="parts-that-stay-the-same" class="level3" data-number="41.3.1">
+<h3 data-number="41.3.1" class="anchored" data-anchor-id="parts-that-stay-the-same"><span class="header-section-number">41.3.1</span> Parts that stay the same</h3>
+<p>The standard page structure can stay the same between apps:</p>
+<ul>
+<li><code>&lt;head&gt;</code> contains page settings and loads stlite’s stylesheet and JavaScript.</li>
+<li><code>&lt;body&gt;</code> contains the page content, including your app.</li>
+</ul>
+<p>The closing tags at the end mark where the app, page body and HTML document finish.</p>
+<p>These lines are pinned to a particular stlite version, <code>@stlite/browser@1.12.2</code>. stlite recommend pinning because their API may change without backwards compatibility in future releases. If a newer version has been released, you may wish to upgrade. See the <a href="https://github.com/whitphx/stlite/releases">stlite releases</a>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pinning stlite protects you from breaking changes in new releases, but it doesn’t guarantee an old version will keep working indefinitely. An app built on an older release can stop working over time. Test your deployed app periodically, and when it breaks, try upgrading to a recent stlite version and re-testing.</p>
+</div>
+</div>
+<p><strong>Parts that stay the same:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-source-line-numbers="1-5,7-10,20-21" data-code-line-numbers="1-5,7-10,20-21"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">"viewport"</span><span class="ot"> content</span><span class="op">=</span><span class="st">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Single-page app<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.2/build/stlite.css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">"module"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.2/build/stlite.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">streamlit-app</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./app.py"</span><span class="dt">&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-file</span><span class="ot"> name</span><span class="op">=</span><span class="st">"model.py"</span><span class="ot"> url</span><span class="op">=</span><span class="st">"./model.py"</span><span class="dt">&gt;&lt;/</span><span class="kw">app-file</span><span class="dt">&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-requirements</span><span class="dt">&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            simpy==4.1.2</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>            numpy</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            pandas</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            sim-tools==1.3.0</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">app-requirements</span><span class="dt">&gt;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">streamlit-app</span><span class="dt">&gt;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-</section>
-<section id="multipage-stlite-apps" class="level2" data-number="41.3">
-<h2 data-number="41.3" class="anchored" data-anchor-id="multipage-stlite-apps"><span class="header-section-number">41.3</span> Multipage stlite apps</h2>
-<p>In some ways, multipage stlite apps are easier to work with, as you can just include the initial page navigation code within the <code>index.html</code> portion and your remaining streamlit code can live in .py files as normal.</p>
-<p>In this example, we have a multipage app containing a homepage and a page where the user can run the simulation.</p>
-<p>We first upload these additional pages in Github and then get their ‘raw’ URL using the ‘Raw’ button when previewing these files in Github.</p>
-<p>Our initial stlite code is then very similar, but we pass in the additional pages to the mount command.</p>
-<pre class="{html}"><code>// This initial code is the same for all stlite apps
-&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
-    &lt;meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    /&gt;
-    &lt;title&gt;Stlite App&lt;/title&gt;
-    &lt;link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.63.1/build/stlite.css"
-    /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="root"&gt;&lt;/div&gt;
-    &lt;script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.63.1/build/stlite.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-        // The code prior to this point is the same for every Stlite app you create
-
-      stlite.mount(
-        {
-        requirements: ["simpy"], // Packages to install
-        entrypoint: "app.py",
-        files: {
-          // Our first file must contain Streamlit code; this will be used on loading
-          // and in this case is used to define the navigation but is never actually displayed
-          // to the user
-      "app.py":`
-import streamlit as st
-
-pg = st.navigation([
-        st.Page("home_page.py", title="Welcome!", icon=":material/add_circle:"),
-        st.Page("des_page.py", title="Run Simulation", icon=":material/laptop:")
-     ])
-
-pg.run()
-`,
-// Next we pass in our actual streamlit pages.
-// it's important that the names of the pages (e.g. home_page.py) match the file names as they appear on github
-// and in your st.Page navigation details
-"home_page.py": {
-  // Instead of pasting in the code, we instead pass in the URL of the python file as it is hosted on github
-        url: "https://raw.githubusercontent.com/Bergam0t/stlite_multipage_example_hsma/refs/heads/main/home_page.py"
-      },
-  // We repeat this for any additional pages
-"des_page.py": {
-        url: "https://raw.githubusercontent.com/Bergam0t/stlite_multipage_example_hsma/refs/heads/main/des_page.py"
-      }
-}
-        },
-        // The code after this point is the same for every stlite app you create
-
-        document.getElementById("root"),
-      );
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<section id="example-repository-1" class="level3" data-number="41.3.1">
-<h3 data-number="41.3.1" class="anchored" data-anchor-id="example-repository-1"><span class="header-section-number">41.3.1</span> Example Repository</h3>
-<p>Click <a href="https://github.com/Bergam0t/stlite_multipage_example_hsma">here</a> to view an example repository containing a working multipage stlite app.</p>
+<section id="parts-to-amend-for-your-app" class="level3" data-number="41.3.2">
+<h3 data-number="41.3.2" class="anchored" data-anchor-id="parts-to-amend-for-your-app"><span class="header-section-number">41.3.2</span> Parts to amend for your app</h3>
+<ul>
+<li><code>&lt;title&gt;</code> sets the browser tab’s initial title. The app replaces it once it loads, so it only appears briefly.</li>
+<li><code>&lt;streamlit-app&gt;</code> specifies the entrypoint file.</li>
+<li><code>&lt;app-file&gt;</code> identifies all other files the app needs, including Python files, images and other file types.</li>
+<li><code>&lt;app-requirements&gt;</code> lists the Python packages to install.</li>
+</ul>
+<p>In our example we pin <code>simpy</code> and <code>sim-tools</code> to the versions used to develop the app. We leave <code>numpy</code> and <code>pandas</code> unpinned so Pyodide can use its compatible versions. We don’t include <code>streamlit</code>, as stlite provides it.</p>
+<p><strong>Parts to amend for your app:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-source-line-numbers="6,11-19" data-code-line-numbers="6,11-19"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">"viewport"</span><span class="ot"> content</span><span class="op">=</span><span class="st">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Single-page app<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.2/build/stlite.css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">"module"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.2/build/stlite.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">streamlit-app</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./app.py"</span><span class="dt">&gt;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-file</span><span class="ot"> name</span><span class="op">=</span><span class="st">"model.py"</span><span class="ot"> url</span><span class="op">=</span><span class="st">"./model.py"</span><span class="dt">&gt;&lt;/</span><span class="kw">app-file</span><span class="dt">&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-requirements</span><span class="dt">&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>            simpy==4.1.2</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>            numpy</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            pandas</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>            sim-tools==1.3.0</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">app-requirements</span><span class="dt">&gt;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">streamlit-app</span><span class="dt">&gt;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 </section>
 </section>
-<section id="deploying-to-github-pages" class="level2" data-number="41.4">
-<h2 data-number="41.4" class="anchored" data-anchor-id="deploying-to-github-pages"><span class="header-section-number">41.4</span> Deploying to GitHub Pages</h2>
-<p>From your github repository, click on ‘settings’.</p>
+<section id="multipage-stlite-apps" class="level2" data-number="41.4">
+<h2 data-number="41.4" class="anchored" data-anchor-id="multipage-stlite-apps"><span class="header-section-number">41.4</span> Multipage stlite apps</h2>
+<p>Multipage stlite apps are set up in the same way! You just have to include each page using <code>&lt;app-file&gt;</code>. For example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-source-line-numbers="12,14-15" data-code-line-numbers="12,14-15"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">"viewport"</span><span class="ot"> content</span><span class="op">=</span><span class="st">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Scenario app<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.2/build/stlite.css"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">"module"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/@stlite/browser@1.12.2/build/stlite.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">streamlit-app</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./app.py"</span><span class="dt">&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-file</span><span class="ot"> name</span><span class="op">=</span><span class="st">"home.py"</span><span class="ot"> url</span><span class="op">=</span><span class="st">"./home.py"</span><span class="dt">&gt;&lt;/</span><span class="kw">app-file</span><span class="dt">&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-file</span><span class="ot"> name</span><span class="op">=</span><span class="st">"model.py"</span><span class="ot"> url</span><span class="op">=</span><span class="st">"./model.py"</span><span class="dt">&gt;&lt;/</span><span class="kw">app-file</span><span class="dt">&gt;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-file</span><span class="ot"> name</span><span class="op">=</span><span class="st">"results.py"</span><span class="ot"> url</span><span class="op">=</span><span class="st">"./results.py"</span><span class="dt">&gt;&lt;/</span><span class="kw">app-file</span><span class="dt">&gt;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-file</span><span class="ot"> name</span><span class="op">=</span><span class="st">"simulation.py"</span><span class="ot"> url</span><span class="op">=</span><span class="st">"./simulation.py"</span><span class="dt">&gt;&lt;/</span><span class="kw">app-file</span><span class="dt">&gt;</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-file</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="ot">            name</span><span class="op">=</span><span class="st">"images/model_diagram.drawio.png"</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="ot">            url</span><span class="op">=</span><span class="st">"./images/model_diagram.drawio.png"</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ot">        </span><span class="dt">&gt;&lt;/</span><span class="kw">app-file</span><span class="dt">&gt;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">app-requirements</span><span class="dt">&gt;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>            simpy==4.1.2</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>            numpy</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>            pandas</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>            sim-tools==1.3.0</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">app-requirements</span><span class="dt">&gt;</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">streamlit-app</span><span class="dt">&gt;</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+</section>
+<section id="trying-the-app-locally" class="level2" data-number="41.5">
+<h2 data-number="41.5" class="anchored" data-anchor-id="trying-the-app-locally"><span class="header-section-number">41.5</span> Trying the app locally</h2>
+<p><code>index.html</code> serves as the website’s starting page. To view the app locally, open a terminal in the folder containing <code>index.html</code> and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-code-line-numbers=""><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> http.server 8000</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then open <code>http://localhost:8000</code> in your browser.</p>
+<p>To share it through a web address, you need to host the files online. GitHub Pages can host <code>index.html</code> and the other files your app needs. When someone visits the site, their browser downloads these files and runs the app using stlite.</p>
+<p><br></p>
+</section>
+<section id="hosting-on-github-pages" class="level2" data-number="41.6">
+<h2 data-number="41.6" class="anchored" data-anchor-id="hosting-on-github-pages"><span class="header-section-number">41.6</span> Hosting on GitHub Pages</h2>
+<p>GitHub Pages is a website hosting service. It takes HTML, CSS and JavaScript files from your GitHub repository and publishes them as a website. It is <strong>free</strong> with public repositories and <strong>easy</strong> to set up because it integrates directly with your repository.</p>
+<p>From your GitHub repository, click on ‘Settings’.</p>
 <p><a href="assets/images/2024-09-30-17-29-21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/images/2024-09-30-17-29-21.png" class="box img-fluid"></a></p>
 <p>In the sidebar on the left, click on ‘pages’.</p>
 <p><a href="assets/images/2024-09-30-17-29-45.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="assets/images/2024-09-30-17-29-45.png" class="box img-fluid"></a></p>
@@ -1027,19 +1081,102 @@ Warning
 </div>
 </div>
 <p><br></p>
+<section id="file-locations" class="level3" data-number="41.6.1">
+<h3 data-number="41.6.1" class="anchored" data-anchor-id="file-locations"><span class="header-section-number">41.6.1</span> File locations</h3>
+<p>These instructions assume your app files are in the repository root, which is why we selected <code>/ (root)</code>.</p>
+<pre class="text" data-code-line-numbers=""><code>your-repository/
+├── index.html
+├── app.py
+├── home.py
+├── model.py
+├── simulation.py
+├── results.py
+└── images/
+    └── logo.png</code></pre>
+<p>You can also organise app files into subfolders. If <code>index.html</code> stays in the root, the GitHub Pages settings stay the same. Just update the paths in <code>index.html</code>.</p>
+<pre class="text" data-code-line-numbers=""><code>your-repository/
+├── index.html
+└── app/
+    ├── app.py
+    ├── home.py
+    ├── model.py
+    ├── simulation.py
+    ├── results.py
+    └── images/
+        └── logo.png</code></pre>
+<p>If you move <code>index.html</code> into a subfolder too, you have a few options:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Location</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>docs/index.html</code></td>
+<td>Select <code>main</code> → <code>/docs</code> as the publishing source.</td>
+</tr>
+<tr class="even">
+<td><code>app/index.html</code></td>
+<td>Publish the repository root and access the app at <code>https://USERNAME.github.io/REPOSITORY/app/</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>app/index.html</code></td>
+<td>Use a GitHub Actions workflow to publish the contents of <code>app/</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>For simplicity, we recommend keeping <code>index.html</code> in the repository root. The other files can be in subfolders, as long as the paths in <code>index.html</code> match.</p>
+<p><br></p>
 </section>
-<section id="stlite-tips" class="level2" data-number="41.5">
-<h2 data-number="41.5" class="anchored" data-anchor-id="stlite-tips"><span class="header-section-number">41.5</span> Stlite tips</h2>
-<ul>
-<li>The ‘spinner’ does not work in stlite by default. This can be a problem with long-running calculations that occur after clicking something as it is not obvious to your user that something is going on. Instead, you must make sure you run <code>import asyncio</code> and then use it as follows.</li>
-</ul>
-<div id="f4c01c62" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> st.spinner(<span class="st">'Running a long-running calculation..'</span>):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">await</span> asyncio.sleep(<span class="fl">0.1</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Do the actual calculation...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="streamlit-versions-in-stlite" class="level2" data-number="41.7">
+<h2 data-number="41.7" class="anchored" data-anchor-id="streamlit-versions-in-stlite"><span class="header-section-number">41.7</span> Streamlit versions in stlite</h2>
+<p>stlite includes a modified version of Streamlit, adapted to run in the browser. This is why we do not add <code>streamlit</code> to <code>&lt;app-requirements&gt;</code>.</p>
+<p>The stlite developers periodically update this version to the latest version of Streamlit, but may not always be up-to-date. New Streamlit features may therefore not be available immediately in stlite. Check the <a href="https://github.com/whitphx/stlite/releases">stlite release notes</a>, and test your app before upgrading.</p>
+<p><strong>Each stlite release is pinned to a particular version of streamlit</strong>. For example, stlite <code>1.12.2</code> includes a build based on Streamlit <code>1.65.0</code>.</p>
+<section id="find-streamlit-version-in-use-via-github" class="level3" data-number="41.7.1">
+<h3 data-number="41.7.1" class="anchored" data-anchor-id="find-streamlit-version-in-use-via-github"><span class="header-section-number">41.7.1</span> Find streamlit version in use via GitHub</h3>
+<ol type="1">
+<li>Open the <a href="https://github.com/whitphx/stlite/tree/%40stlite/browser%401.12.2">stlite release you are using on GitHub</a>.</li>
+<li>Click the <code>streamlit</code> submodule link (e.g., <code>streamlit @ 9c524f4</code>). This opens the exact Streamlit source code included in that release.</li>
+<li>Open <code>lib/pyproject.toml</code> and find <code>version</code> under <code>[project]</code>.</li>
+</ol>
+</section>
+<section id="find-streamlit-version-in-use-via-app" class="level3" data-number="41.7.2">
+<h3 data-number="41.7.2" class="anchored" data-anchor-id="find-streamlit-version-in-use-via-app"><span class="header-section-number">41.7.2</span> Find streamlit version in use via app</h3>
+<p>Alternatively, run your app using your chosen stlite version and include this command to see which Streamlit build it uses:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-code-line-numbers=""><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>st.write(<span class="st">"Streamlit version:"</span>, st.__version__)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><br></p>
+</section>
+</section>
+<section id="using-st.spinner-in-older-versions-of-stlite" class="level2" data-number="41.8">
+<h2 data-number="41.8" class="anchored" data-anchor-id="using-st.spinner-in-older-versions-of-stlite"><span class="header-section-number">41.8</span> Using <code>st.spinner</code> in older versions of stlite</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>This will ensure the spinner actually appears, but the code is otherwise unchanged.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>View problem &amp; solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In older versions of stlite, <code>st.spinner</code> may not display. This is a problem for long calculations triggered by a click, as users can’t tell anything is happening. Add <code>import asyncio</code> and yield briefly inside the spinner:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-code-line-numbers=""><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> st.spinner(<span class="st">"Running a long-running calculation.."</span>):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">await</span> asyncio.sleep(<span class="fl">0.1</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Do the actual calculation...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -1631,4 +1768,5 @@ Warning
 
 
 
+<script src="site_libs/quarto-contrib/line-highlight-1.0.0/line-highlight.js" defer="true"></script>
 </body></html>

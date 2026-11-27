@@ -108,6 +108,25 @@ cookieconsent.run({
 });
 </script> 
   
+<script>
+(function () {
+  function wrap(iframe) {
+    if (iframe.dataset.wrapped) return;
+    iframe.dataset.wrapped = "1";
+    const box = document.createElement("div");
+    box.className = "stlite-box";
+    const header = document.createElement("div");
+    header.className = "stlite-header";
+    header.textContent = "Interactive app: wait for it to load, then try it!";
+    iframe.parentNode.insertBefore(box, iframe);
+    box.appendChild(header);
+    box.appendChild(iframe);
+  }
+  function run() { document.querySelectorAll("iframe.stlite").forEach(wrap); }
+  document.addEventListener("DOMContentLoaded", run);
+  new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 
 
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -671,7 +690,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./stlite_github_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying to Github Pages with Serverless Streamlit (stlite)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Deploying an app with stlite and GitHub Pages</span></span></a>
   </div>
 </li>
       </ul>
@@ -760,14 +779,13 @@ cookieconsent.run({
 
 
 <p><br></p>
-<p>The final task of the day is deploying an app.</p>
+<p>The final task is deploying an app.</p>
 <ul>
-<li><p>Create a new repository and upload one of the apps you’ve created in the last few sessions to Github using the skills from session 7A (or borrow the sample app from the exercise_4 folder)</p></li>
+<li><p>Create a new repository and upload one of the apps you’ve created in the last few exercises to GitHub.</p></li>
 <li><p>Deploy your app to the streamlit community cloud</p>
 <ul>
-<li>Remember to include a requirements.txt file</li>
+<li>Remember to include a <code>requirements.txt</code> file</li>
 </ul></li>
-<li><p>Share your link in your PSG channel</p></li>
 </ul>
 <p>If you finish this,</p>
 <ul>
