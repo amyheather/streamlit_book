@@ -313,6 +313,152 @@ st.plotly_chart(
 
 <br>
 
+## Adding icons
+
+Icons make metric cards quicker to scan, especially on a dashboard with many of them.
+
+In recent versions of Streamlit, `st.metric()` has an `icon` parameter. It accepts a single emoji, or an icon from the Material Symbols library written as `:material/icon_name:`.
+
+```{python}
+#| eval: false
+import streamlit as st
+
+col1, col2, col3 = st.columns(3)
+
+col1.metric(
+  label="Patients Seen this Week",
+  value=52,
+  icon=":material/personal_injury:", # <1>
+  border=True
+  )
+
+col2.metric(
+  label="Waiting List Length",
+  value=147,
+  delta=-15,
+  delta_color="inverse",
+  icon="🕒", # <2>
+  border=True
+  )
+
+col3.metric(
+  label="Average Calls Resource Couldn't Attend",
+  value="6.3%",
+  icon=":material/call_missed:",
+  border=True
+  )
+```
+
+
+1. Material icons use the format `:material/icon_name:`, where the name is in snake case. You can browse the available icons in the [Material Symbols library](https://fonts.google.com/icons).
+2. A single emoji also works.
+
+```{stlite-python}
+import streamlit as st
+
+col1, col2, col3 = st.columns(3)
+
+col1.metric(
+  label="Patients Seen this Week",
+  value=52,
+  icon=":material/personal_injury:",
+  border=True
+  )
+
+col2.metric(
+  label="Waiting List Length",
+  value=147,
+  delta=-15,
+  delta_color="inverse",
+  icon="🕒",
+  border=True
+  )
+
+col3.metric(
+  label="Average Calls Resource Couldn't Attend",
+  value="6.3%",
+  icon=":material/call_missed:",
+  border=True
+  )
+```
+
+### Adding icons in earlier versions of streamlit
+
+::: {.callout-note collapse="true" title="View approach for earlier versions"}
+
+This approach places the icon beside the number itself. It is adapted from [this post on the Streamlit forum](https://discuss.streamlit.io/t/adding-an-icon-to-a-st-metric-easily/59140) from Germán Castaño. It needs the `streamlit-extras` package (`pip install streamlit-extras`).
+
+```{python}
+#| eval: false
+import streamlit as st
+from streamlit_extras.stylable_container import stylable_container
+
+def iconMetricContainer(key, icon_unicode, css_style=None, icon_color='grey', family="filled", type="icons"):
+    """Returns a CSS-styled container that adds a Material Icon to the value of an st.metric.
+
+    Adapted from https://discuss.streamlit.io/t/adding-an-icon-to-a-st-metric-easily/59140
+
+    Args:
+        key (str): Unique key for the component.
+        icon_unicode (str): Code point for a Material Icon, e.g. "e8b6".
+            Find them at https://fonts.google.com/icons
+        css_style (str, optional): Additional CSS to apply.
+        icon_color (str, optional): Hex colour value for the icon. Defaults to 'grey'.
+        family (str, optional): "filled" or "outline". Only works with type="icons".
+        type (str, optional): "icons" or "symbols".
+
+    Returns:
+        DeltaGenerator: A container. Add elements with the 'with' notation.
+    """
+
+    if (family == "filled") and (type == "icons"):
+        font_family = "Material Icons"
+    elif (family == "outline") and (type == "icons"):
+        font_family = "Material Icons Outlined"
+    elif type == "symbols":
+        font_family = "Material Symbols Outlined"
+    else:
+        print("ERROR - Check Params for iconMetricContainer")
+        font_family = "Material Icons"
+
+    css_style_icon = f'''
+        div[data-testid="stMetricValue"]>div::before
+        {{
+            font-family: {font_family};
+            content: "\\{icon_unicode}";
+            vertical-align: -20%;
+            color: {icon_color};
+        }}
+        '''
+
+    if css_style is not None:
+        css_style_icon += "\n\n" + css_style
+
+    return stylable_container(key=key, css_styles=css_style_icon) # <1>
+
+my_formatted_value_for_metric = "6.3%"
+
+with iconMetricContainer(key="nonattend_metric", icon_unicode="e61f", family="outline"): # <2>
+    st.metric(
+      "Average Number of Calls Resource Couldn't Attend",
+      my_formatted_value_for_metric,
+      border=True
+      )
+```
+
+1. `stylable_container` lets us inject CSS that applies only to the elements inside this container.
+2. We wrap the metric in our function using `with`. The `icon_unicode` is the code point of the icon you chose from Google's icon library.
+
+This relies on Streamlit's internal HTML structure (`data-testid`), so it may stop working after a Streamlit update.
+
+Result:
+
+![](assets/images/old_metric_icon.png){.box}
+
+:::
+
+<br>
+
 ## Indicators
 
 To get other sorts of displays that we might be familiar with in other dashboarding software, we may need to instead move to plotly or another graphing library rather than using things built in to Streamlit.
