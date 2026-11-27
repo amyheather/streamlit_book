@@ -2,14 +2,12 @@
 
 <br>
 
-The final task of the day is deploying an app.
+The final task is deploying an app.
 
-- Create a new repository and upload one of the apps you’ve created in the last few sessions to Github using the skills from session 7A (or borrow the sample app from the exercise_4 folder)
+- Create a new repository and upload one of the apps you've created in the last few exercises to GitHub.
 
 - Deploy your app to the streamlit community cloud
-    - Remember to include a requirements.txt file
-
-- Share your link in your PSG channel
+    - Remember to include a `requirements.txt` file
 
 If you finish this,
 
