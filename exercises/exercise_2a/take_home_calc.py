@@ -11,6 +11,8 @@ remaining = monthly_take_home - housing_costs - food_costs - utility_costs
 housing_perc = housing_costs / monthly_take_home
 
 # Print the message to the user
-print (f"Your monthly amount after housing, food and utility costs is",
-       f"£{remaining}.  Your housing costs represent {housing_perc*100:.2f}%",
-       f"of your monthly take home.")
+print(
+    "Your monthly amount after housing, food and utility costs is",
+    f"£{remaining}.  Your housing costs represent {housing_perc * 100:.2f}%",
+    "of your monthly take home.",
+)

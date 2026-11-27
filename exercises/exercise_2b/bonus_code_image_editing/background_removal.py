@@ -1,12 +1,14 @@
-import streamlit as st
 import io
+
+import streamlit as st
 from PIL import Image
 from rembg import remove
 
-uploaded_image = st.file_uploader("Please upload an image file", type=['png','jpg','jpeg','bmp', 'bitmap'])
+uploaded_image = st.file_uploader(
+    "Please upload an image file", type=["png", "jpg", "jpeg", "bmp", "bitmap"]
+)
 
 if uploaded_image is not None:
-
     imagefile = io.BytesIO(uploaded_image.read())
 
     im = Image.open(imagefile)

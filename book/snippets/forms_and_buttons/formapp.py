@@ -1,7 +1,8 @@
-import streamlit as st
-import time
 import random
+import time
+
 import pandas as pd
+import streamlit as st
 
 st.title("Clinic Waiting Time Estimator")
 
